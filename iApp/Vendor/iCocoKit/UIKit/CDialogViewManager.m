@@ -10,7 +10,7 @@
 #import "CAlertView.h"
 @implementation CDialogViewManager
 
-+ ( void)showMessageView:(NSString*)title  message:(NSString*)message delayAutoHide:(NSTimeInterval)delay{
++ (UIAlertView*)showMessageView:(NSString*)title  message:(NSString*)message delayAutoHide:(NSTimeInterval)delay{
 
     //@step
    
@@ -23,9 +23,10 @@
     [alert show];
     
     if (delay<=0) {
-        return;
+        return alert;
     }
     [alert performSelector:@selector(hide) withObject:nil afterDelay:delay];
     
+    return alert;
 }
 @end

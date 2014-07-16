@@ -21,7 +21,17 @@ NSString * AppLocalizedString(NSString* key)
 	return value;
 }
 
-#pragma mark get array from comma localizedString 
+NSString * AppLocalizedString2(NSString* key, NSString* defaultValue)
+{
+    NSString* value =[AppLanguage get:key alter:defaultValue];
+	//[[NSBundle mainBundle] localizedStringForKey:(key) value:@"" table:nil];
+	
+	if ( nil == value)
+		return key;
+	return value;
+}
+
+#pragma mark get array from comma localizedString
 NSArray*  AppLocalizedStringArray(NSString* key)
 {
 	NSString* value = [[NSBundle mainBundle] localizedStringForKey:(key) value:@"" table:nil];
@@ -57,13 +67,13 @@ NSString * AppLocalizedResourcePathByKeyWithSubDirectory(NSString* key,NSString*
 
 //////////////////////////////////////////////////////////////////
 #pragma mark 
-NSString *AppResourceGet( NSString* aKey, NSString* defaultValue)
+NSObject *AppResourceGet( NSString* aKey, NSObject* defaultValue)
 { 
 	NSString * key = (NSString* )aKey;
 	
 	NSUserDefaults* settings = [NSUserDefaults standardUserDefaults];
-	NSString* value = (NSString*)[settings stringForKey: key];
-	if ( [Lang isEmptyString:value])
+	NSObject* value = (NSObject*)[settings objectForKey: key];
+	if ( nil == value || nil != defaultValue)
 	{
 		[settings setObject:defaultValue forKey:key];
 		value = defaultValue;
@@ -73,7 +83,7 @@ NSString *AppResourceGet( NSString* aKey, NSString* defaultValue)
 	return value;
 	
 }
-NSString *AppResourceSet(const NSString* aKey,    NSString* value)
+NSObject *AppResourceSet(const NSString* aKey,    NSObject* value)
 {
 	NSString * key = (NSString* )aKey;
 	NSUserDefaults* settings = [NSUserDefaults standardUserDefaults];

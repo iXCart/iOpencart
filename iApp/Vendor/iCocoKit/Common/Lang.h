@@ -20,7 +20,7 @@
 ///////////////////////////////////////////////////////////////////////////
 
 FOUNDATION_EXPORT     NSString* CTString( const NSString*);
-FOUNDATION_EXPORT    NSString*   StringPlus(  NSString*  aString  ,  NSString*   bString);
+FOUNDATION_EXPORT    NSString*   StringJoin(  NSString*  aString  ,  NSString*   bString);
 FOUNDATION_EXPORT    BOOL    StringEqual(const  NSString*  aString  ,  const NSString*   bString);
 
 ///////////////////////////////
@@ -46,6 +46,8 @@ FOUNDATION_EXPORT    BOOL    StringEqual(const  NSString*  aString  ,  const NSS
 +(NSString*)safeString:(NSString*) value   toValue:(NSString*) toValue;
 
 +(NSString*) trimString:(NSString*) value;
+
++(NSString*)safeNumberToIntString:(NSNumber*) value   toValue:(NSString*) toValue;
 
 + (id)paseJSONDatatoArrayOrNSDictionary:(NSData *)jsonData;
 

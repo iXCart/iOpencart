@@ -46,7 +46,7 @@
 		<key>name</key>
 		<string>Logout</string>
 		<key>class</key>
-		<string></string>
+		<string>Logout</string>
 		<key>Image</key>
 		<string></string>
 	</dict>

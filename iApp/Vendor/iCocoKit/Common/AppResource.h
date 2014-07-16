@@ -12,6 +12,8 @@
 
 #pragma mark localestring 
 FOUNDATION_EXPORT NSString*  AppLocalizedString(NSString* key);
+FOUNDATION_EXPORT NSString*  AppLocalizedString2(NSString* key, NSString* defaultValue);
+
 FOUNDATION_EXPORT NSArray*  AppLocalizedStringArray(NSString* key);
 
 FOUNDATION_EXPORT NSString*  AppLocalizedResourcePathByKey(NSString* key);
@@ -19,8 +21,8 @@ FOUNDATION_EXPORT NSString*  AppLocalizedResourcePathByKeyWithSubDirectory(NSStr
 
 ///////////////////////////////////////////////////////////////////////////////////
 
-FOUNDATION_EXPORT NSString *AppResourceGet(const  NSString* aKey,    const NSString* defaultValue);
-FOUNDATION_EXPORT NSString *AppResourceSet( const NSString* aKey,    NSString* defaultValue);
+FOUNDATION_EXPORT NSObject *AppResourceGet(const  NSString* aKey,    const NSObject* defaultValue);
+FOUNDATION_EXPORT NSObject *AppResourceSet( const NSString* aKey,    NSObject* defaultValue);
 
 ///////////////////////////////////////////////////////////////////////////////////
 @interface AppResource : NSObject {

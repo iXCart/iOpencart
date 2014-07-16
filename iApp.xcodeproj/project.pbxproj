@@ -13,6 +13,8 @@
 		9110901F192CBCB0009747E5 /* Resource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9110901E192CBCB0009747E5 /* Resource.m */; };
 		91109028192CBD25009747E5 /* CoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91109026192CBD25009747E5 /* CoverViewController.m */; };
 		9110902D192CBDD9009747E5 /* CNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9110902C192CBDD9009747E5 /* CNavigationController.m */; };
+		9122E3AB1970DA6200C215B4 /* PaymentMethodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9122E3A91970DA6200C215B4 /* PaymentMethodViewController.xib */; };
+		9122E3AC1970DA6200C215B4 /* PaymentMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9122E3AA1970DA6200C215B4 /* PaymentMethodViewController.m */; };
 		914524791959658B00B9BFE7 /* CUIEnginer.m in Sources */ = {isa = PBXBuildFile; fileRef = 914524781959658B00B9BFE7 /* CUIEnginer.m */; };
 		9145248119596AF300B9BFE7 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9145247F19596AF300B9BFE7 /* LoginViewController.m */; };
 		9145248219596AF300B9BFE7 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9145248019596AF300B9BFE7 /* LoginViewController.xib */; };
@@ -27,12 +29,22 @@
 		915326061950581D00E6E98F /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 915325FB1950581D00E6E98F /* ProductsViewController.xib */; };
 		915326071950581D00E6E98F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915325FE1950581D00E6E98F /* SettingsViewController.m */; };
 		915326081950581D00E6E98F /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 915325FF1950581D00E6E98F /* SettingsViewController.xib */; };
-		9153260D1950584B00E6E98F /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9153260B1950584B00E6E98F /* CartViewController.m */; };
-		9153260E1950584B00E6E98F /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9153260C1950584B00E6E98F /* CartViewController.xib */; };
 		91563821195A9A8E00A3E6EB /* CoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91563820195A9A8E00A3E6EB /* CoverViewController.xib */; };
 		91563825195AB58400A3E6EB /* XCartUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 91563824195AB58400A3E6EB /* XCartUser.m */; };
 		9156382C195AB6A500A3E6EB /* OpenCartUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9156382B195AB6A500A3E6EB /* OpenCartUser.m */; };
 		9156382F195ABABC00A3E6EB /* XCartAppFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9156382E195ABABC00A3E6EB /* XCartAppFactory.m */; };
+		916DCDAD196D8F2400ECAD07 /* ShippingAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 916DCDAA196D8F2400ECAD07 /* ShippingAddressViewController.xib */; };
+		916DCDAE196D8F2400ECAD07 /* ShippingAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 916DCDAB196D8F2400ECAD07 /* ShippingAddressViewController.m */; };
+		916DCDB5196D9A1200ECAD07 /* ShippingMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 916DCDB2196D9A1200ECAD07 /* ShippingMethodViewController.m */; };
+		916DCDB6196D9A1200ECAD07 /* ShippingMethodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 916DCDB3196D9A1200ECAD07 /* ShippingMethodViewController.xib */; };
+		917396551971032E008C42C7 /* AbstractActionSheetPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 917396491971032E008C42C7 /* AbstractActionSheetPicker.m */; };
+		917396561971032E008C42C7 /* ActionSheetCustomPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9173964B1971032E008C42C7 /* ActionSheetCustomPicker.m */; };
+		917396571971032E008C42C7 /* ActionSheetDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9173964E1971032E008C42C7 /* ActionSheetDatePicker.m */; };
+		917396581971032E008C42C7 /* ActionSheetDistancePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 917396501971032E008C42C7 /* ActionSheetDistancePicker.m */; };
+		917396591971032E008C42C7 /* ActionSheetStringPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 917396521971032E008C42C7 /* ActionSheetStringPicker.m */; };
+		9173965A1971032E008C42C7 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 917396541971032E008C42C7 /* DistancePickerView.m */; };
+		9173966119714594008C42C7 /* ConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9173965F19714594008C42C7 /* ConfirmViewController.xib */; };
+		9173966219714594008C42C7 /* ConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9173966019714594008C42C7 /* ConfirmViewController.m */; };
 		918ECC38192CC6AD00EDF6B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 918ECC34192CC6AD00EDF6B1 /* InfoPlist.strings */; };
 		918ECC39192CC6AD00EDF6B1 /* iAppTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 918ECC36192CC6AD00EDF6B1 /* iAppTests-Info.plist */; };
 		919A268F1956A2EA00F251E3 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 919A25F61956A2EA00F251E3 /* MKAnnotationView+WebCache.m */; };
@@ -79,6 +91,14 @@
 		91C6A721192C9E3900903D95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C6A715192C9E3900903D95 /* AppDelegate.m */; };
 		91C6A722192C9E3900903D95 /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C6A718192C9E3900903D95 /* AppViewController.m */; };
 		91C6A723192C9E3900903D95 /* CWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C6A71A192C9E3900903D95 /* CWebViewController.m */; };
+		91CC86A3196BB5E200129688 /* CartItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CC86A1196BB5E200129688 /* CartItemCell.m */; };
+		91CC86A4196BB5E200129688 /* CartItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91CC86A2196BB5E200129688 /* CartItemCell.xib */; };
+		91CC86AC196C060300129688 /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CC86AA196C060300129688 /* CartViewController.m */; };
+		91CC86AD196C060300129688 /* CartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91CC86AB196C060300129688 /* CartViewController.xib */; };
+		91CC86B1196C063A00129688 /* PaymentAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CC86AF196C063A00129688 /* PaymentAddressViewController.m */; };
+		91CC86B2196C063A00129688 /* PaymentAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91CC86B0196C063A00129688 /* PaymentAddressViewController.xib */; };
+		91CC86B6196C0F6B00129688 /* AddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CC86B4196C0F6B00129688 /* AddressCell.m */; };
+		91CC86B7196C0F6B00129688 /* AddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91CC86B5196C0F6B00129688 /* AddressCell.xib */; };
 		91D6DFEF195ADFB100FC2195 /* settingDefs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91D6DFEE195ADFB100FC2195 /* settingDefs.plist */; };
 		91D6DFFA195AEAAD00FC2195 /* cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 91D6DFF4195AEAAD00FC2195 /* cart.png */; };
 		91D6DFFB195AEAAD00FC2195 /* category.png in Resources */ = {isa = PBXBuildFile; fileRef = 91D6DFF5195AEAAD00FC2195 /* category.png */; };
@@ -99,9 +119,12 @@
 		91D866EF1957CB7D00011141 /* WebViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91D866E71957CB7D00011141 /* WebViewCell.xib */; };
 		91D866F51958240A00011141 /* CDialogViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D866F41958240A00011141 /* CDialogViewManager.m */; };
 		91D866FB195828BA00011141 /* CAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D866FA195828BA00011141 /* CAlertView.m */; };
+		91E1409B197662A60084818A /* TotalsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E14099197662A60084818A /* TotalsTableViewController.m */; };
+		91E1409C197662A60084818A /* TotalsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91E1409A197662A60084818A /* TotalsTableViewController.xib */; };
 		91E3F0161956C3B0000DF9AC /* CPageContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91E3F0151956C3B0000DF9AC /* CPageContainerViewController.xib */; };
 		91E3F0251956D53C000DF9AC /* OpenCartConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E3F0241956D53C000DF9AC /* OpenCartConstant.m */; };
 		91E3F02B1956DF64000DF9AC /* UIImage+Extenstion.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E3F02A1956DF64000DF9AC /* UIImage+Extenstion.m */; };
+		91F4074C196D29A20058D397 /* row_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 91F4074B196D29A20058D397 /* row_selected.png */; };
 		91FC43C8196127EF00EB01A9 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 91FC43C6196127EF00EB01A9 /* placeholder.png */; };
 		91FC43C9196127EF00EB01A9 /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 91FC43C7196127EF00EB01A9 /* placeholder@2x.png */; };
 /* End PBXBuildFile section */
@@ -165,6 +188,9 @@
 		91109026192CBD25009747E5 /* CoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverViewController.m; sourceTree = "<group>"; };
 		9110902B192CBDD9009747E5 /* CNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNavigationController.h; sourceTree = "<group>"; };
 		9110902C192CBDD9009747E5 /* CNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNavigationController.m; sourceTree = "<group>"; };
+		9122E3A81970DA6200C215B4 /* PaymentMethodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentMethodViewController.h; sourceTree = "<group>"; };
+		9122E3A91970DA6200C215B4 /* PaymentMethodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentMethodViewController.xib; sourceTree = "<group>"; };
+		9122E3AA1970DA6200C215B4 /* PaymentMethodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentMethodViewController.m; sourceTree = "<group>"; };
 		914524771959658B00B9BFE7 /* CUIEnginer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CUIEnginer.h; sourceTree = "<group>"; };
 		914524781959658B00B9BFE7 /* CUIEnginer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CUIEnginer.m; sourceTree = "<group>"; };
 		9145247E19596AF300B9BFE7 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
@@ -187,9 +213,6 @@
 		915325FD1950581D00E6E98F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		915325FE1950581D00E6E98F /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		915325FF1950581D00E6E98F /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
-		9153260A1950584B00E6E98F /* CartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartViewController.h; sourceTree = "<group>"; };
-		9153260B1950584B00E6E98F /* CartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartViewController.m; sourceTree = "<group>"; };
-		9153260C1950584B00E6E98F /* CartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
 		91563820195A9A8E00A3E6EB /* CoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoverViewController.xib; sourceTree = "<group>"; };
 		91563823195AB58400A3E6EB /* XCartUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCartUser.h; sourceTree = "<group>"; };
 		91563824195AB58400A3E6EB /* XCartUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCartUser.m; sourceTree = "<group>"; };
@@ -197,6 +220,28 @@
 		9156382B195AB6A500A3E6EB /* OpenCartUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenCartUser.m; sourceTree = "<group>"; };
 		9156382D195ABABC00A3E6EB /* XCartAppFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCartAppFactory.h; sourceTree = "<group>"; };
 		9156382E195ABABC00A3E6EB /* XCartAppFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCartAppFactory.m; sourceTree = "<group>"; };
+		916DCDAA196D8F2400ECAD07 /* ShippingAddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShippingAddressViewController.xib; sourceTree = "<group>"; };
+		916DCDAB196D8F2400ECAD07 /* ShippingAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShippingAddressViewController.m; sourceTree = "<group>"; };
+		916DCDAC196D8F2400ECAD07 /* ShippingAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShippingAddressViewController.h; sourceTree = "<group>"; };
+		916DCDB2196D9A1200ECAD07 /* ShippingMethodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShippingMethodViewController.m; sourceTree = "<group>"; };
+		916DCDB3196D9A1200ECAD07 /* ShippingMethodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShippingMethodViewController.xib; sourceTree = "<group>"; };
+		916DCDB4196D9A1200ECAD07 /* ShippingMethodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShippingMethodViewController.h; sourceTree = "<group>"; };
+		917396481971032E008C42C7 /* AbstractActionSheetPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AbstractActionSheetPicker.h; sourceTree = "<group>"; };
+		917396491971032E008C42C7 /* AbstractActionSheetPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AbstractActionSheetPicker.m; sourceTree = "<group>"; };
+		9173964A1971032E008C42C7 /* ActionSheetCustomPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPicker.h; sourceTree = "<group>"; };
+		9173964B1971032E008C42C7 /* ActionSheetCustomPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetCustomPicker.m; sourceTree = "<group>"; };
+		9173964C1971032E008C42C7 /* ActionSheetCustomPickerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetCustomPickerDelegate.h; sourceTree = "<group>"; };
+		9173964D1971032E008C42C7 /* ActionSheetDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDatePicker.h; sourceTree = "<group>"; };
+		9173964E1971032E008C42C7 /* ActionSheetDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDatePicker.m; sourceTree = "<group>"; };
+		9173964F1971032E008C42C7 /* ActionSheetDistancePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetDistancePicker.h; sourceTree = "<group>"; };
+		917396501971032E008C42C7 /* ActionSheetDistancePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetDistancePicker.m; sourceTree = "<group>"; };
+		917396511971032E008C42C7 /* ActionSheetStringPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetStringPicker.h; sourceTree = "<group>"; };
+		917396521971032E008C42C7 /* ActionSheetStringPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetStringPicker.m; sourceTree = "<group>"; };
+		917396531971032E008C42C7 /* DistancePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistancePickerView.h; sourceTree = "<group>"; };
+		917396541971032E008C42C7 /* DistancePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistancePickerView.m; sourceTree = "<group>"; };
+		9173965E19714594008C42C7 /* ConfirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmViewController.h; sourceTree = "<group>"; };
+		9173965F19714594008C42C7 /* ConfirmViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmViewController.xib; sourceTree = "<group>"; };
+		9173966019714594008C42C7 /* ConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmViewController.m; sourceTree = "<group>"; };
 		918ECC35192CC6AD00EDF6B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		918ECC36192CC6AD00EDF6B1 /* iAppTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iAppTests-Info.plist"; sourceTree = "<group>"; };
 		919A25F51956A2EA00F251E3 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
@@ -270,6 +315,18 @@
 		91C6A718192C9E3900903D95 /* AppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppViewController.m; sourceTree = "<group>"; };
 		91C6A719192C9E3900903D95 /* CWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWebViewController.h; sourceTree = "<group>"; };
 		91C6A71A192C9E3900903D95 /* CWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWebViewController.m; sourceTree = "<group>"; };
+		91CC86A0196BB5E200129688 /* CartItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartItemCell.h; sourceTree = "<group>"; };
+		91CC86A1196BB5E200129688 /* CartItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartItemCell.m; sourceTree = "<group>"; };
+		91CC86A2196BB5E200129688 /* CartItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartItemCell.xib; sourceTree = "<group>"; };
+		91CC86A9196C060300129688 /* CartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartViewController.h; sourceTree = "<group>"; };
+		91CC86AA196C060300129688 /* CartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartViewController.m; sourceTree = "<group>"; };
+		91CC86AB196C060300129688 /* CartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartViewController.xib; sourceTree = "<group>"; };
+		91CC86AE196C063A00129688 /* PaymentAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentAddressViewController.h; sourceTree = "<group>"; };
+		91CC86AF196C063A00129688 /* PaymentAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentAddressViewController.m; sourceTree = "<group>"; };
+		91CC86B0196C063A00129688 /* PaymentAddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentAddressViewController.xib; sourceTree = "<group>"; };
+		91CC86B3196C0F6B00129688 /* AddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressCell.h; sourceTree = "<group>"; };
+		91CC86B4196C0F6B00129688 /* AddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressCell.m; sourceTree = "<group>"; };
+		91CC86B5196C0F6B00129688 /* AddressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressCell.xib; sourceTree = "<group>"; };
 		91D6DFEE195ADFB100FC2195 /* settingDefs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = settingDefs.plist; sourceTree = "<group>"; };
 		91D6DFF4195AEAAD00FC2195 /* cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart.png; sourceTree = "<group>"; };
 		91D6DFF5195AEAAD00FC2195 /* category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category.png; sourceTree = "<group>"; };
@@ -301,12 +358,16 @@
 		91D866F61958243700011141 /* ICocoKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICocoKit.h; sourceTree = "<group>"; };
 		91D866F9195828BA00011141 /* CAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAlertView.h; sourceTree = "<group>"; };
 		91D866FA195828BA00011141 /* CAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAlertView.m; sourceTree = "<group>"; };
+		91E14098197662A50084818A /* TotalsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalsTableViewController.h; sourceTree = "<group>"; };
+		91E14099197662A60084818A /* TotalsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalsTableViewController.m; sourceTree = "<group>"; };
+		91E1409A197662A60084818A /* TotalsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TotalsTableViewController.xib; sourceTree = "<group>"; };
 		91E3F0151956C3B0000DF9AC /* CPageContainerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPageContainerViewController.xib; sourceTree = "<group>"; };
 		91E3F0201956D1A6000DF9AC /* PageControllerKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageControllerKit.h; sourceTree = "<group>"; };
 		91E3F0231956D53C000DF9AC /* OpenCartConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCartConstant.h; sourceTree = "<group>"; };
 		91E3F0241956D53C000DF9AC /* OpenCartConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenCartConstant.m; sourceTree = "<group>"; };
 		91E3F0291956DF64000DF9AC /* UIImage+Extenstion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Extenstion.h"; sourceTree = "<group>"; };
 		91E3F02A1956DF64000DF9AC /* UIImage+Extenstion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Extenstion.m"; sourceTree = "<group>"; };
+		91F4074B196D29A20058D397 /* row_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = row_selected.png; sourceTree = "<group>"; };
 		91FC43C6196127EF00EB01A9 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		91FC43C7196127EF00EB01A9 /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -422,16 +483,6 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
-		915326091950584B00E6E98F /* Cart */ = {
-			isa = PBXGroup;
-			children = (
-				9153260A1950584B00E6E98F /* CartViewController.h */,
-				9153260B1950584B00E6E98F /* CartViewController.m */,
-				9153260C1950584B00E6E98F /* CartViewController.xib */,
-			);
-			path = Cart;
-			sourceTree = "<group>";
-		};
 		91563829195AB6A500A3E6EB /* OpenCart */ = {
 			isa = PBXGroup;
 			children = (
@@ -439,6 +490,27 @@
 				9156382B195AB6A500A3E6EB /* OpenCartUser.m */,
 			);
 			path = OpenCart;
+			sourceTree = "<group>";
+		};
+		917396471971032E008C42C7 /* Pickers */ = {
+			isa = PBXGroup;
+			children = (
+				917396481971032E008C42C7 /* AbstractActionSheetPicker.h */,
+				917396491971032E008C42C7 /* AbstractActionSheetPicker.m */,
+				9173964A1971032E008C42C7 /* ActionSheetCustomPicker.h */,
+				9173964B1971032E008C42C7 /* ActionSheetCustomPicker.m */,
+				9173964C1971032E008C42C7 /* ActionSheetCustomPickerDelegate.h */,
+				9173964D1971032E008C42C7 /* ActionSheetDatePicker.h */,
+				9173964E1971032E008C42C7 /* ActionSheetDatePicker.m */,
+				9173964F1971032E008C42C7 /* ActionSheetDistancePicker.h */,
+				917396501971032E008C42C7 /* ActionSheetDistancePicker.m */,
+				917396511971032E008C42C7 /* ActionSheetStringPicker.h */,
+				917396521971032E008C42C7 /* ActionSheetStringPicker.m */,
+				917396531971032E008C42C7 /* DistancePickerView.h */,
+				917396541971032E008C42C7 /* DistancePickerView.m */,
+			);
+			name = Pickers;
+			path = "ActionSheetPicker-3.0/Pickers";
 			sourceTree = "<group>";
 		};
 		918ECC33192CC6AD00EDF6B1 /* iAppTests */ = {
@@ -567,6 +639,7 @@
 			children = (
 				91D6DFF3195AEAAD00FC2195 /* icon */,
 				91B18F881947243E00103441 /* splash.png */,
+				91F4074B196D29A20058D397 /* row_selected.png */,
 				91FC43C6196127EF00EB01A9 /* placeholder.png */,
 				91FC43C7196127EF00EB01A9 /* placeholder@2x.png */,
 			);
@@ -679,7 +752,7 @@
 		91C6A71C192C9E3900903D95 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				915326091950584B00E6E98F /* Cart */,
+				91CC86A8196C060300129688 /* Checkout */,
 				915325EF1950581D00E6E98F /* Category */,
 				915325F51950581D00E6E98F /* Product */,
 				915325FC1950581D00E6E98F /* Setting */,
@@ -694,6 +767,7 @@
 		91C6A726192C9E5200903D95 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				917396471971032E008C42C7 /* Pickers */,
 				919A25F41956A2EA00F251E3 /* SDWebImage */,
 				910EFD6E19498A8B00FD4378 /* XCartKit */,
 				91C6A727192C9E5200903D95 /* iCocoKit */,
@@ -709,6 +783,34 @@
 				91D866F61958243700011141 /* ICocoKit.h */,
 			);
 			path = iCocoKit;
+			sourceTree = "<group>";
+		};
+		91CC86A8196C060300129688 /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+				91CC86A9196C060300129688 /* CartViewController.h */,
+				91CC86AA196C060300129688 /* CartViewController.m */,
+				91CC86AB196C060300129688 /* CartViewController.xib */,
+				91E14098197662A50084818A /* TotalsTableViewController.h */,
+				91E14099197662A60084818A /* TotalsTableViewController.m */,
+				91E1409A197662A60084818A /* TotalsTableViewController.xib */,
+				91CC86AE196C063A00129688 /* PaymentAddressViewController.h */,
+				91CC86AF196C063A00129688 /* PaymentAddressViewController.m */,
+				91CC86B0196C063A00129688 /* PaymentAddressViewController.xib */,
+				916DCDAC196D8F2400ECAD07 /* ShippingAddressViewController.h */,
+				916DCDAB196D8F2400ECAD07 /* ShippingAddressViewController.m */,
+				916DCDAA196D8F2400ECAD07 /* ShippingAddressViewController.xib */,
+				916DCDB4196D9A1200ECAD07 /* ShippingMethodViewController.h */,
+				916DCDB2196D9A1200ECAD07 /* ShippingMethodViewController.m */,
+				916DCDB3196D9A1200ECAD07 /* ShippingMethodViewController.xib */,
+				9122E3A81970DA6200C215B4 /* PaymentMethodViewController.h */,
+				9122E3AA1970DA6200C215B4 /* PaymentMethodViewController.m */,
+				9122E3A91970DA6200C215B4 /* PaymentMethodViewController.xib */,
+				9173965E19714594008C42C7 /* ConfirmViewController.h */,
+				9173966019714594008C42C7 /* ConfirmViewController.m */,
+				9173965F19714594008C42C7 /* ConfirmViewController.xib */,
+			);
+			path = Checkout;
 			sourceTree = "<group>";
 		};
 		91D6DFF3195AEAAD00FC2195 /* icon */ = {
@@ -752,6 +854,12 @@
 				91D866E51957CB7D00011141 /* WebViewCell.h */,
 				91D866E61957CB7D00011141 /* WebViewCell.m */,
 				91D866E71957CB7D00011141 /* WebViewCell.xib */,
+				91CC86A0196BB5E200129688 /* CartItemCell.h */,
+				91CC86A1196BB5E200129688 /* CartItemCell.m */,
+				91CC86A2196BB5E200129688 /* CartItemCell.xib */,
+				91CC86B3196C0F6B00129688 /* AddressCell.h */,
+				91CC86B4196C0F6B00129688 /* AddressCell.m */,
+				91CC86B5196C0F6B00129688 /* AddressCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -870,34 +978,43 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91CC86A4196BB5E200129688 /* CartItemCell.xib in Resources */,
 				91D6DFFB195AEAAD00FC2195 /* category.png in Resources */,
+				91CC86B7196C0F6B00129688 /* AddressCell.xib in Resources */,
 				91D866E81957CB7D00011141 /* BaseCell.xib in Resources */,
 				919A26C41956BC2700F251E3 /* CPageView.xib in Resources */,
-				9153260E1950584B00E6E98F /* CartViewController.xib in Resources */,
 				91D6DFFA195AEAAD00FC2195 /* cart.png in Resources */,
 				91E3F0161956C3B0000DF9AC /* CPageContainerViewController.xib in Resources */,
 				918ECC38192CC6AD00EDF6B1 /* InfoPlist.strings in Resources */,
+				91F4074C196D29A20058D397 /* row_selected.png in Resources */,
+				91CC86AD196C060300129688 /* CartViewController.xib in Resources */,
 				915326041950581D00E6E98F /* ProductDetailViewController.xib in Resources */,
 				915326011950581D00E6E98F /* CategoriesViewController.xib in Resources */,
 				91D866EB1957CB7D00011141 /* ImagePagesViewCell.xib in Resources */,
 				918ECC39192CC6AD00EDF6B1 /* iAppTests-Info.plist in Resources */,
 				91C6A6CA192C9AEE00903D95 /* Images.xcassets in Resources */,
+				91E1409C197662A60084818A /* TotalsTableViewController.xib in Resources */,
 				9145248219596AF300B9BFE7 /* LoginViewController.xib in Resources */,
 				91B18F8B1947243E00103441 /* proudctDefs.plist in Resources */,
 				91D6DFFF195AEAAD00FC2195 /* settings.png in Resources */,
+				9122E3AB1970DA6200C215B4 /* PaymentMethodViewController.xib in Resources */,
 				915326081950581D00E6E98F /* SettingsViewController.xib in Resources */,
 				91D6E006195AEF3800FC2195 /* Localizable.strings in Resources */,
 				91563821195A9A8E00A3E6EB /* CoverViewController.xib in Resources */,
 				91D866ED1957CB7D00011141 /* ImageViewCell.xib in Resources */,
+				916DCDB6196D9A1200ECAD07 /* ShippingMethodViewController.xib in Resources */,
 				91C53FF2195585CC00FB0AA1 /* tabDefs.plist in Resources */,
 				91B18F8A1947243E00103441 /* splash.png in Resources */,
 				91D866EF1957CB7D00011141 /* WebViewCell.xib in Resources */,
 				91FC43C9196127EF00EB01A9 /* placeholder@2x.png in Resources */,
 				91FC43C8196127EF00EB01A9 /* placeholder.png in Resources */,
 				91D6DFFC195AEAAD00FC2195 /* logo.png in Resources */,
+				916DCDAD196D8F2400ECAD07 /* ShippingAddressViewController.xib in Resources */,
 				91C6A6B6192C9AEE00903D95 /* InfoPlist.strings in Resources */,
 				915326061950581D00E6E98F /* ProductsViewController.xib in Resources */,
+				91CC86B2196C063A00129688 /* PaymentAddressViewController.xib in Resources */,
 				91D6DFEF195ADFB100FC2195 /* settingDefs.plist in Resources */,
+				9173966119714594008C42C7 /* ConfirmViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -915,38 +1032,50 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				917396581971032E008C42C7 /* ActionSheetDistancePicker.m in Sources */,
 				919A26971956A2EA00F251E3 /* SDWebImagePrefetcher.m in Sources */,
 				91D866D71957CB0D00011141 /* AppLanguage.m in Sources */,
 				91109028192CBD25009747E5 /* CoverViewController.m in Sources */,
 				91D866EA1957CB7D00011141 /* ImagePagesViewCell.m in Sources */,
+				91CC86B1196C063A00129688 /* PaymentAddressViewController.m in Sources */,
 				91D866E91957CB7D00011141 /* CTableViewCell.m in Sources */,
 				9110902D192CBDD9009747E5 /* CNavigationController.m in Sources */,
 				914E77971948A1C000596707 /* XCartCoreData.xcdatamodeld in Sources */,
 				9110901F192CBCB0009747E5 /* Resource.m in Sources */,
 				919A26BC1956BB2F00F251E3 /* DetailViewController.m in Sources */,
 				919A26BE1956BB2F00F251E3 /* Tile.m in Sources */,
+				9173966219714594008C42C7 /* ConfirmViewController.m in Sources */,
 				91D866F51958240A00011141 /* CDialogViewManager.m in Sources */,
 				91D866D91957CB0D00011141 /* Lang.m in Sources */,
 				915326051950581D00E6E98F /* ProductsViewController.m in Sources */,
 				91D866D81957CB0D00011141 /* AppResource.m in Sources */,
 				919A269D1956A2EA00F251E3 /* UIImageView+WebCache.m in Sources */,
+				916DCDB5196D9A1200ECAD07 /* ShippingMethodViewController.m in Sources */,
 				919A26901956A2EA00F251E3 /* NSData+ImageContentType.m in Sources */,
 				91D866DA1957CB0D00011141 /* Utils.m in Sources */,
 				919A26961956A2EA00F251E3 /* SDWebImageManager.m in Sources */,
 				919A26981956A2EA00F251E3 /* UIButton+WebCache.m in Sources */,
+				917396571971032E008C42C7 /* ActionSheetDatePicker.m in Sources */,
 				919A26911956A2EA00F251E3 /* SDImageCache.m in Sources */,
-				9153260D1950584B00E6E98F /* CartViewController.m in Sources */,
 				91E3F02B1956DF64000DF9AC /* UIImage+Extenstion.m in Sources */,
 				919A26991956A2EA00F251E3 /* UIImage+GIF.m in Sources */,
+				91CC86AC196C060300129688 /* CartViewController.m in Sources */,
 				919A268F1956A2EA00F251E3 /* MKAnnotationView+WebCache.m in Sources */,
 				919A26921956A2EA00F251E3 /* SDWebImageCompat.m in Sources */,
 				914E77911948A0DB00596707 /* DataModel.m in Sources */,
 				91E3F0251956D53C000DF9AC /* OpenCartConstant.m in Sources */,
 				919A269B1956A2EA00F251E3 /* UIImage+WebP.m in Sources */,
+				916DCDAE196D8F2400ECAD07 /* ShippingAddressViewController.m in Sources */,
+				91E1409B197662A60084818A /* TotalsTableViewController.m in Sources */,
 				9145248119596AF300B9BFE7 /* LoginViewController.m in Sources */,
 				910EFD7419498AAD00FD4378 /* XCartDataManager.m in Sources */,
+				9173965A1971032E008C42C7 /* DistancePickerView.m in Sources */,
 				91D866EE1957CB7D00011141 /* WebViewCell.m in Sources */,
 				919A26C11956BB2F00F251E3 /* CPageContainerViewController.m in Sources */,
+				91CC86B6196C0F6B00129688 /* AddressCell.m in Sources */,
+				917396561971032E008C42C7 /* ActionSheetCustomPicker.m in Sources */,
+				917396551971032E008C42C7 /* AbstractActionSheetPicker.m in Sources */,
+				9122E3AC1970DA6200C215B4 /* PaymentMethodViewController.m in Sources */,
 				91C6A721192C9E3900903D95 /* AppDelegate.m in Sources */,
 				9156382C195AB6A500A3E6EB /* OpenCartUser.m in Sources */,
 				91563825195AB58400A3E6EB /* XCartUser.m in Sources */,
@@ -954,6 +1083,8 @@
 				919A26941956A2EA00F251E3 /* SDWebImageDownloader.m in Sources */,
 				919A26951956A2EA00F251E3 /* SDWebImageDownloaderOperation.m in Sources */,
 				91D866EC1957CB7D00011141 /* ImageViewCell.m in Sources */,
+				917396591971032E008C42C7 /* ActionSheetStringPicker.m in Sources */,
+				91CC86A3196BB5E200129688 /* CartItemCell.m in Sources */,
 				919A269A1956A2EA00F251E3 /* UIImage+MultiFormat.m in Sources */,
 				91D866FB195828BA00011141 /* CAlertView.m in Sources */,
 				91C6A722192C9E3900903D95 /* AppViewController.m in Sources */,

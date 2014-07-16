@@ -9,6 +9,7 @@
 #import "SettingsViewController.h"
 #import "LoginViewController.h"
 #import "XCartKit.h"
+#import "DataModel.h"
 
 @interface SettingsViewController ()
 
@@ -127,14 +128,21 @@
     return cell;
 }
 
-
+- (void)processCommand:(NSDictionary*)dict
+{
+    NSString* class = (NSString*) [dict valueForKey:@"class"];
+    if (StringEqual(class, @"Logout")) {
+        
+        [[DataModel sharedInstance]loutOut];
+    }
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    return;
-    NSArray* items = [_mappingResult array];
+    
+    NSArray* items = _defs;
     int row = indexPath.row;
     NSDictionary* item = [items objectAtIndex:row];
-    //  NSString* key = (NSString*) [item valueForKey:@"key"];
+    [self processCommand:item];
     //@step
     //ProductsViewController* viewController = [[ProductsViewController alloc]initWithNibName:@"ProductsViewController" bundle:nil];
     

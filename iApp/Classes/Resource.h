@@ -15,21 +15,42 @@
 
 #endif
 
+extern  NSString* NotifyEventCommpleteAddCart ;
+
 @interface Resource : NSObject
 
 
 +(UIColor*) getStandardColor;
  
-+ (NSString*) getBaseURLString;
++ (NSString*)getBaseURLString;
 
 + (NSString*)getIndexURLString;
+
++ (NSString*)getCategoriesURLString;
 
 + (NSString*)getProductsURLString; 
 
 + (NSString*)getLoginURLString;
 
++ (NSString*)getCartURLString;
+
++ (NSString*)getAddCartURLString;
+
++ (NSString*)getPaymentConfirmURLString;
+
++ (NSString*)getCheckoutSuccessURLString;
+
++ (NSString*)getLogoutURLString;
+
 + (NSArray*)getImagesDefsFromProductResult:(NSDictionary*)dict;
 
 + (void) assginImageWithSource:(UIImageView*)target  source:(NSString*)source;
 
++ (void)storeUserAccountInfo:(NSDictionary*) dict;
+
++ (NSDictionary*)loadUserAccountInfo;
+
++ (void)showRestResponseErrorMessage:(NSDictionary*)response;
+
++ (void)notifyCartUpdate:(NSString*)count;
 @end

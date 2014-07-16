@@ -19,4 +19,11 @@
 - (void)add2Cart:(NSDictionary*)dict;
 - (NSArray*)getProudctsFromCart;
 
+- (void)auotoLogin;
+
+- (void)loutOut;
+
+//- (void)cleanUpUserAccountInfo;
+
+- (void)storeUserAccountInfo:(NSString*) email password:(NSString*)password;
 @end

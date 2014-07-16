@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "XCartDataManager.h"
 #import "AppManager.h"
+#import "DataModel.h"
 
 @interface LoginViewController ()
 
@@ -73,10 +74,15 @@
         XCartUser* user = [XCartDataManager sharedInstance].activeUser;
         
         if (nil !=user && [user isValidateUser]) {
+            //@step
+             
+            [[DataModel sharedInstance ]storeUserAccountInfo:email password:password];
             //@step login succcess
             [self closeView];
             return ;
         }
+        //@step
+        
         //@step
         NSString* mssage = @"Failed login";
         

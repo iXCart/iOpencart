@@ -34,7 +34,8 @@
     UIBarButtonItem* button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(add2Cart:)];
     [self.navigationItem setRightBarButtonItem:button];
 }
--(NSArray*) loadDefs
+
+-( NSArray*) loadDefs
 {
     NSString* cfgFilePath =[Utils getBundleFileAsFullPath:  @"proudctDefs.plist"];
     NSArray* data = [NSArray arrayWithContentsOfFile:cfgFilePath];
@@ -75,7 +76,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark add2Cart
+- (IBAction)add2Cart:(id)sender{
+    
+    [[DataModel sharedInstance] add2Cart:_resultDictionary];
+  
+}
 
+#pragma makr loadData
 - (void)loadData
 {
     if (nil == self.args) {
@@ -263,7 +271,7 @@
      }
      //@step
      UITableViewCell *cell = [self getCellWithMatchedType:tableView indexPath:indexPath];
- // Configure the cell...
+  
      NSDictionary* item = [self getRowDef:indexPath];
      NSString* name = [item valueForKey:@"name"];
      
@@ -287,9 +295,7 @@
          //@step
          if ([cell isKindOfClass:[ImageViewCell class]]) {
              ImageViewCell* imageCell = (ImageViewCell*)cell;
-             
-              //imageCell.imageLayerView.image = [UIImage imageNamed:@"splash.png"];
-             //[ imageCell.imageLayerView sd_setImageWithURL:[NSURL URLWithString: value] placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+ 
              //@step
              [Resource assginImageWithSource:imageCell.imageLayerView source:value];
              
@@ -315,62 +321,6 @@
  return cell;
  }
 
-#pragma mark Actions
-- (IBAction)add2Cart:(id)sender{
-    
-    [[DataModel sharedInstance] add2Cart:_resultDictionary];
-    
-    [CDialogViewManager showMessageView:@"" message:@"One prodcut has been add into cart!" delayAutoHide:2];
-}
-
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- } else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 
 

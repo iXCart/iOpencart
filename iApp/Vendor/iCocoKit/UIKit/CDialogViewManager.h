@@ -11,6 +11,6 @@
 @interface CDialogViewManager : NSObject
 
 
-+ ( void)showMessageView:(NSString*)title  message:(NSString*)message delayAutoHide:(NSTimeInterval)delay;
++ (UIAlertView*)showMessageView:(NSString*)title  message:(NSString*)message delayAutoHide:(NSTimeInterval)delay;
 
 @end

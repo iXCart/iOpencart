@@ -15,7 +15,7 @@ NSString* CTString( const NSString*  value)
 	if ( nil == value) return nil;
 	return [NSString stringWithFormat:@"%@", value];
 }
- NSString*   StringPlus(  NSString*  aString  ,  NSString*   bString)
+ NSString*   StringJoin(  NSString*  aString  ,  NSString*   bString)
 {
 	aString =  [aString stringByAppendingFormat:@"%@",    bString];
 	return aString;
@@ -65,6 +65,17 @@ BOOL    StringEqual( const NSString*  aString  ,  const NSString*   bString)
 	if (nil == value  ||  [value length ] == 0)
 		return toValue;
 	return  [NSString stringWithFormat:@"%@", value];
+}
+
++(NSString*)safeNumberToIntString:(NSNumber*) value   toValue:(NSString*) toValue
+{
+	if ( nil == value)
+		return toValue;
+    
+    NSInteger i = [value integerValue];
+    
+    return [NSString stringWithFormat:@"%d", i];
+    
 }
 
 +(NSString*) trimString:(NSString*) value

@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface CTableViewCell : UITableViewCell
-
+{
+    
+}
 
 - (void)setup:(NSObject*)args;
 

@@ -25,6 +25,7 @@
 
 
 +(AppManager*) sharedInstance;
+
 -(void) startApp;
 -(void) terminateApp;
 -(void) setupWorkSpace;

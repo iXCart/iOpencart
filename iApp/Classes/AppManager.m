@@ -47,38 +47,7 @@ static AppManager *  _appManagerInstance = nil;
 {
     return self;
 }
-/*
- - (id)retain {
- return self;
- }
  
- - (unsigned)retainCount {
- return UINT_MAX;  // denotes an object that cannot be released
- }
- 
- - (oneway void)release {
- //do nothing
- //[super release];
- }
- 
- - (id)autorelease {
- return self;
- }
- 
- 
- 
- - (void)dealloc
- {
- AppTrace(self, @"dealloc");
- 
- [mSyncTimer release];
- 
- 
- [coverViewController release];
- 
- [super dealloc];
- }
- */
 
 -(void) startApp;
 {
@@ -189,10 +158,12 @@ static AppManager *  _appManagerInstance = nil;
 #pragma mark setupWorkSpace
 -(void) setupWorkSpace
 {
-    //@step do init work
+    [self registerListener];
+    
+    [[DataModel sharedInstance] auotoLogin];
     
     //@step
-    [self performSelector:@selector(onCompletedSetupWorkSpace) withObject:nil afterDelay:8];
+    [self performSelector:@selector(onCompletedSetupWorkSpace) withObject:nil afterDelay:2];
     return;
     
     [self  onCompletedSetupWorkSpace];
@@ -205,18 +176,38 @@ static AppManager *  _appManagerInstance = nil;
     [self getMainTabBarController].selectedIndex =  selectedIndex ;
 }
 
-//
-//-(void) registerListener {
-//
-//	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onComplete: )
-// 												 name:(NSString*)_KeyNotifyOnCompleteLoadSystemText object:nil];
-//
-//
-//}
-//-(void) unRegisterListener{
-//	[[NSNotificationCenter defaultCenter] removeObserver:self name:(NSString*)_KeyNotifyOnCompleteLoadSystemText object:nil];
-//
-//}
+- (void)upateShoppingCartBar:(NSDictionary*)dict
+{
+    
+    UITabBarController* tab = [self getMainTabBarController];
+    UITabBarItem* cartItem = [tab.tabBar.items objectAtIndex:1];
+    
+    NSString* count = [dict valueForKey:@"count"];
+    if ([Lang isEmptyString:count]) {
+        count = nil;
+    }
+    cartItem.badgeValue = count;
+    
+}
+
+- (void)onNotifyEventCommpleteAddCart:(NSNotification*)notifycation
+{
+    NSDictionary* dict =[notifycation object];
+    
+    [self upateShoppingCartBar:dict];
+}
+
+-(void) registerListener {
+
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotifyEventCommpleteAddCart: )
+ 												 name: NotifyEventCommpleteAddCart object:nil];
+
+
+}
+-(void) unRegisterListener{
+	[[NSNotificationCenter defaultCenter] removeObserver:self name:NotifyEventCommpleteAddCart object:nil];
+
+}
 
 
 @end

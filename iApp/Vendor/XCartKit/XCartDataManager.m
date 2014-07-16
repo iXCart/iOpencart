@@ -55,6 +55,39 @@ static XCartDataManager* _sharedManager;
     return _sharedManager;
 }
 
+///////////////////////////////////////////////////////////////////////
+/*
+ @request:
+ 
+ @response:
+ 
+ */
+- (void)executeAction:(NSString*)urlString method:(RKRequestMethod)method  params:(NSDictionary*) params success: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
+              failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure{
+    
+    int iMax = [params count];
+    NSMutableDictionary* parameters = [NSMutableDictionary dictionaryWithCapacity:iMax];
+    [parameters addEntriesFromDictionary:params];
+    [parameters setObject:@"1" forKey:Rest_json];
+    //@step
+    
+    //@step
+    switch (method) {
+        case RKRequestMethodGET:
+            [_objectManager  getObject:nil path:urlString parameters:parameters  success:success failure:failure];
+            break;
+        case RKRequestMethodPOST:
+            [_objectManager  postObject:nil path:urlString parameters:parameters  success:success failure:failure];
+            break;
+            
+        default:
+            assert(@"no matched support method! ");
+            break;
+    }
+    
+    
+}
+
 
 - (void)setupWorkSpace{
     
@@ -140,7 +173,10 @@ static XCartDataManager* _sharedManager;
     
     [self setCategoriesResponseDescriptor];
     
-    NSString* path = @"/opencart/index.php?route=common/header&json";
+    
+    NSString* path = [Resource getCategoriesURLString];
+    path = StringJoin(path, @"&json=1");
+    
   //@  [_objectManager getObjectsAtPath: path parameters:nil  success:success failure:failure];
     //@step
     XBlockBinder* binder = [[XBlockBinder alloc]init];
@@ -215,7 +251,7 @@ static XCartDataManager* _sharedManager;
 }
 
 
-#pragma mark productDetails
+#pragma mark ProductDetails
 /*
   @request: h-ttp://127.0.0.1/opencart/index.php?route=product/product&product_id=42&json
   @response:
@@ -253,7 +289,23 @@ static XCartDataManager* _sharedManager;
     
     _activeUser = activeUser;
 }
-#pragma mark login
+
+#pragma mark User
+- (void)setUserResponseDescriptor{
+    
+    //@step
+    RKEntityMapping *entityMapping = [RKEntityMapping mappingForEntityForName:@"User" inManagedObjectStore:_managedObjectStore];
+    
+    
+    NSIndexSet *statusCodes = RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful); // Anything in 2xx
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:entityMapping method:RKRequestMethodAny pathPattern: nil keyPath:nil statusCodes:statusCodes];
+    
+    [_objectManager addResponseDescriptor:responseDescriptor];
+    
+    
+}
+
+#pragma mark Login
 /*
  @request: h ttp://127.0.0.1/opencart/index.php?route=account/login
     method="post" enctype="multipart/form-data">
@@ -265,6 +317,9 @@ static XCartDataManager* _sharedManager;
     if ([Lang isEmptyString:password]|| [Lang isEmptyString:email]) {
         return;
     }
+    //@step
+    [self setUserResponseDescriptor];
+    //@step
     NSDictionary* parameters = [NSDictionary dictionaryWithObjectsAndKeys:  @"1",@"json",
                                 email,@"email",
                                 password,@"password",
@@ -305,6 +360,260 @@ static XCartDataManager* _sharedManager;
         strongSelf = NULL;
     }];
 }
+
+- (void)logout:(void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
+      failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure{
+    
+    if (self.activeUser == nil) {
+        return;
+    }
+    //@step
+    
+    //@step
+    XBlockBinder* binder = [[XBlockBinder alloc]init];
+    [binder setCompletionBlockWithSuccess:success failure:failure];
+    [self putBlock:binder];
+    __weak  XBlockBinder *weakBinder = binder;
+    
+    //@step
+    NSString* urlString = [Resource getLogoutURLString];
+     [self executeAction:urlString method:RKRequestMethodGET params:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        
+        //@step
+        NSData* data = operation.HTTPRequestOperation.responseData;
+        NSDictionary* response = [Lang paseJSONDatatoArrayOrNSDictionary:data];
+        
+         if (nil == response) {
+             return  ;
+         }
+         if ( StringEqual(Rest_success,   [response valueForKey:Rest_status]))
+         {
+          
+             [self setActiveUser:nil];
+         }else
+         {
+             [Resource showRestResponseErrorMessage:response];
+         }
+
+        //@step
+        __strong __typeof(&*weakBinder)strongSelf = weakBinder;
+        
+        strongSelf.success(operation, mappingResult);
+        
+        [strongSelf free];
+        strongSelf = NULL;
+        
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        
+        __strong __typeof(&*weakBinder)strongSelf = weakBinder;
+        
+        strongSelf.failure(operation,error);
+        [strongSelf free];
+        strongSelf = NULL;
+    }];
+}
+
+
+#pragma mark checkout cart
+
+
+/*
+ @request: h－ttp://127.0.0.1/opencart/index.php?route=checkout/cart&json
+ @response:
+ */
+- (void)getCart: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
+                      failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure{
+    
+    NSDictionary* parameters = [NSDictionary dictionaryWithObjectsAndKeys: @"checkout/cart",@"route", @"1",@"json",
+                                
+                                nil];
+    //@step
+    
+    //@step
+    NSString* urlString = [Resource getCartURLString];
+    
+    [_objectManager getObjectsAtPath:urlString parameters:parameters  success:success failure:failure];
+}
+
+
+ 
+/*
+ @request: h－ttp://127.0.0.1/opencart/index.php?route=checkout/payment_address&json
+ @response:
+ */
+- (void)getPaymentAddress: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
+        failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure{
+    
+    NSDictionary* parameters = [NSDictionary dictionaryWithObjectsAndKeys: @"checkout/payment_address",@"route", @"1",@"json",
+                                
+                                nil];
+    //@step
+    
+    //@step
+    NSString* urlString = [Resource getCartURLString];
+    
+    [_objectManager getObjectsAtPath:urlString parameters:parameters  success:success failure:failure];
+}
+
+/*
+ @request: h ttp://127.0.0.1/o2/index.php?route=checkout/payment_address/save
+ @response:
+ */
+- (void)savePaymentAddress:(NSDictionary*) params success: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
+                           failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure{
+    
+    int iMax = [params count];
+    NSMutableDictionary* parameters = [NSMutableDictionary dictionaryWithCapacity:iMax];
+    [parameters addEntriesFromDictionary:params];
+    [parameters setObject:@"1" forKey:Rest_json];
+    //@step
+    
+    //@step
+    NSString* urlString = StringJoin([Resource getCartURLString],@"route=checkout/payment_address/save") ;
+    
+    [_objectManager  postObject:nil path:urlString parameters:parameters  success:success failure:failure];
+}
+
+
+
+/*
+ @request: h-ttp://127.0.0.1/opencart/index.php?route=checkout/shipping_address&json
+ @response:
+ */
+- (void)getShippingAddress: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
+                  failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure{
+    
+    NSDictionary* parameters = [NSDictionary dictionaryWithObjectsAndKeys: @"checkout/shipping_address",@"route", @"1",@"json",
+                                
+                                nil];
+    //@step
+    
+    //@step
+    NSString* urlString = [Resource getCartURLString];
+    
+    [_objectManager getObjectsAtPath:urlString parameters:parameters  success:success failure:failure];
+}
+
+
+/*
+ @request: h ttp://127.0.0.1/o2/index.php?route=checkout/shipping_address/save
+ @response:
+ */
+- (void)saveShappingAddress:(NSDictionary*) params success: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
+                   failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure{
+    
+    int iMax = [params count];
+    NSMutableDictionary* parameters = [NSMutableDictionary dictionaryWithCapacity:iMax];
+    [parameters addEntriesFromDictionary:params];
+    [parameters setObject:@"1" forKey:Rest_json];
+    //@step
+    
+    //@step
+    NSString* urlString = StringJoin([Resource getCartURLString],@"route=checkout/shipping_address/save") ;
+    
+    [_objectManager  postObject:nil path:urlString parameters:parameters  success:success failure:failure];
+}
+
+
+
+/*
+ @request: h-ttp://127.0.0.1/opencart/index.php?route=checkout/shipping_method&json
+ @response:
+ */
+- (void)getShippingMethod: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
+                   failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure{
+    
+    NSDictionary* parameters = [NSDictionary dictionaryWithObjectsAndKeys: @"checkout/shipping_method",@"route", @"1",@"json",
+                                
+                                nil];
+    //@step
+    
+    //@step
+    NSString* urlString = [Resource getCartURLString];
+    
+    [_objectManager getObjectsAtPath:urlString parameters:parameters  success:success failure:failure];
+}
+
+
+/*
+ @request: h ttp://127.0.0.1/o2/index.php?route=checkout/shipping_method/save
+ @response:
+ */
+- (void)saveShappingMethod:(NSDictionary*) params success: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
+                    failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure{
+    
+    int iMax = [params count];
+    NSMutableDictionary* parameters = [NSMutableDictionary dictionaryWithCapacity:iMax];
+    [parameters addEntriesFromDictionary:params];
+    [parameters setObject:@"1" forKey:Rest_json];
+    //@step
+    
+    //@step
+    NSString* urlString = StringJoin([Resource getCartURLString],@"route=checkout/shipping_method/save") ;
+    
+    [_objectManager  postObject:nil path:urlString parameters:parameters  success:success failure:failure];
+}
+
+
+/*
+ @request: h ttp://127.0.0.1/o2/index.php?route=checkout/payment_method
+ @response:
+ */
+- (void)getPaymentMethod: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
+                  failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure{
+    
+    NSDictionary* parameters = [NSDictionary dictionaryWithObjectsAndKeys: @"checkout/payment_method",@"route", @"1",@"json",
+                                
+                                nil];
+    //@step
+    
+    //@step
+    NSString* urlString = [Resource getCartURLString];
+    
+    [_objectManager getObjectsAtPath:urlString parameters:parameters  success:success failure:failure];
+}
+
+/*
+ @request: h ttp://127.0.0.1/o2/index.php?route=checkout/payment_method/save
+ @response:
+ */
+- (void)savePaymentMethod:(NSDictionary*) params success: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
+                   failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure{
+    
+    int iMax = [params count];
+    NSMutableDictionary* parameters = [NSMutableDictionary dictionaryWithCapacity:iMax];
+    [parameters addEntriesFromDictionary:params];
+    [parameters setObject:@"1" forKey:Rest_json];
+    //@step
+    
+    //@step
+    NSString* urlString = StringJoin([Resource getCartURLString],@"route=checkout/payment_method/save") ;
+    
+    [_objectManager  postObject:nil path:urlString parameters:parameters  success:success failure:failure];
+}
+
+
+/*
+ @request: h ttp://127.0.0.1/o2/index.php?route=checkout/confirm&json
+ @response:
+ */
+- (void)getCheckoutConfirmMethod: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
+                 failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure{
+    
+    NSDictionary* parameters = [NSDictionary dictionaryWithObjectsAndKeys: @"checkout/confirm",@"route", @"1",@"json",
+                                
+                                nil];
+    //@step
+    
+    //@step
+    NSString* urlString = [Resource getCartURLString];
+    
+    [_objectManager getObjectsAtPath:urlString parameters:parameters  success:success failure:failure];
+}
+
+
+
+
 
 
 
