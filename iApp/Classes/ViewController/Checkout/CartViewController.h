@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AppTableViewController.h"
 
-@interface CartViewController : AppTableViewController
+@interface CartViewController : AppTableViewController <ObserverDelegate>
 {
     NSArray* _prodcuts;
 }

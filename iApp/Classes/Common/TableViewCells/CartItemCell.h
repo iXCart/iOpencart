@@ -11,7 +11,7 @@
 
 @interface CartItemCell : CTableViewCell
 {
-
+    NSDictionary* _data;
 }
 @property(nonatomic)IBOutlet UIImageView* extImageView;
 
@@ -20,7 +20,8 @@
 @property(nonatomic)IBOutlet UILabel* labelPrice;
 @property(nonatomic)IBOutlet UILabel* labelQuantity;
 @property(nonatomic)IBOutlet UILabel* labelTotal;
+@property(nonatomic)IBOutlet UIStepper* stepper;
 
-
+@property(nonatomic) id <ObserverDelegate>observer;
 
 @end

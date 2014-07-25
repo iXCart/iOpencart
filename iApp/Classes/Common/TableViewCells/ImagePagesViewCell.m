@@ -45,8 +45,8 @@
 
 #pragma mark setup
 //@override
-- (void)setup:(NSObject*)args{
-    [super setup:args];
+- (void)setArgs:(NSObject*)args{
+    [super setArgs:args];
     
     if (nil == args || ![args isKindOfClass:[NSDictionary class]]) {
         return;

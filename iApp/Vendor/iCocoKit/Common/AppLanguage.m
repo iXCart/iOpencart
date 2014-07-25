@@ -102,8 +102,10 @@ static NSString* _languageKey = nil;
 
 +(NSString *)get:(NSString *)key alter:(NSString *)alternate 
 {
-    
-	return [_bundle localizedStringForKey:key value:alternate table:nil];
+    if (nil ==_bundle) {
+        _bundle = [NSBundle mainBundle];
+    }
+	return [ _bundle  localizedStringForKey:key value:alternate table:nil];
 }
 
 +(NSString*) getPathForResource:(NSString*) name

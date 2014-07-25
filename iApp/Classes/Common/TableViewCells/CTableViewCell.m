@@ -31,7 +31,7 @@
     // Configure the view for the selected state
 }
 
-- (void)setup:(NSObject*)args{
+- (void)setArgs:(NSObject*)args{
 
 }
 @end

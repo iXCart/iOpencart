@@ -46,9 +46,7 @@
          forCellReuseIdentifier:@"CartItemCell"];
     if (nil == _totalsController) {
         _totalsController = (TotalsTableViewController*) [TotalsTableViewController create];
-    }
-     
-}
+    } }
 
 - (void)viewDidLoad
 {
@@ -58,15 +56,42 @@
     
     [self prepareTableview];
    
+    [self registerListener];
     
+}
+
+- (void)viewDidUnload
+{
+    [self unRegisterListener];
+}
+
+- (void)renderLeftButton:(BOOL)inEditMode
+{
+    UIBarButtonItem* button = nil;
+    if (inEditMode) {
+             button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(saveAction:)];
+    }else
+        button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editAction:)];
+
+   
+    [self.navigationItem setLeftBarButtonItem:button animated:true];
 }
 - (void)renderToolBar:(BOOL)visiable
 {
     if (visiable) {
         UIBarButtonItem* button = [[UIBarButtonItem alloc] initWithTitle:@"Checkout" style:UIBarButtonItemStylePlain target:self action:@selector(checkOut:)];
         [self.navigationItem setRightBarButtonItem:button];
+        
+        //[self renderLeftButton:self.editing];
+        return;
+         button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editAction:)];
+        [self.navigationItem setLeftBarButtonItem:button];
+        
     }else
+    {
         [self.navigationItem setRightBarButtonItem:nil];
+        [self.navigationItem setLeftBarButtonItem:nil];
+    }
   
 }
 
@@ -74,6 +99,36 @@
     [super viewWillAppear:animated];
     
     [self loadData];
+    
+    self.editing = false;
+    [[DataModel sharedInstance]resetUnDeleteProducts];
+    
+    
+}
+
+
+- (void)saveAction:(id)sender
+{
+    //@step remove
+    [[DataModel sharedInstance]commitUpdateCart:_prodcuts];
+    //@step update
+    
+    //@step
+    self.editing = false;
+}
+
+- (void)editAction:(id)sender
+{
+    self.editing = true;
+    
+}
+
+- (void)setEditing:(BOOL)editing animated:(BOOL)animated
+{
+    [super setEditing:editing animated:animated];
+    //self.tableView.editing = editing;
+    
+    [self renderLeftButton:editing];
     
     
 }
@@ -115,8 +170,15 @@
     //@step
     NSArray* list = [[_mappingResult dictionary] valueForKey :Cart_totals];
     [_totalsController relaod:list];
-    self.tableView.tableFooterView = _totalsController.view;
+    if (nil == _prodcuts || [_prodcuts count] ==0) {
+        self.tableView.tableFooterView  = nil;
+    }else
+    {
+        self.tableView.tableFooterView = _totalsController.view;
+    }
 }
+
+
 
 - (void)onEventCartUpdated
 {
@@ -135,23 +197,33 @@
     NSString* countString = [NSString stringWithFormat:@"%d", iquantity];
     [Resource notifyCartUpdate:countString];
 }
-- (RKMappingResult*)parseData2Result:(NSData*)data
+
+
+
+- (NSArray*)formatProdcuts:(NSArray*)products
 {
-    //@step
-     NSDictionary* response = [Lang paseJSONDatatoArrayOrNSDictionary:data];
-    RKMappingResult* result = [[RKMappingResult alloc]initWithDictionary:response];
+    NSMutableArray* result = [NSMutableArray arrayWithCapacity: [products count]];
+    for (NSDictionary* item in products) {
+        NSMutableDictionary* dict = [NSMutableDictionary dictionaryWithDictionary: item];
+        [result addObject:dict];
+    }
     return  result;
 }
 
+
+#pragma mark data routine 
+
+#pragma loadData
 - (void)loadData
 {
     [[XCartDataManager  sharedInstance ]getCart: ^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         
         NSLog(@"mappingResult->[%@]", mappingResult);
         
-        _mappingResult =  [self parseData2Result:operation.HTTPRequestOperation.responseData];
+        _mappingResult =  [Resource parseData2Result:operation.HTTPRequestOperation.responseData];
         //@step
-        _prodcuts = [[_mappingResult dictionary] valueForKey :Cart_products];
+        _prodcuts =[self formatProdcuts: [[_mappingResult dictionary] valueForKey :Cart_products]];
+        
         //@step
         [self.tableView reloadData];
         //@step
@@ -165,10 +237,16 @@
     }];
 
 }
+
+#pragma mark data routine loadData
+- (void)removeProduct:(NSDictionary*)item
+{
+    [[DataModel sharedInstance]moveProuctFromCart:item];
+}
 #pragma mark - Table view data source
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    return 151;
+    return 140;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -187,29 +265,59 @@
 {
     NSString* reuseId =@"CartItemCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId forIndexPath:indexPath];
-    
-         //
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId ];
+    //[[CartItemCell alloc]initWithFrame:CGRectZero];
+    //
     NSArray* items = _prodcuts;
 
     int row = indexPath.row;
     NSDictionary* item = [items objectAtIndex:row];
     //cell.textLabel.text = [item valueForKey:Cart_Product_name];
     CartItemCell* theCell = (CartItemCell*)cell;
-    theCell.labelName.text =[item valueForKey:Cart_Product_name];
-    theCell.labelName.numberOfLines = 2;
-    theCell.labelModel.text = [item valueForKey:Cart_Product_model];
-    theCell.labelPrice.text =[item valueForKey:Cart_Product_price];
     
-    theCell.labelQuantity.text = [Lang safeNumberToIntString:[item valueForKey:Cart_Product_quantity] toValue:@""] ;
-    theCell.labelTotal.text = [item valueForKey:Cart_Product_total];
-    //@step
-    NSString* imageUrlString = [item valueForKey:Product_thumb];
-    [Resource assginImageWithSource:theCell.extImageView source:imageUrlString];
-    
-    
+    [theCell setArgs:item];
+    theCell.observer = self ;
+    theCell.indexPath = indexPath;
     return cell;
 }
+
+- (void)removeRow:(UITableViewCell*)sender
+{
+    CartItemCell* cell = (CartItemCell*)sender;
+    NSIndexPath* indexPath = cell.indexPath;
+    NSMutableArray* items = (NSMutableArray*) _prodcuts;
+    int row = indexPath.row;
+    NSDictionary* item = [items objectAtIndex:row];
+    
+    [self removeProduct:item];
+    
+    [items removeObjectAtIndex:row];
+    
+    // Delete the row from the data source
+    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+}
+
+- (void)update:(id)sender  value :(id) value
+{
+    NSLog(@"%@->update:%@,%@",self,sender,value);
+    do{
+        if (nil == sender || ![sender isKindOfClass:[CartItemCell class]]) {
+            break;
+        }
+        if (nil != value && StringEqual(@"delete",value)){
+            [self removeRow:sender];
+            
+        }else
+        { //@ increment or discerment
+            if (!self.editing) {
+                [self setEditing:true animated:true];
+            }
+         }
+        
+    }while(false);
+    
+ }
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSArray* items = _prodcuts;
@@ -219,6 +327,49 @@
     viewController.args = item;
     
     [self.navigationController pushViewController:viewController animated:true];
+    
+}
+
+// Override to support editing the table view.
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        NSMutableArray* items = (NSMutableArray*) _prodcuts;
+        int row = indexPath.row;
+        NSDictionary* item = [items objectAtIndex:row];
+        
+        [self removeProduct:item];
+        
+        [items removeObjectAtIndex:row];
+        
+        // Delete the row from the data source
+         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        
+        //@step
+        [self setEditing:true animated:true];
+        
+    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+    }
+}
+
+
+- (void)onNotifyEventCommpleteUpdateCart:(NSNotification*)notifycation
+{
+    //@step refresh the view
+    [self loadData];
+}
+
+-(void) registerListener {
+    
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onNotifyEventCommpleteUpdateCart: )
+ 												 name: NotifyEventCommpleteUpdateCart object:nil];
+    
+    
+}
+-(void) unRegisterListener{
+	[[NSNotificationCenter defaultCenter] removeObserver:self name:NotifyEventCommpleteUpdateCart object:nil];
     
 }
 

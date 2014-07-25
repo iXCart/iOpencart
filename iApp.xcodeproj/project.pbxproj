@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9106EB92197FA99A0072B16A /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9106EB8F197FA99A0072B16A /* UIScrollView+SVInfiniteScrolling.m */; };
+		9106EB93197FA99A0072B16A /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9106EB91197FA99A0072B16A /* UIScrollView+SVPullToRefresh.m */; };
 		910EFD7419498AAD00FD4378 /* XCartDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 910EFD7319498AAD00FD4378 /* XCartDataManager.m */; };
 		910EFD7D1949ADCB00FD4378 /* AppTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 910EFD7C1949ADCB00FD4378 /* AppTableViewController.m */; };
 		9110901C192CBC4F009747E5 /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9110901B192CBC4F009747E5 /* AppManager.m */; };
@@ -175,6 +177,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9106EB8D197FA99A0072B16A /* SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPullToRefresh.h; sourceTree = "<group>"; };
+		9106EB8E197FA99A0072B16A /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
+		9106EB8F197FA99A0072B16A /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
+		9106EB90197FA99A0072B16A /* UIScrollView+SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVPullToRefresh.h"; sourceTree = "<group>"; };
+		9106EB91197FA99A0072B16A /* UIScrollView+SVPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVPullToRefresh.m"; sourceTree = "<group>"; };
 		910EFD7219498AAD00FD4378 /* XCartDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCartDataManager.h; sourceTree = "<group>"; };
 		910EFD7319498AAD00FD4378 /* XCartDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCartDataManager.m; sourceTree = "<group>"; };
 		910EFD7519498AC000FD4378 /* XCartKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCartKit.h; sourceTree = "<group>"; };
@@ -403,6 +410,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9106EB8C197FA99A0072B16A /* SVPullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				9106EB8D197FA99A0072B16A /* SVPullToRefresh.h */,
+				9106EB8E197FA99A0072B16A /* UIScrollView+SVInfiniteScrolling.h */,
+				9106EB8F197FA99A0072B16A /* UIScrollView+SVInfiniteScrolling.m */,
+				9106EB90197FA99A0072B16A /* UIScrollView+SVPullToRefresh.h */,
+				9106EB91197FA99A0072B16A /* UIScrollView+SVPullToRefresh.m */,
+			);
+			name = SVPullToRefresh;
+			path = SVPullToRefresh/SVPullToRefresh;
+			sourceTree = "<group>";
+		};
 		910EFD6E19498A8B00FD4378 /* XCartKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -767,6 +787,7 @@
 		91C6A726192C9E5200903D95 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				9106EB8C197FA99A0072B16A /* SVPullToRefresh */,
 				917396471971032E008C42C7 /* Pickers */,
 				919A25F41956A2EA00F251E3 /* SDWebImage */,
 				910EFD6E19498A8B00FD4378 /* XCartKit */,
@@ -1100,8 +1121,10 @@
 				91C6A723192C9E3900903D95 /* CWebViewController.m in Sources */,
 				915326001950581D00E6E98F /* CategoriesViewController.m in Sources */,
 				9110901C192CBC4F009747E5 /* AppManager.m in Sources */,
+				9106EB93197FA99A0072B16A /* UIScrollView+SVPullToRefresh.m in Sources */,
 				915326071950581D00E6E98F /* SettingsViewController.m in Sources */,
 				9156382F195ABABC00A3E6EB /* XCartAppFactory.m in Sources */,
+				9106EB92197FA99A0072B16A /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

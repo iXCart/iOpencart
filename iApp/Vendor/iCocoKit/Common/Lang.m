@@ -78,6 +78,19 @@ BOOL    StringEqual( const NSString*  aString  ,  const NSString*   bString)
     
 }
 
++ (double)safeStringToDouble:(NSString*)value toValue:(double)toValue
+{
+    if ([Lang isEmptyString:value]) {
+        return toValue;
+    }
+    if ([Lang isContainsString:value token:@"$"]) {
+        NSRange range = [value rangeOfString:@"$"];
+        NSString* numberString = [value substringFromIndex: range.location + range.length];
+        return [numberString doubleValue];
+    }
+    return [value doubleValue];
+}
+
 +(NSString*) trimString:(NSString*) value
 {
 	if (nil == value) {

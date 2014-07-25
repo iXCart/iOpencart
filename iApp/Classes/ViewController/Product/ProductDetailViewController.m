@@ -306,7 +306,7 @@
          {
               CTableViewCell* theCell = (CTableViewCell*) cell;
              
-             [theCell setup:_resultDictionary];
+             [theCell setArgs:_resultDictionary];
              
              return cell;
               break;

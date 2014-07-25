@@ -29,6 +29,8 @@
     extern  NSString* Product_images;
     extern  NSString* Product_quantity;
 
+    extern  NSString* Product_quantity_orignal;
+
     extern  NSString* Product_Discounts_price;
     extern  NSString* Product_Discounts_quantity;
     extern  NSString* Product_text_discount;
@@ -38,6 +40,8 @@
 
     extern  NSString* Cart_products;
     extern  NSString* Cart_totals;
+    extern  NSString* CartProdcut_key;
+
 
     extern  NSString* Cart_Product_name;
     extern  NSString* Cart_Product_model;

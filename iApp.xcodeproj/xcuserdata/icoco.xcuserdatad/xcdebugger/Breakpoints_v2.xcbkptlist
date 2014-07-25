@@ -249,22 +249,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "iApp/Classes/AppDelegate.m"
-            timestampString = "427179486.122276"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "-applicationDidFinishLaunching:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "iApp/Vendor/XCartKit/XCartDataManager.m"
             timestampString = "427127754.713439"
             startingColumnNumber = "9223372036854775807"
@@ -314,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iApp/Classes/Model/DataModel.m"
-            timestampString = "427182825.415473"
+            timestampString = "427788729.753941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "279"
+            endingLineNumber = "279"
             landmarkName = "-login:password:"
             landmarkType = "5">
          </BreakpointContent>
@@ -330,13 +314,57 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iApp/Classes/Model/DataModel.m"
-            timestampString = "427182825.415473"
+            timestampString = "427788729.753941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "-auotoLogin"
+            startingLineNumber = "304"
+            endingLineNumber = "304"
+            landmarkName = "-login:password:"
             landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__28-[DataModel login:password:]_block_invoke"
+                  moduleName = "iApp"
+                  urlString = "file:///Users/icoco/WorkSpace/prj/iPhone/iXCart/iOSApp/iApp/Classes/Model/DataModel.m"
+                  timestampString = "427972351.535215"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "304"
+                  endingLineNumber = "304"
+                  offsetFromSymbolStart = "538">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__28-[DataModel login:password:]_block_invoke"
+                  moduleName = "iApp"
+                  urlString = "file:///Users/icoco/WorkSpace/prj/iPhone/iXCart/iOSApp/iApp/Classes/Model/DataModel.m"
+                  timestampString = "427972351.535426"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "304"
+                  endingLineNumber = "304"
+                  offsetFromSymbolStart = "664">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__28-[DataModel login:password:]_block_invoke127"
+                  moduleName = "iApp"
+                  urlString = "file:///Users/icoco/WorkSpace/prj/iPhone/iXCart/iOSApp/iApp/Classes/Model/DataModel.m"
+                  timestampString = "427972351.535622"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "304"
+                  endingLineNumber = "304"
+                  offsetFromSymbolStart = "82">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -346,11 +374,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iApp/Classes/Model/DataModel.m"
-            timestampString = "427182825.415473"
+            timestampString = "427788729.753941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "277"
+            endingLineNumber = "277"
             landmarkName = "-login:password:"
             landmarkType = "5">
          </BreakpointContent>
@@ -410,11 +438,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iApp/Classes/ViewController/Checkout/ConfirmViewController.m"
-            timestampString = "427191350.767571"
+            timestampString = "427622183.845447"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
+            startingLineNumber = "196"
+            endingLineNumber = "196"
             landmarkName = "-loadData"
             landmarkType = "5">
          </BreakpointContent>
@@ -426,11 +454,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iApp/Classes/ViewController/Checkout/ConfirmViewController.m"
-            timestampString = "427191350.767571"
+            timestampString = "427622183.845447"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
             landmarkName = "-loadDataFromLocal"
             landmarkType = "5">
          </BreakpointContent>
@@ -490,11 +518,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iApp/Classes/Model/DataModel.m"
-            timestampString = "427182825.415473"
+            timestampString = "427785287.820101"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "-submit2ServerCart:"
             landmarkType = "5">
          </BreakpointContent>
@@ -506,12 +534,76 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iApp/Classes/Resource.m"
-            timestampString = "427186121.01223"
+            timestampString = "427789843.221027"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "163"
-            endingLineNumber = "163"
-            landmarkName = "+showRestResponseErrorMessage:"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "+fomratDictionary2String:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iApp/Classes/Resource.m"
+            timestampString = "427785287.820101"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "+isVersion2"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iApp/Classes/ViewController/Checkout/PaymentMethodViewController.m"
+            timestampString = "427450328.975997"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "-nextStep:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iApp/Classes/Common/TableViewCells/CartItemCell.m"
+            timestampString = "427717682.845686"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "-onValueChanged:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iApp/Classes/Common/TableViewCells/CartItemCell.m"
+            timestampString = "427623470.059831"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "-renderView"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -522,12 +614,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iApp/Classes/ViewController/Checkout/CartViewController.m"
-            timestampString = "427190164.14109"
+            timestampString = "427788956.790671"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
-            landmarkName = "-reloadTotalsView"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "-renderLeftButton:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -537,13 +629,61 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "iApp/Classes/ViewController/Checkout/TotalsTableViewController.m"
-            timestampString = "427190896.996024"
+            filePath = "iApp/Classes/ViewController/Checkout/CartViewController.m"
+            timestampString = "427789843.221027"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
-            landmarkName = "-tableView:numberOfRowsInSection:"
+            startingLineNumber = "302"
+            endingLineNumber = "302"
+            landmarkName = "-update:value:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iApp/Classes/ViewController/Checkout/CartViewController.m"
+            timestampString = "427788956.790671"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
+            landmarkName = "-saveAction:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iApp/Classes/ViewController/Category/CategoriesViewController.m"
+            timestampString = "427972540.310642"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
+            landmarkName = "-searchBarCancelButtonClicked:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iApp/Classes/ViewController/Category/CategoriesViewController.m"
+            timestampString = "427972351.459272"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

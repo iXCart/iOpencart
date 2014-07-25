@@ -9,6 +9,13 @@
 #import "DataModel.h"
 #import "XCartDataManager.h"
 
+@interface DataModel ()
+{
+    
+}
+@property (atomic)int taskCount;
+@end
+
 @implementation DataModel
 
 + (DataModel*)sharedInstance{
@@ -21,6 +28,7 @@
     return sharedInstance;
 }
 
+#pragma mark add proudct to cart
 - (void)add2Cart:(NSDictionary*)dict{
    
     //@step
@@ -89,9 +97,182 @@
 
 }
 
+#pragma remove product from cart
+- (void)moveProuctFromCart:(NSDictionary*)item
+{
+    if (nil == _unDeleteProducts) {
+        _unDeleteProducts =[NSMutableArray array];
+    }
+    [_unDeleteProducts addObject:item];
+}
+
+- (void)batchRemoveProdcutsFromCart
+{
+    if (nil == _unDeleteProducts || [_unDeleteProducts count]<=0) {
+        return;
+    }
+    for (NSDictionary* item in _unDeleteProducts) {
+        if (item) {
+            [self removeProductFromServerCart:item];
+            //break;
+        }
+    }
+    
+    [_unDeleteProducts removeAllObjects];
+}
+
+- (void)resetUnDeleteProducts
+{
+    if (nil == _unDeleteProducts || [_unDeleteProducts count]<=0) {
+        return;
+    }
+    [_unDeleteProducts removeAllObjects];
+}
+
+
+- (void)removeProductFromServerCart:(NSDictionary*)product
+{
+    //@ index.php?route=checkout/cart&remove=29:
+    //@step
+    NSString* productKey = [product valueForKey:CartProdcut_key];
+    NSDictionary* params =[NSDictionary dictionaryWithObjectsAndKeys:
+                           TRUE_ONE,Rest_json,
+                           productKey,@"remove",
+                           nil];
+    NSString* urlString = [Resource getCheckoutCartURLString];
+    //urlString = [NSString stringWithFormat:@"%@&remove=%@", urlString, productKey];
+    //@step
+    [[XCartDataManager sharedInstance] executeAction:urlString method:RKRequestMethodGET params:params success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        //@step
+        [self finishOneTask];
+        //@step
+        NSDictionary* response = [Lang paseJSONDatatoArrayOrNSDictionary: operation.HTTPRequestOperation.responseData];
+        if (nil == response) {
+            return  ;
+        }
+        if ( StringEqual(Rest_success,   [response valueForKey:Rest_status]))
+        {
+            
+        }else
+        {
+            [Resource showRestResponseErrorMessage:response];
+        }
+       
+        
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        NSString* buf = operation.HTTPRequestOperation.responseString;
+        [CDialogViewManager showMessageView:[error localizedDescription] message:buf delayAutoHide: 3];
+        //@step
+        [self finishOneTask];
+        //@step
+        
+    }];
+}
+
+#pragma
+- (void)startTaskCount:(int)i
+{
+    self.taskCount = i;
+}
+
+- (void)finishOneTask
+{
+    @synchronized(self){
+        int i = self.taskCount;
+        self.taskCount = i -1;
+    }
+    
+    if (0 <= self.taskCount ) {
+            [self performSelector:@selector(notifyWhileFinishTask) withObject:nil afterDelay:0.5];
+    }
+    
+}
+- (void)notifyWhileFinishTask
+{
+     [[NSNotificationCenter defaultCenter]postNotificationName:NotifyEventCommpleteUpdateCart object:nil];
+}
+
+#pragma mark commitUpdateCart remove and update quanlity
+- (void) commitUpdateCart:(NSArray*)list
+{
+    int iTaskCount = 0;
+    
+    if (nil != _unDeleteProducts) {
+        iTaskCount = [_unDeleteProducts count];
+    }
+    if (nil != list) {
+        iTaskCount = iTaskCount + [list count];
+    }
+    [self startTaskCount:iTaskCount];
+    //@step
+    [self batchRemoveProdcutsFromCart];
+    [self applyUpdateCart:list];
+}
+
+#pragma mark updateCart
+- (void)applyUpdateCart:(NSArray*)list
+{
+    if (nil == list || [list count]<=0) {
+        return;
+    }
+    NSMutableDictionary* updatedProducts = [NSMutableDictionary dictionary];
+    for (NSDictionary* item in list) {
+        if (item) {
+            NSNumber* originalValue = [item valueForKey:Product_quantity_orignal];
+            if (nil != originalValue) {
+                //@step it was update so then need update db
+                NSNumber* value = [item valueForKey:Product_quantity];
+                NSString* key = [item valueForKey:CartProdcut_key];
+                NSString* name = [NSString stringWithFormat:@"quantity[%@]", key];
+                [updatedProducts setValue:value forKey:name];
+            }
+         }
+    }
+    //@step
+    if ([updatedProducts count]>0) {
+        [self persistentUpdateProdcutQuantity:updatedProducts];
+    }
+    
+}
+
+- (void)persistentUpdateProdcutQuantity:(NSDictionary*)products
+{
+    //@ index.php?route=checkout/cart |post
+    //@step
+   
+    NSMutableDictionary * params = [NSMutableDictionary dictionaryWithDictionary:products];
+    [params setValue:TRUE_ONE forKey:Rest_json];
+  
+    NSString* urlString = [Resource getCheckoutCartURLString];
+    
+    //@step
+    [[XCartDataManager sharedInstance] executeAction:urlString method:RKRequestMethodPOST params:params success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        //@step
+        [self finishOneTask];
+        //@step
+        NSDictionary* response = [Lang paseJSONDatatoArrayOrNSDictionary: operation.HTTPRequestOperation.responseData];
+        if (nil == response) {
+            return  ;
+        }
+        if ( StringEqual(Rest_success,   [response valueForKey:Rest_status]))
+        {
+            
+        }else
+        {
+            [Resource showRestResponseErrorMessage:response];
+        }
+        
+        
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        NSString* buf = operation.HTTPRequestOperation.responseString;
+        [CDialogViewManager showMessageView:[error localizedDescription] message:buf delayAutoHide: 3];
+        //@step
+        [self finishOneTask];
+        //@step
+    }];
+}
+
 #pragma Account
-
-
 - (void)login:(NSString*) email password:(NSString*)password{
     
     if ([Lang isEmptyString:email] || [Lang isEmptyString:password]) {

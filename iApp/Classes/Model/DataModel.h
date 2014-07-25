@@ -11,6 +11,10 @@
 @interface DataModel : NSObject
 {
     NSMutableArray*  _localCart;
+    
+    NSMutableArray* _unDeleteProducts;
+    
+     
 }
 
 + (DataModel*)sharedInstance;
@@ -18,6 +22,14 @@
 
 - (void)add2Cart:(NSDictionary*)dict;
 - (NSArray*)getProudctsFromCart;
+
+- (void)moveProuctFromCart:(NSDictionary*)item;
+//- (void)batchRemoveProdcutsFromCart;
+- (void)resetUnDeleteProducts;
+
+- (void)commitUpdateCart:(NSArray*)list;
+
+
 
 - (void)auotoLogin;
 

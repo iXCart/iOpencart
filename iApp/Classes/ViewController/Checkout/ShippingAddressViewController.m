@@ -102,7 +102,7 @@ static NSString* cellId = @"AddressCell";
                            address_id, CheckoutPaymentAddress_address_id,
                            nil];
     //@step
-    [[XCartDataManager sharedInstance] saveShappingAddress:params success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+    [[XCartDataManager sharedInstance] saveShippingAddress:params success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         NSDictionary* response = [Lang paseJSONDatatoArrayOrNSDictionary: operation.HTTPRequestOperation.responseData];
         if (nil == response) {
             return  ;

@@ -27,6 +27,8 @@
     const NSString* Product_images = @"images";
     const NSString* Product_quantity = @"quantity";
 
+    const NSString* Product_quantity_orignal = @"quantity_orignal";
+
     const NSString* Product_Discounts_price = @"price";
     const NSString* Product_Discounts_quantity = @"quantity";
     const NSString* Product_text_discount = @"text_discount";
@@ -36,6 +38,7 @@
 
     const NSString* Cart_products = @"products";
     const NSString* Cart_totals = @"totals";
+    const NSString* CartProdcut_key = @"key";
 
     const NSString* Cart_Product_name = @"name";
     const NSString* Cart_Product_model = @"model";

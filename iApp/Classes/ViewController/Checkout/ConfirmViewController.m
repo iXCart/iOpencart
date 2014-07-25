@@ -138,8 +138,9 @@
         
         
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        
-        [CDialogViewManager showMessageView:@"" message:[error localizedDescription] delayAutoHide:-1];
+        NSString* buf = operation.HTTPRequestOperation.responseString;
+       
+        [CDialogViewManager showMessageView:[error localizedDescription] message:buf delayAutoHide:-1];
     }];
     
 }

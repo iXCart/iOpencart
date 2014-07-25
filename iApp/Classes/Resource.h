@@ -17,6 +17,8 @@
 
 extern  NSString* NotifyEventCommpleteAddCart ;
 
+extern  NSString* NotifyEventCommpleteUpdateCart;
+
 @interface Resource : NSObject
 
 
@@ -24,11 +26,15 @@ extern  NSString* NotifyEventCommpleteAddCart ;
  
 + (NSString*)getBaseURLString;
 
++ (BOOL)isVersion2;
+
 + (NSString*)getIndexURLString;
 
 + (NSString*)getCategoriesURLString;
 
 + (NSString*)getProductsURLString; 
+
++ (NSString*)getSearchProductsURLString;
 
 + (NSString*)getLoginURLString;
 
@@ -36,11 +42,23 @@ extern  NSString* NotifyEventCommpleteAddCart ;
 
 + (NSString*)getAddCartURLString;
 
++ (NSString*)getCheckoutCartURLString;
+
++ (NSString*)getSavePaymentAddressURLString;
+
++ (NSString*)getSaveShippingAddressURLString;
+
++ (NSString*)getSaveShippingMethodURLString;
+
++ (NSString*)getSavePaymentMethodURLString;
+
 + (NSString*)getPaymentConfirmURLString;
 
 + (NSString*)getCheckoutSuccessURLString;
 
 + (NSString*)getLogoutURLString;
+
++ (RKMappingResult*)parseData2Result:(NSData*)data;
 
 + (NSArray*)getImagesDefsFromProductResult:(NSDictionary*)dict;
 

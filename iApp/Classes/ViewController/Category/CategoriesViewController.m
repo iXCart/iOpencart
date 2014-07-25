@@ -8,7 +8,9 @@
 
 #import "CategoriesViewController.h"
 #import "XCartDataManager.h"
+#import "SVPullToRefresh.h"
 #import "ProductsViewController.h"
+#import "ProductDetailViewController.h"
 
 @interface CategoriesViewController ()
 
@@ -30,6 +32,10 @@
     UINib *nib = [UINib nibWithNibName:@"TableCells" bundle:nil];
     [self.tableView registerNib:nib
          forCellReuseIdentifier:@"Cell"];
+    
+   // self.tableView.tableHeaderView = self.searchBar;
+    UIEdgeInsets inset = UIEdgeInsetsMake(44+20, 0, 0, 0);
+    self.tableView.contentInset = inset;
 }
 
 - (void)viewDidLoad
@@ -39,7 +45,10 @@
     self.title =@"Categories";
     [self prepareTableview];
    // [[XCartDataManager sharedManager] getCategories  ];
-    [self loadData];
+   // [self loadData];
+    
+    [self hookPullDownRefresh];
+    [self.tableView triggerPullToRefresh];
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,20 +57,64 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)searchData:(NSDictionary*) parmas
+{
+    if (nil == parmas || [parmas count]<=0) {
+        return;
+    }
+    NSMutableDictionary * params = [NSMutableDictionary dictionaryWithDictionary:parmas];
+    [params setValue:TRUE_ONE forKey:Rest_json];
+    
+    NSString* urlString = [Resource getSearchProductsURLString];
+    
+    //@step
+    [[XCartDataManager sharedInstance] executeAction:urlString method:RKRequestMethodGET params:params success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        //@step
+        RKMappingResult* rkResult =  [Resource parseData2Result:operation.HTTPRequestOperation.responseData];
+        NSArray* list  = [[rkResult dictionary] valueForKey :Cart_products] ;
+        NSDictionary* dict =[NSDictionary dictionaryWithObjects:list forKeys:list];
+        //@step
+        RKMappingResult* result = [[RKMappingResult alloc]initWithDictionary:dict];
+
+        _mappingResult = result;
+        
+        //@step
+        [self.tableView reloadData];
+        
+        
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        NSString* buf = operation.HTTPRequestOperation.responseString;
+        [CDialogViewManager showMessageView:[error localizedDescription] message:buf delayAutoHide: 3];
+        //@step
+        _mappingResult = nil;
+        //@step
+        [self.tableView reloadData];
+        //@step
+    }];
+    
+}
+
+
 - (void)loadData
 {
+    __weak CategoriesViewController *weakSelf = self;
     [[XCartDataManager  sharedInstance ]getCategories:nil success: ^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         
         NSLog(@"mappingResult->[%@]", mappingResult);
         
         _mappingResult = mappingResult;
         //@step
-        [self.tableView reloadData];
+        [weakSelf.tableView reloadData];
+        
+        [weakSelf stopPullToRefreshAnimation];
+        
         
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"An Error Has Occurred" message:[error localizedDescription] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         [alertView show];
+        
+        [weakSelf stopPullToRefreshAnimation];
     }];
 
 }
@@ -114,64 +167,82 @@
     NSArray* items = [_mappingResult array];
     int row = indexPath.row;
     NSDictionary* item = [items objectAtIndex:row];
-  //  NSString* key = (NSString*) [item valueForKey:@"key"];
-    //@step
-    //ProductsViewController* viewController = [[ProductsViewController alloc]initWithNibName:@"ProductsViewController" bundle:nil];
     
-    AppViewController * viewController = [ProductsViewController create];
-    viewController.args = item;
     
+    AppViewController* viewController = nil;
+    if ([item isKindOfClass:[NSManagedObject class]]) {
+        viewController = [ProductsViewController create];
+        viewController.args = item;
+
+    }
+    else
+    {
+        NSString* product_id = (NSString*) [item objectForKey: Product_product_id];
+        if (![Lang isEmptyString:product_id]) {
+            viewController = [ProductDetailViewController create];
+            viewController.args = item;
+         }
+    }
+         
     [self.navigationController pushViewController:viewController animated:true];
     
 }
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
 
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- } else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar;
+{
+    searchBar.showsCancelButton= true;
+    return  true;
+}
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar;
+{
+    searchBar.showsCancelButton = false;
+}
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar;
+{
+    
+    NSString* keywords =  searchBar.text ;
+    if ([Lang isEmptyString:keywords]) {
+        [searchBar resignFirstResponder];
+        [self loadData];
+        return;
+    }
+    NSDictionary* params = [NSDictionary dictionaryWithObjectsAndKeys:
+                            keywords, @"search",nil];
+    
+    [self searchData:params];
+    
+    [searchBar resignFirstResponder];
+}
 
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar;
+{
+    [searchBar resignFirstResponder];
+    //[self loadData];
+}
 
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
+#pragma mark pull to refresh 
+- (void)hookPullDownRefresh
+{
+    __weak CategoriesViewController *weakSelf = self;
+    
+    // setup pull-to-refresh
+    [self.tableView addPullToRefreshWithActionHandler:^{
+        weakSelf.searchBar.text = @"";
+        [weakSelf  loadData];
+    }];
+    
+    [self.tableView.pullToRefreshView  setTitle:NSLocalizedString(@"Release to load all categories...",@"") forState:(SVPullToRefreshStateTriggered)] ;
+    
+    self.tableView.pullToRefreshView.arrowColor = [UIColor grayColor];
+}
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
-
-
+-(void)stopPullToRefreshAnimation
+{
+    
+    [self.tableView.pullToRefreshView stopAnimating]; // call to stop animation
+    return;
+    UIEdgeInsets inset = UIEdgeInsetsMake(44, 0, 0, 0);
+    self.tableView.contentInset = inset;
+    self.tableView.scrollIndicatorInsets = inset;
+}
 @end

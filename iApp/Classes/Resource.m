@@ -12,6 +12,8 @@
 
 NSString* NotifyEventCommpleteAddCart =@"NotifyEventCommpleteAddCart";
 
+NSString* NotifyEventCommpleteUpdateCart =@"NotifyEventCommpleteUpdateCart";
+
 @implementation Resource
 
 
@@ -25,12 +27,15 @@ NSString* NotifyEventCommpleteAddCart =@"NotifyEventCommpleteAddCart";
 
 + (NSString*) getBaseURLString
 {
+    return NSLocalizedString(@"WebSerivceEntry", @"");
     return  AppLocalizedString2(@"WebSerivceEntry",@"http://127.0.0.1/o2");
     
-    return @"http://127.0.0.1/opencart";
-    return @"http://127.0.0.1/o2";
-    
-    
+}
+
++ (BOOL)isVersion2
+{
+    NSString* verion = NSLocalizedString(@"WebSerivceVersion",@"2");
+    return StringEqual(@"2", verion);
 }
 
 + (NSString*)getIndexURLString
@@ -52,6 +57,13 @@ NSString* NotifyEventCommpleteAddCart =@"NotifyEventCommpleteAddCart";
   
 }
 
++ (NSString*)getSearchProductsURLString
+{
+    return StringJoin([Resource getBaseURLString],    @"/index.php?route=product/search");
+    
+}
+
+
 + (NSString*)getLoginURLString
 {
      return StringJoin([Resource getBaseURLString],    @"/index.php?route=account/login");
@@ -70,6 +82,47 @@ NSString* NotifyEventCommpleteAddCart =@"NotifyEventCommpleteAddCart";
     return StringJoin([Resource getIndexURLString], @"route=checkout/cart/add");
 }
 
++ (NSString*)getCheckoutCartURLString
+{
+    return StringJoin([Resource getIndexURLString], @"route=checkout/cart");
+}
+
++ (NSString*)getSavePaymentAddressURLString
+{
+    if ([Resource isVersion2]) {
+        return StringJoin([Resource getCartURLString],@"route=checkout/payment_address/save") ;
+    }else
+        return StringJoin([Resource getCartURLString],@"route=checkout/payment_address/validate") ;
+    
+}
+
++ (NSString*)getSaveShippingAddressURLString
+{
+    NSString* result = [Resource isVersion2] ?
+            @"route=checkout/shipping_address/save"  : @"route=checkout/shipping_address/validate"  ;
+    
+    return StringJoin([Resource getIndexURLString], result);
+}
+
+
++ (NSString*)getSaveShippingMethodURLString
+{
+    NSString* result = [Resource isVersion2] ?
+    @"route=checkout/shipping_method/save"  : @"route=checkout/shipping_method/validate"  ;
+    
+    return StringJoin([Resource getIndexURLString], result);
+}
+
++ (NSString*)getSavePaymentMethodURLString
+{
+    NSString* result = [Resource isVersion2] ?
+    @"route=checkout/payment_method/save"  : @"route=checkout/payment_method/validate"  ;
+    
+    return StringJoin([Resource getIndexURLString], result);
+}
+
+
+
 + (NSString*)getPaymentConfirmURLString
 {
     return StringJoin([Resource getIndexURLString], @"route=payment/cod/confirm");
@@ -84,6 +137,14 @@ NSString* NotifyEventCommpleteAddCart =@"NotifyEventCommpleteAddCart";
 {
     return StringJoin([Resource getIndexURLString], @"route=account/logout");
 }
+
++ (RKMappingResult*)parseData2Result:(NSData*)data
+{
+    //@step
+    NSDictionary* response = [Lang paseJSONDatatoArrayOrNSDictionary:data];
+    RKMappingResult* result = [[RKMappingResult alloc]initWithDictionary:response];
+    return  result;
+};
 
 
 + (NSDictionary*)dictonaryWithImagePair:(NSString*)name value:(NSString*)value{

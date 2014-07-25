@@ -5,20 +5,28 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>E89328AA-D7A0-425B-8B8C-B2FA56280CCE</string>
+	<string>F02733A5-7AD8-48CD-9660-4397AE07213B</string>
 	<key>IDESourceControlProjectName</key>
 	<string>iApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>98C79055-695F-4F5D-9A8D-41C297CFB644</key>
+		<string>https://github.com/samvermette/SVPullToRefresh.git</string>
 		<key>D07B7B6D-D68E-475A-94F1-FB97E258C00F</key>
 		<string>https://github.com/iXCart/iOSApp.git</string>
+		<key>FE9A1295-957B-4692-BDE0-0F328A5796F3</key>
+		<string>https://github.com/skywinder/ActionSheetPicker-3.0.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>iApp.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>98C79055-695F-4F5D-9A8D-41C297CFB644</key>
+		<string>../../iApp/Vendor/SVPullToRefresh</string>
 		<key>D07B7B6D-D68E-475A-94F1-FB97E258C00F</key>
 		<string>../..</string>
+		<key>FE9A1295-957B-4692-BDE0-0F328A5796F3</key>
+		<string>../../iApp/Vendor/ActionSheetPicker-3.0</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/iXCart/iOSApp.git</string>
@@ -32,9 +40,25 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FE9A1295-957B-4692-BDE0-0F328A5796F3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ActionSheetPicker-3.0</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>D07B7B6D-D68E-475A-94F1-FB97E258C00F</string>
 			<key>IDESourceControlWCCName</key>
 			<string>iOSApp</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>98C79055-695F-4F5D-9A8D-41C297CFB644</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SVPullToRefresh</string>
 		</dict>
 	</array>
 </dict>

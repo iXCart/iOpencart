@@ -1,3 +1,6 @@
 [submodule "iApp/Vendor/ActionSheetPicker-3.0"]
 	path = iApp/Vendor/ActionSheetPicker-3.0
 	url = https://github.com/skywinder/ActionSheetPicker-3.0.git
+[submodule "iApp/Vendor/SVPullToRefresh"]
+	path = iApp/Vendor/SVPullToRefresh
+	url = https://github.com/samvermette/SVPullToRefresh.git

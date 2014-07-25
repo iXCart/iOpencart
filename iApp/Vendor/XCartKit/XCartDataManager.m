@@ -469,7 +469,7 @@ static XCartDataManager* _sharedManager;
     //@step
     
     //@step
-    NSString* urlString = StringJoin([Resource getCartURLString],@"route=checkout/payment_address/save") ;
+    NSString* urlString = [Resource getSavePaymentAddressURLString];
     
     [_objectManager  postObject:nil path:urlString parameters:parameters  success:success failure:failure];
 }
@@ -499,7 +499,7 @@ static XCartDataManager* _sharedManager;
  @request: h ttp://127.0.0.1/o2/index.php?route=checkout/shipping_address/save
  @response:
  */
-- (void)saveShappingAddress:(NSDictionary*) params success: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
+- (void)saveShippingAddress:(NSDictionary*) params success: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
                    failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure{
     
     int iMax = [params count];
@@ -509,7 +509,7 @@ static XCartDataManager* _sharedManager;
     //@step
     
     //@step
-    NSString* urlString = StringJoin([Resource getCartURLString],@"route=checkout/shipping_address/save") ;
+    NSString* urlString = [Resource getSaveShippingAddressURLString];
     
     [_objectManager  postObject:nil path:urlString parameters:parameters  success:success failure:failure];
 }
@@ -539,7 +539,7 @@ static XCartDataManager* _sharedManager;
  @request: h ttp://127.0.0.1/o2/index.php?route=checkout/shipping_method/save
  @response:
  */
-- (void)saveShappingMethod:(NSDictionary*) params success: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
+- (void)saveShippingMethod:(NSDictionary*) params success: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
                     failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure{
     
     int iMax = [params count];
@@ -549,7 +549,7 @@ static XCartDataManager* _sharedManager;
     //@step
     
     //@step
-    NSString* urlString = StringJoin([Resource getCartURLString],@"route=checkout/shipping_method/save") ;
+    NSString* urlString = [Resource getSaveShippingMethodURLString];
     
     [_objectManager  postObject:nil path:urlString parameters:parameters  success:success failure:failure];
 }
@@ -587,7 +587,7 @@ static XCartDataManager* _sharedManager;
     //@step
     
     //@step
-    NSString* urlString = StringJoin([Resource getCartURLString],@"route=checkout/payment_method/save") ;
+    NSString* urlString = [Resource getSavePaymentMethodURLString];
     
     [_objectManager  postObject:nil path:urlString parameters:parameters  success:success failure:failure];
 }

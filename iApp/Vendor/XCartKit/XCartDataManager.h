@@ -58,13 +58,13 @@
 - (void)getShippingAddress: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
                    failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure;
 
-- (void)saveShappingAddress:(NSDictionary*) params success: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
+- (void)saveShippingAddress:(NSDictionary*) params success: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
                     failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure;
 
 - (void)getShippingMethod: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
                   failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure;
 
-- (void)saveShappingMethod:(NSDictionary*) params success: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
+- (void)saveShippingMethod:(NSDictionary*) params success: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success
                    failure:(void (^)(RKObjectRequestOperation *operation, NSError *error))failure;
 
 - (void)getPaymentMethod: (void (^)(RKObjectRequestOperation *operation, RKMappingResult *mappingResult))success

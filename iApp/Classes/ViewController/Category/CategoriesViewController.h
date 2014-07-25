@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "AppTableViewController.h"
 
-@interface CategoriesViewController : AppTableViewController
+@interface CategoriesViewController : AppTableViewController <UISearchBarDelegate>
 {
    
     
 }
+
+@property(nonatomic)IBOutlet UISearchBar* searchBar;
 @end
