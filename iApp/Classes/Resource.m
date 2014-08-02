@@ -96,6 +96,12 @@ NSString* NotifyEventCommpleteUpdateCart =@"NotifyEventCommpleteUpdateCart";
     
 }
 
++ (NSString*)getAddPaymentAddressURLString
+{
+    return StringJoin([Resource getIndexURLString],@"route=checkout/payment_address/validate");
+}
+
+
 + (NSString*)getSaveShippingAddressURLString
 {
     NSString* result = [Resource isVersion2] ?

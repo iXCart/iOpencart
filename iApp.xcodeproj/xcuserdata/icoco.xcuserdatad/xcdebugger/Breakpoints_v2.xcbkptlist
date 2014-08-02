@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iApp/Classes/ViewController/Setting/SettingsViewController.m"
-            timestampString = "427112511.79573"
+            timestampString = "428668710.823105"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
@@ -329,7 +329,7 @@
                   symbolName = "__28-[DataModel login:password:]_block_invoke"
                   moduleName = "iApp"
                   urlString = "file:///Users/icoco/WorkSpace/prj/iPhone/iXCart/iOSApp/iApp/Classes/Model/DataModel.m"
-                  timestampString = "427972351.535215"
+                  timestampString = "428068669.469416"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "304"
@@ -343,7 +343,7 @@
                   symbolName = "__28-[DataModel login:password:]_block_invoke"
                   moduleName = "iApp"
                   urlString = "file:///Users/icoco/WorkSpace/prj/iPhone/iXCart/iOSApp/iApp/Classes/Model/DataModel.m"
-                  timestampString = "427972351.535426"
+                  timestampString = "428068669.469745"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "304"
@@ -357,7 +357,7 @@
                   symbolName = "__28-[DataModel login:password:]_block_invoke127"
                   moduleName = "iApp"
                   urlString = "file:///Users/icoco/WorkSpace/prj/iPhone/iXCart/iOSApp/iApp/Classes/Model/DataModel.m"
-                  timestampString = "427972351.535622"
+                  timestampString = "428068669.470096"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "304"
@@ -406,12 +406,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iApp/Classes/ViewController/Checkout/PaymentAddressViewController.m"
-            timestampString = "426929671.842579"
+            timestampString = "428062685.483148"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "248"
-            endingLineNumber = "248"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            startingLineNumber = "249"
+            endingLineNumber = "249"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -422,12 +422,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iApp/Classes/ViewController/Checkout/PaymentAddressViewController.m"
-            timestampString = "426929671.842579"
+            timestampString = "428062685.483148"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
-            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            startingLineNumber = "221"
+            endingLineNumber = "221"
+            landmarkName = "-wrapAddress:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -502,11 +502,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iApp/Classes/ViewController/Setting/SettingsViewController.m"
-            timestampString = "427112543.418264"
+            timestampString = "428668710.823105"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "-processCommand:"
             landmarkType = "5">
          </BreakpointContent>
@@ -534,11 +534,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iApp/Classes/Resource.m"
-            timestampString = "427789843.221027"
+            timestampString = "428226778.7878"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "216"
-            endingLineNumber = "216"
+            startingLineNumber = "222"
+            endingLineNumber = "222"
             landmarkName = "+fomratDictionary2String:"
             landmarkType = "5">
          </BreakpointContent>
@@ -662,11 +662,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iApp/Classes/ViewController/Category/CategoriesViewController.m"
-            timestampString = "427972540.310642"
+            timestampString = "428668848.004088"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "219"
-            endingLineNumber = "219"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
             landmarkName = "-searchBarCancelButtonClicked:"
             landmarkType = "5">
          </BreakpointContent>
@@ -678,12 +678,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iApp/Classes/ViewController/Category/CategoriesViewController.m"
-            timestampString = "427972351.459272"
+            timestampString = "428668848.004088"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "167"
-            endingLineNumber = "167"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iApp/Classes/Common/TableViewCells/EditTextFieldCell.m"
+            timestampString = "428223835.407959"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-layoutIfNeeded"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

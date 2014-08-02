@@ -62,6 +62,9 @@
 	[[AppManager sharedInstance]setKeyWindow:self.window];
    	//@step
     if (nil == self.tabBarController) {
+//        UITabBarController* tabController = [[UITabBarController alloc]init];
+//        self.window.rootViewController = tabController;
+        
         self.tabBarController =(UITabBarController *)[self.window rootViewController];
     }
     

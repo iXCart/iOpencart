@@ -33,5 +33,6 @@
 
 - (void)setArgs:(NSObject*)args{
 
+    _args = args;
 }
 @end

@@ -35,6 +35,7 @@
 		91563825195AB58400A3E6EB /* XCartUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 91563824195AB58400A3E6EB /* XCartUser.m */; };
 		9156382C195AB6A500A3E6EB /* OpenCartUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9156382B195AB6A500A3E6EB /* OpenCartUser.m */; };
 		9156382F195ABABC00A3E6EB /* XCartAppFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9156382E195ABABC00A3E6EB /* XCartAppFactory.m */; };
+		916AB49B198CF5B60003D219 /* Main_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 916AB49A198CF5B60003D219 /* Main_iPhone.xib */; };
 		916DCDAD196D8F2400ECAD07 /* ShippingAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 916DCDAA196D8F2400ECAD07 /* ShippingAddressViewController.xib */; };
 		916DCDAE196D8F2400ECAD07 /* ShippingAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 916DCDAB196D8F2400ECAD07 /* ShippingAddressViewController.m */; };
 		916DCDB5196D9A1200ECAD07 /* ShippingMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 916DCDB2196D9A1200ECAD07 /* ShippingMethodViewController.m */; };
@@ -121,6 +122,14 @@
 		91D866EF1957CB7D00011141 /* WebViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91D866E71957CB7D00011141 /* WebViewCell.xib */; };
 		91D866F51958240A00011141 /* CDialogViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D866F41958240A00011141 /* CDialogViewManager.m */; };
 		91D866FB195828BA00011141 /* CAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D866FA195828BA00011141 /* CAlertView.m */; };
+		91DB5BBB1983A4A30006D80F /* AddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91DB5BB91983A4A30006D80F /* AddressViewController.m */; };
+		91DB5BBC1983A4A30006D80F /* AddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91DB5BBA1983A4A30006D80F /* AddressViewController.xib */; };
+		91DB5BC11983A5F60006D80F /* addressViewDef.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91DB5BC01983A5F60006D80F /* addressViewDef.plist */; };
+		91DB71DE1983CB6700DDC308 /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 91DB71D91983CB6700DDC308 /* JVFloatLabeledTextField.m */; };
+		91DB71DF1983CB6700DDC308 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 91DB71DB1983CB6700DDC308 /* JVFloatLabeledTextView.m */; };
+		91DB71E01983CB6700DDC308 /* NSString+TextDirectionality.m in Sources */ = {isa = PBXBuildFile; fileRef = 91DB71DD1983CB6700DDC308 /* NSString+TextDirectionality.m */; };
+		91DB71E71983CC3600DDC308 /* EditTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91DB71E41983CC3600DDC308 /* EditTextFieldCell.xib */; };
+		91DB71E81983CC3600DDC308 /* EditTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91DB71E61983CC3600DDC308 /* EditTextFieldCell.m */; };
 		91E1409B197662A60084818A /* TotalsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91E14099197662A60084818A /* TotalsTableViewController.m */; };
 		91E1409C197662A60084818A /* TotalsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91E1409A197662A60084818A /* TotalsTableViewController.xib */; };
 		91E3F0161956C3B0000DF9AC /* CPageContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91E3F0151956C3B0000DF9AC /* CPageContainerViewController.xib */; };
@@ -227,6 +236,7 @@
 		9156382B195AB6A500A3E6EB /* OpenCartUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenCartUser.m; sourceTree = "<group>"; };
 		9156382D195ABABC00A3E6EB /* XCartAppFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCartAppFactory.h; sourceTree = "<group>"; };
 		9156382E195ABABC00A3E6EB /* XCartAppFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCartAppFactory.m; sourceTree = "<group>"; };
+		916AB49A198CF5B60003D219 /* Main_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Main_iPhone.xib; sourceTree = "<group>"; };
 		916DCDAA196D8F2400ECAD07 /* ShippingAddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShippingAddressViewController.xib; sourceTree = "<group>"; };
 		916DCDAB196D8F2400ECAD07 /* ShippingAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShippingAddressViewController.m; sourceTree = "<group>"; };
 		916DCDAC196D8F2400ECAD07 /* ShippingAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShippingAddressViewController.h; sourceTree = "<group>"; };
@@ -365,6 +375,19 @@
 		91D866F61958243700011141 /* ICocoKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICocoKit.h; sourceTree = "<group>"; };
 		91D866F9195828BA00011141 /* CAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAlertView.h; sourceTree = "<group>"; };
 		91D866FA195828BA00011141 /* CAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAlertView.m; sourceTree = "<group>"; };
+		91DB5BB81983A4A30006D80F /* AddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressViewController.h; sourceTree = "<group>"; };
+		91DB5BB91983A4A30006D80F /* AddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressViewController.m; sourceTree = "<group>"; };
+		91DB5BBA1983A4A30006D80F /* AddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressViewController.xib; sourceTree = "<group>"; };
+		91DB5BC01983A5F60006D80F /* addressViewDef.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = addressViewDef.plist; sourceTree = "<group>"; };
+		91DB71D81983CB6700DDC308 /* JVFloatLabeledTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledTextField.h; sourceTree = "<group>"; };
+		91DB71D91983CB6700DDC308 /* JVFloatLabeledTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextField.m; sourceTree = "<group>"; };
+		91DB71DA1983CB6700DDC308 /* JVFloatLabeledTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JVFloatLabeledTextView.h; sourceTree = "<group>"; };
+		91DB71DB1983CB6700DDC308 /* JVFloatLabeledTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JVFloatLabeledTextView.m; sourceTree = "<group>"; };
+		91DB71DC1983CB6700DDC308 /* NSString+TextDirectionality.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TextDirectionality.h"; sourceTree = "<group>"; };
+		91DB71DD1983CB6700DDC308 /* NSString+TextDirectionality.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TextDirectionality.m"; sourceTree = "<group>"; };
+		91DB71E41983CC3600DDC308 /* EditTextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditTextFieldCell.xib; sourceTree = "<group>"; };
+		91DB71E51983CC3600DDC308 /* EditTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTextFieldCell.h; sourceTree = "<group>"; };
+		91DB71E61983CC3600DDC308 /* EditTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTextFieldCell.m; sourceTree = "<group>"; };
 		91E14098197662A50084818A /* TotalsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalsTableViewController.h; sourceTree = "<group>"; };
 		91E14099197662A60084818A /* TotalsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalsTableViewController.m; sourceTree = "<group>"; };
 		91E1409A197662A60084818A /* TotalsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TotalsTableViewController.xib; sourceTree = "<group>"; };
@@ -648,7 +671,9 @@
 				91B18F871947243E00103441 /* images */,
 				91B18F891947243E00103441 /* proudctDefs.plist */,
 				91D6DFEE195ADFB100FC2195 /* settingDefs.plist */,
+				91DB5BC01983A5F60006D80F /* addressViewDef.plist */,
 				91C53FF1195585CC00FB0AA1 /* tabDefs.plist */,
+				916AB49A198CF5B60003D219 /* Main_iPhone.xib */,
 				914E77951948A1C000596707 /* XCartCoreData.xcdatamodeld */,
 			);
 			path = Resources;
@@ -787,6 +812,7 @@
 		91C6A726192C9E5200903D95 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				91DB71D71983CB6700DDC308 /* JVFloatLabeledTextField */,
 				9106EB8C197FA99A0072B16A /* SVPullToRefresh */,
 				917396471971032E008C42C7 /* Pickers */,
 				919A25F41956A2EA00F251E3 /* SDWebImage */,
@@ -819,6 +845,9 @@
 				91CC86AF196C063A00129688 /* PaymentAddressViewController.m */,
 				91CC86B0196C063A00129688 /* PaymentAddressViewController.xib */,
 				916DCDAC196D8F2400ECAD07 /* ShippingAddressViewController.h */,
+				91DB5BB81983A4A30006D80F /* AddressViewController.h */,
+				91DB5BB91983A4A30006D80F /* AddressViewController.m */,
+				91DB5BBA1983A4A30006D80F /* AddressViewController.xib */,
 				916DCDAB196D8F2400ECAD07 /* ShippingAddressViewController.m */,
 				916DCDAA196D8F2400ECAD07 /* ShippingAddressViewController.xib */,
 				916DCDB4196D9A1200ECAD07 /* ShippingMethodViewController.h */,
@@ -881,8 +910,25 @@
 				91CC86B3196C0F6B00129688 /* AddressCell.h */,
 				91CC86B4196C0F6B00129688 /* AddressCell.m */,
 				91CC86B5196C0F6B00129688 /* AddressCell.xib */,
+				91DB71E51983CC3600DDC308 /* EditTextFieldCell.h */,
+				91DB71E61983CC3600DDC308 /* EditTextFieldCell.m */,
+				91DB71E41983CC3600DDC308 /* EditTextFieldCell.xib */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		91DB71D71983CB6700DDC308 /* JVFloatLabeledTextField */ = {
+			isa = PBXGroup;
+			children = (
+				91DB71D81983CB6700DDC308 /* JVFloatLabeledTextField.h */,
+				91DB71D91983CB6700DDC308 /* JVFloatLabeledTextField.m */,
+				91DB71DA1983CB6700DDC308 /* JVFloatLabeledTextView.h */,
+				91DB71DB1983CB6700DDC308 /* JVFloatLabeledTextView.m */,
+				91DB71DC1983CB6700DDC308 /* NSString+TextDirectionality.h */,
+				91DB71DD1983CB6700DDC308 /* NSString+TextDirectionality.m */,
+			);
+			name = JVFloatLabeledTextField;
+			path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextField;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1008,10 +1054,12 @@
 				91E3F0161956C3B0000DF9AC /* CPageContainerViewController.xib in Resources */,
 				918ECC38192CC6AD00EDF6B1 /* InfoPlist.strings in Resources */,
 				91F4074C196D29A20058D397 /* row_selected.png in Resources */,
+				91DB5BC11983A5F60006D80F /* addressViewDef.plist in Resources */,
 				91CC86AD196C060300129688 /* CartViewController.xib in Resources */,
 				915326041950581D00E6E98F /* ProductDetailViewController.xib in Resources */,
 				915326011950581D00E6E98F /* CategoriesViewController.xib in Resources */,
 				91D866EB1957CB7D00011141 /* ImagePagesViewCell.xib in Resources */,
+				916AB49B198CF5B60003D219 /* Main_iPhone.xib in Resources */,
 				918ECC39192CC6AD00EDF6B1 /* iAppTests-Info.plist in Resources */,
 				91C6A6CA192C9AEE00903D95 /* Images.xcassets in Resources */,
 				91E1409C197662A60084818A /* TotalsTableViewController.xib in Resources */,
@@ -1028,12 +1076,14 @@
 				91B18F8A1947243E00103441 /* splash.png in Resources */,
 				91D866EF1957CB7D00011141 /* WebViewCell.xib in Resources */,
 				91FC43C9196127EF00EB01A9 /* placeholder@2x.png in Resources */,
+				91DB5BBC1983A4A30006D80F /* AddressViewController.xib in Resources */,
 				91FC43C8196127EF00EB01A9 /* placeholder.png in Resources */,
 				91D6DFFC195AEAAD00FC2195 /* logo.png in Resources */,
 				916DCDAD196D8F2400ECAD07 /* ShippingAddressViewController.xib in Resources */,
 				91C6A6B6192C9AEE00903D95 /* InfoPlist.strings in Resources */,
 				915326061950581D00E6E98F /* ProductsViewController.xib in Resources */,
 				91CC86B2196C063A00129688 /* PaymentAddressViewController.xib in Resources */,
+				91DB71E71983CC3600DDC308 /* EditTextFieldCell.xib in Resources */,
 				91D6DFEF195ADFB100FC2195 /* settingDefs.plist in Resources */,
 				9173966119714594008C42C7 /* ConfirmViewController.xib in Resources */,
 			);
@@ -1077,12 +1127,14 @@
 				919A26961956A2EA00F251E3 /* SDWebImageManager.m in Sources */,
 				919A26981956A2EA00F251E3 /* UIButton+WebCache.m in Sources */,
 				917396571971032E008C42C7 /* ActionSheetDatePicker.m in Sources */,
+				91DB71DF1983CB6700DDC308 /* JVFloatLabeledTextView.m in Sources */,
 				919A26911956A2EA00F251E3 /* SDImageCache.m in Sources */,
 				91E3F02B1956DF64000DF9AC /* UIImage+Extenstion.m in Sources */,
 				919A26991956A2EA00F251E3 /* UIImage+GIF.m in Sources */,
 				91CC86AC196C060300129688 /* CartViewController.m in Sources */,
 				919A268F1956A2EA00F251E3 /* MKAnnotationView+WebCache.m in Sources */,
 				919A26921956A2EA00F251E3 /* SDWebImageCompat.m in Sources */,
+				91DB71DE1983CB6700DDC308 /* JVFloatLabeledTextField.m in Sources */,
 				914E77911948A0DB00596707 /* DataModel.m in Sources */,
 				91E3F0251956D53C000DF9AC /* OpenCartConstant.m in Sources */,
 				919A269B1956A2EA00F251E3 /* UIImage+WebP.m in Sources */,
@@ -1099,6 +1151,7 @@
 				9122E3AC1970DA6200C215B4 /* PaymentMethodViewController.m in Sources */,
 				91C6A721192C9E3900903D95 /* AppDelegate.m in Sources */,
 				9156382C195AB6A500A3E6EB /* OpenCartUser.m in Sources */,
+				91DB5BBB1983A4A30006D80F /* AddressViewController.m in Sources */,
 				91563825195AB58400A3E6EB /* XCartUser.m in Sources */,
 				9145248519598A0B00B9BFE7 /* XBlockBinder.m in Sources */,
 				919A26941956A2EA00F251E3 /* SDWebImageDownloader.m in Sources */,
@@ -1118,10 +1171,12 @@
 				919A26931956A2EA00F251E3 /* SDWebImageDecoder.m in Sources */,
 				915326031950581D00E6E98F /* ProductDetailViewController.m in Sources */,
 				91C6A6B8192C9AEE00903D95 /* main.m in Sources */,
+				91DB71E81983CC3600DDC308 /* EditTextFieldCell.m in Sources */,
 				91C6A723192C9E3900903D95 /* CWebViewController.m in Sources */,
 				915326001950581D00E6E98F /* CategoriesViewController.m in Sources */,
 				9110901C192CBC4F009747E5 /* AppManager.m in Sources */,
 				9106EB93197FA99A0072B16A /* UIScrollView+SVPullToRefresh.m in Sources */,
+				91DB71E01983CB6700DDC308 /* NSString+TextDirectionality.m in Sources */,
 				915326071950581D00E6E98F /* SettingsViewController.m in Sources */,
 				9156382F195ABABC00A3E6EB /* XCartAppFactory.m in Sources */,
 				9106EB92197FA99A0072B16A /* UIScrollView+SVInfiniteScrolling.m in Sources */,

@@ -10,7 +10,7 @@
 
 @interface CTableViewCell : UITableViewCell
 {
-    
+    NSObject* _args ;
 }
 @property(nonatomic)NSIndexPath* indexPath;
 

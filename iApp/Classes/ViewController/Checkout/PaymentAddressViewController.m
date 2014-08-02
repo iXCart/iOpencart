@@ -10,6 +10,7 @@
 #import  "ShippingAddressViewController.h"
 #import "XCartDataManager.h"
 #import "AddressCell.h"
+#import "AddressViewController.h"
 
 @interface PaymentAddressViewController ()
 {
@@ -128,7 +129,16 @@ static NSString* cellId = @"AddressCell";
 
 - (IBAction)addNewAddress:(id)sender
 {
+    return;
     
+    AddressViewController* addressView = (AddressViewController*) [AddressViewController create];
+    
+    CNavigationController* nav = [[CNavigationController alloc]initWithRootViewController:addressView];
+    addressView.args = _mappingResult.dictionary;
+    self.modalPresentationStyle = UIModalPresentationCurrentContext;
+    [self presentViewController:nav animated:true completion:^{
+        
+    }];
 }
 
 - (RKMappingResult*)parseData2Result:(NSData*)data

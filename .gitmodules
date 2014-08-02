@@ -4,3 +4,6 @@
 [submodule "iApp/Vendor/SVPullToRefresh"]
 	path = iApp/Vendor/SVPullToRefresh
 	url = https://github.com/samvermette/SVPullToRefresh.git
+[submodule "iApp/Vendor/JVFloatLabeledTextField"]
+	path = iApp/Vendor/JVFloatLabeledTextField
+	url = https://github.com/jverdi/JVFloatLabeledTextField

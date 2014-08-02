@@ -16,6 +16,8 @@
 
 @end
 
+static NSString* ruseCellId = @"BaseCell";
+
 @implementation CategoriesViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -29,9 +31,8 @@
 
 -(void)prepareTableview
 {
-    UINib *nib = [UINib nibWithNibName:@"TableCells" bundle:nil];
-    [self.tableView registerNib:nib
-         forCellReuseIdentifier:@"Cell"];
+    [self.tableView registerClass: [UITableViewCell class]
+           forCellReuseIdentifier:ruseCellId];
     
    // self.tableView.tableHeaderView = self.searchBar;
     UIEdgeInsets inset = UIEdgeInsetsMake(44+20, 0, 0, 0);
@@ -136,23 +137,10 @@
 
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
  {
-    NSString* reuseId =@"Cell";
+    NSString* reuseId =ruseCellId;
      
      UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId forIndexPath:indexPath];
- 
-     
-     if (cell == nil) {
-         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"TableCells"
-                                                      owner:nil
-                                                    options:nil];
-         for (id oneObject in nib) {
-             if ([oneObject isKindOfClass:[UITableViewCell class]]) {
-                 cell = (UITableViewCell *)oneObject;
-                 break;
-             }
-         }
-     }
- //
+   //
      NSArray* items = [_mappingResult array];
      int row = indexPath.row;
      NSDictionary* item = [items objectAtIndex:row];
