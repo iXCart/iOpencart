@@ -129,11 +129,13 @@ static NSString* cellId = @"AddressCell";
 
 - (IBAction)addNewAddress:(id)sender
 {
-    return;
+     
     
     AddressViewController* addressView = (AddressViewController*) [AddressViewController create];
     
     CNavigationController* nav = [[CNavigationController alloc]initWithRootViewController:addressView];
+    
+    addressView.isShippingAddress = false;
     addressView.args = _mappingResult.dictionary;
     self.modalPresentationStyle = UIModalPresentationCurrentContext;
     [self presentViewController:nav animated:true completion:^{

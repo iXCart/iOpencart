@@ -70,11 +70,25 @@
     UIBarButtonItem* button = nil;
     if (inEditMode) {
              button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(saveAction:)];
+         [self.navigationItem setRightBarButtonItem:button animated:true];
+        [self.navigationItem setLeftBarButtonItem:nil];
     }else
-        button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editAction:)];
-
+    {
+//        button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(editAction:)];
+//        
+//        [self.navigationItem setLeftBarButtonItem:button animated:true];
+        //@step
+        [self renderCheckoutButton];
+        
+    }
    
-    [self.navigationItem setLeftBarButtonItem:button animated:true];
+   
+}
+
+-(void)renderCheckoutButton
+{
+    UIBarButtonItem* button = [[UIBarButtonItem alloc] initWithTitle:@"Checkout" style:UIBarButtonItemStylePlain target:self action:@selector(checkOut:)];
+    [self.navigationItem setRightBarButtonItem:button];
 }
 - (void)renderToolBar:(BOOL)visiable
 {

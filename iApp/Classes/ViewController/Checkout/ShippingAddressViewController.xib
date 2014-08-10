@@ -44,7 +44,7 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
-                            <action selector="addNewAddress:" destination="-1" eventType="touchUpOutside" id="bhp-9A-UOj"/>
+                            <action selector="addNewAddress:" destination="-1" eventType="touchUpInside" id="jV5-NN-54l"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qE-bE-OVs">
@@ -54,7 +54,7 @@
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
-                            <action selector="addNewAddress:" destination="-1" eventType="touchUpOutside" id="qRC-4C-U8Y"/>
+                            <action selector="addNewAddress:" destination="-1" eventType="touchUpInside" id="Dj3-h0-oy0"/>
                         </connections>
                     </button>
                 </subviews>

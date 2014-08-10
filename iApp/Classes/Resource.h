@@ -50,6 +50,8 @@ extern  NSString* NotifyEventCommpleteUpdateCart;
 
 + (NSString*)getSaveShippingAddressURLString;
 
++ (NSString*)getAddShippingAddressURLString;
+
 + (NSString*)getSaveShippingMethodURLString;
 
 + (NSString*)getSavePaymentMethodURLString;

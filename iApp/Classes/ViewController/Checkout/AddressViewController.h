@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "AppTableViewController.h"
 @interface AddressViewController : AppTableViewController
-
+{
+}
+ 
+@property (nonatomic)BOOL isShippingAddress;
 @end

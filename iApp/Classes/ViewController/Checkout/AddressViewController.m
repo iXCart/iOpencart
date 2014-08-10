@@ -71,13 +71,16 @@
     if (nil == params || [params count]<=0) {
         return;
     }
+    if (self.isShippingAddress) {
+        [params setValue:@"new" forKey:@"shipping_address"];
+    }
     //@ index.php?route=checkout/cart |post
     //@step
     
    // NSMutableDictionary * params = [NSMutableDictionary dictionaryWithDictionary:products];
    // [params setValue:TRUE_ONE forKey:Rest_json];
     
-    NSString* urlString = [Resource getAddPaymentAddressURLString];
+    NSString* urlString =self.isShippingAddress ? [Resource getAddShippingAddressURLString] :[Resource getAddPaymentAddressURLString];
     
     //@step
     [[XCartDataManager sharedInstance] executeAction:urlString method:RKRequestMethodPOST params:params success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
@@ -116,13 +119,12 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [self registerForKeyboardNotifications];
 }
 
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    [self unregisterForKeyboardNotifications];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -177,6 +179,17 @@
     return [_defs count];;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
+{
+    NSArray* items = _defs;
+    int row = indexPath.row;
+    NSDictionary* item = [items objectAtIndex:row];
+    NSNumber* height = [item valueForKey:@"height"];
+    if (nil != height) {
+        return  [height floatValue];
+    }
+    return 44;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

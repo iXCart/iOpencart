@@ -101,6 +101,11 @@ NSString* NotifyEventCommpleteUpdateCart =@"NotifyEventCommpleteUpdateCart";
     return StringJoin([Resource getIndexURLString],@"route=checkout/payment_address/validate");
 }
 
++ (NSString*)getAddShippingAddressURLString
+{
+    return StringJoin([Resource getIndexURLString],@"route=checkout/shipping_address/validate");
+}
+
 
 + (NSString*)getSaveShippingAddressURLString
 {
