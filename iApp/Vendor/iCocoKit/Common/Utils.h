@@ -12,4 +12,7 @@
 
 
 + (NSString*) getBundleFileAsFullPath :(NSString*) fileName;
+
++ (void) roundRectView:(UIView*) aView;
+
 @end

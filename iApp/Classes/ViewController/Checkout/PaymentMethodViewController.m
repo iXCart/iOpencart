@@ -15,6 +15,10 @@
 @interface PaymentMethodViewController ()
 {
     NSIndexPath* _selectedIndexPath;
+    BOOL _isExpandBottomView;
+    
+    CGRect _original_frame;
+
 }
 
 @end
@@ -37,6 +41,43 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)expandCommentView
+{
+    _isExpandBottomView = true;
+    
+    CGRect frame =  _original_frame;
+    CGRect commentFrame = self.commentContainerView.frame;
+    CGRect footerFrame = self.agreeTermView.frame;
+    frame.size.height = frame.size.height + commentFrame.size.height + footerFrame.size.height + 30;
+    
+    self.bottomView.frame = frame;
+    self.tableView.tableFooterView = self.bottomView;
+    
+    //self.bottomView.backgroundColor=[UIColor darkGrayColor];
+    commentFrame.origin.y = footerFrame.origin.y;
+    commentFrame.origin.x = 9;
+    self.commentContainerView.frame = commentFrame;
+    [self.bottomView addSubview:self.commentContainerView];
+
+    
+    footerFrame.origin.y = commentFrame.size.height + commentFrame.origin.y + 10;
+    footerFrame.origin.x = 0;
+    self.agreeTermView.frame = footerFrame;
+    
+    [self.agreeTermView removeFromSuperview];
+    [self.bottomView addSubview:self.agreeTermView];
+    self.agreeTermView.frame = footerFrame;
+}
+
+- (void)addAgreeView
+{
+    CGRect footerFrame = self.agreeTermView.frame;
+    footerFrame.origin.y = 80;
+    self.agreeTermView.frame = footerFrame;
+    
+    [self.bottomView addSubview:self.agreeTermView];
+}
+
 static NSString* cellId = @"AddressCell";
 
 -(void)prepareTableview
@@ -47,6 +88,10 @@ static NSString* cellId = @"AddressCell";
     
     //@step
     self.tableView.tableFooterView = self.bottomView;
+    
+    [self addAgreeView];
+    _original_frame = self.tableView.tableFooterView.frame;
+   
 }
 
 - (void)viewDidLoad
@@ -57,7 +102,8 @@ static NSString* cellId = @"AddressCell";
     
     [self prepareTableview];
     
-    
+    [Utils roundRectView:self.commentContainerView];
+    [Utils roundRectView:self.commentView];
 }
 - (void)renderToolBar:(BOOL)visiable
 {
@@ -88,7 +134,7 @@ static NSString* cellId = @"AddressCell";
 }
 
 
-- (void)nextStep:(id)sender
+- (IBAction)nextStep:(id)sender
 {
     //@step
     NSDictionary* rowData = [self getSelecteRowData];
@@ -97,7 +143,9 @@ static NSString* cellId = @"AddressCell";
     }
     
     NSString* code = [rowData valueForKey:CheckoutShappingMethod_code];
-    NSString* comment = @"";
+    NSString* comment = self.commentView.text;
+    comment = [Lang isEmptyString:comment] ? @"" : comment;
+
     //@step
     NSDictionary* params =[NSDictionary dictionaryWithObjectsAndKeys:
                            
@@ -131,6 +179,9 @@ static NSString* cellId = @"AddressCell";
 
 - (IBAction)addComment:(id)sender
 {
+    if (!_isExpandBottomView) {
+        [self expandCommentView];
+    }
     
 }
 
@@ -256,6 +307,8 @@ static NSString* cellId = @"AddressCell";
     //@step
     NSIndexSet* set = [NSIndexSet indexSetWithIndex:0];
     [self.tableView  reloadSections:set  withRowAnimation:UITableViewRowAnimationFade];
+    
+    [self.commentView resignFirstResponder];
 }
 
 @end

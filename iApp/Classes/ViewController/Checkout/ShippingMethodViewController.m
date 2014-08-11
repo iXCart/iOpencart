@@ -13,6 +13,10 @@
 @interface ShippingMethodViewController ()
 {
     NSIndexPath* _selectedIndexPath;
+    BOOL _isExpandBottomView;
+    
+    CGRect _original_frame;
+    
 }
 
 @end
@@ -35,6 +39,30 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)swithcBottomView:(BOOL)expand
+{
+    if (!expand) {
+        CGRect frame = _original_frame;
+        frame.size.height = 80;
+        self.bottomView.frame = frame;
+        
+    }
+    else
+    {
+        CGRect frame = _original_frame;
+        frame.size.height = 220;
+        self.bottomView.frame = frame;
+    }
+    
+    _isExpandBottomView = expand;
+    self.commentContainerView.hidden = !expand;
+    
+   
+    self.tableView.tableFooterView =self.bottomView;
+ 
+    
+}
+
 static NSString* cellId = @"AddressCell";
 
 -(void)prepareTableview
@@ -45,6 +73,13 @@ static NSString* cellId = @"AddressCell";
     
     //@step
     self.tableView.tableFooterView = self.bottomView;
+    
+    _original_frame = self.bottomView.frame;
+    
+    [self swithcBottomView:false];
+   
+    [Utils roundRectView:self.commentContainerView];
+    [Utils roundRectView:self.commentView];
 }
 
 - (void)viewDidLoad
@@ -68,6 +103,7 @@ static NSString* cellId = @"AddressCell";
 }
 
 - (void)viewWillAppear:(BOOL)animated{
+   
     [super viewWillAppear:animated];
     
     [self loadData];
@@ -88,6 +124,8 @@ static NSString* cellId = @"AddressCell";
 
 - (void)nextStep:(id)sender
 {
+    [self.commentView resignFirstResponder];
+    //@step
     //@step
     NSDictionary* rowData = [self getSelecteRowData];
     if (nil == rowData) {
@@ -97,7 +135,8 @@ static NSString* cellId = @"AddressCell";
     NSDictionary* subItem = [dict valueForKey:CheckoutShappingMethod_flat];
     
     NSString* code = [subItem valueForKey:CheckoutShappingMethod_code];
-    NSString* comment = @"";
+    NSString* comment = self.commentView.text;
+    comment = [Lang isEmptyString:comment] ? @"" : comment;
     //@step
     NSDictionary* params =[NSDictionary dictionaryWithObjectsAndKeys:
                            
@@ -130,7 +169,9 @@ static NSString* cellId = @"AddressCell";
 
 - (IBAction)addComment:(id)sender
 {
-    
+    if (!_isExpandBottomView) {
+        [self swithcBottomView:true];
+    }
 }
 
 - (RKMappingResult*)parseData2Result:(NSData*)data
@@ -256,6 +297,17 @@ static NSString* cellId = @"AddressCell";
     //@step
     NSIndexSet* set = [NSIndexSet indexSetWithIndex:0];
     [self.tableView  reloadSections:set  withRowAnimation:UITableViewRowAnimationFade];
+    
+    
+    //@step
+    [self.commentView resignFirstResponder];
+}
+
+
+#pragma textView
+- (void)textViewDidEndEditing:(UITextView *)textView;
+{
+    [textView resignFirstResponder];
 }
 
 @end

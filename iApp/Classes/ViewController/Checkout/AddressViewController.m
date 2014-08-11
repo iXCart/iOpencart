@@ -204,7 +204,17 @@
 
     [cell setArgs:item];
     
-    cell.textField.placeholder = [item valueForKey:@"title"];
+    NSString* title = [item valueForKey:@"title"];
+    if (StringEqual(title,@"BLANK")) {
+        title = @"";
+        cell.textField.enabled = false;
+    }
+    else
+    {
+        cell.textField.enabled = true;
+    }
+    
+    cell.textField.placeholder = title;
     cell.textField.floatingLabelTextColor = [UIColor blackColor];
     [cell layoutIfNeeded];
     

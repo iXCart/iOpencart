@@ -14,4 +14,9 @@
 }
 
 @property(nonatomic)IBOutlet UIView* bottomView;
+@property(nonatomic)IBOutlet UIView* commentContainerView;
+@property(nonatomic)IBOutlet UITextView* commentView;
+
+@property(nonatomic)IBOutlet UIView* agreeTermView;
+
 @end

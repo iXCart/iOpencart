@@ -8,10 +8,13 @@
 
 #import "AppTableViewController.h"
 
-@interface ShippingMethodViewController : AppTableViewController
+@interface ShippingMethodViewController : AppTableViewController<UITextViewDelegate>
 {
     NSArray* _list;
 }
 
 @property(nonatomic)IBOutlet UIView* bottomView;
+@property(nonatomic)IBOutlet UIView* commentContainerView;
+@property(nonatomic)IBOutlet UITextView* commentView;
+
 @end

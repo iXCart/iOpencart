@@ -19,4 +19,14 @@
 }
 
 
++(void)roundRectView:(UIView*) aView
+{
+	if (nil == aView) {
+		return;
+	}
+	aView.layer.cornerRadius = 5;
+	aView.clipsToBounds = YES;
+}
+
+
 @end
