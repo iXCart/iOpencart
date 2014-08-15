@@ -120,10 +120,22 @@ static NSString* ruseCellId = @"BaseCell";
 - (void)processCommand:(NSDictionary*)dict
 {
     NSString* class = (NSString*) [dict valueForKey:@"class"];
-    if (StringEqual(class, @"Logout")) {
+    do{
+        if ([Lang isEmptyString:class]) {
+            break;
+        }
+
+        if (StringEqual(class, @"Logout")) {
+            
+            [self confirmLogout:nil];
+            break;
+        }
+        UIViewController* viewController = [CUIEnginer createViewController:class inNavigationController:false];
+        [self.navigationController pushViewController:viewController animated:true];
         
-        [[DataModel sharedInstance]loutOut];
-    }
+
+    }while (false);
+    
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -142,4 +154,22 @@ static NSString* ruseCellId = @"BaseCell";
     
 }
 
+#pragma mark Logout
+- (void)confirmLogout:(id)sender
+{
+    NSString* message = AppLocalizedString2(@"Logout now?", @"Logout now?");
+    NSString* cancel = AppLocalizedString2(@"Cancel", @"Cancel");
+    NSString* ok = AppLocalizedString2(@"OK", @"OK");
+    
+    UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"" message:message delegate:self cancelButtonTitle: cancel otherButtonTitles: ok, nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
+{
+    if (buttonIndex == alertView.cancelButtonIndex) {
+        return;
+    }
+     [[DataModel sharedInstance]loutOut];
+}
 @end

@@ -36,8 +36,6 @@ extern  NSString* NotifyEventCommpleteUpdateCart;
 
 + (NSString*)getSearchProductsURLString;
 
-+ (NSString*)getLoginURLString;
-
 + (NSString*)getCartURLString;
 
 + (NSString*)getAddCartURLString;
@@ -60,7 +58,16 @@ extern  NSString* NotifyEventCommpleteUpdateCart;
 
 + (NSString*)getCheckoutSuccessURLString;
 
++ (NSString*)getLoginURLString;
+
 + (NSString*)getLogoutURLString;
+
++ (NSString*)getAccountEditURLString;
+
++ (NSString*)getAccountWishlistURLString;
+
++ (NSString*)getOrderHistoryURLString;
+
 
 + (RKMappingResult*)parseData2Result:(NSData*)data;
 

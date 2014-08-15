@@ -78,11 +78,18 @@ BOOL    StringEqual( const NSString*  aString  ,  const NSString*   bString)
     
 }
 
-+ (double)safeStringToDouble:(NSString*)value toValue:(double)toValue
+//@input $1,177
+//@output 1177
++ (float)safeStringToFloat:(NSString*)value toValue:(float)toValue
 {
     if ([Lang isEmptyString:value]) {
         return toValue;
     }
+    
+    NSString* result = [value stringByReplacingOccurrencesOfString:@"$" withString:@""];
+    result = [result stringByReplacingOccurrencesOfString:@"," withString:@""];
+    return [result floatValue];
+    
     if ([Lang isContainsString:value token:@"$"]) {
         NSRange range = [value rangeOfString:@"$"];
         NSString* numberString = [value substringFromIndex: range.location + range.length];

@@ -46,7 +46,9 @@
          forCellReuseIdentifier:@"CartItemCell"];
     if (nil == _totalsController) {
         _totalsController = (TotalsTableViewController*) [TotalsTableViewController create];
-    } }
+    }
+
+}
 
 - (void)viewDidLoad
 {

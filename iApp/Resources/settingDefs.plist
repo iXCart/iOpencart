@@ -6,7 +6,7 @@
 		<key>name</key>
 		<string>My Account</string>
 		<key>class</key>
-		<string></string>
+		<string>AcountEditViewController</string>
 		<key>Image</key>
 		<string></string>
 	</dict>
@@ -14,7 +14,7 @@
 		<key>name</key>
 		<string>My Orders</string>
 		<key>class</key>
-		<string></string>
+		<string>OrdersViewController</string>
 		<key>Image</key>
 		<string></string>
 	</dict>
@@ -22,7 +22,7 @@
 		<key>name</key>
 		<string>Wish List</string>
 		<key>class</key>
-		<string></string>
+		<string>WishlistViewController</string>
 		<key>Image</key>
 		<string></string>
 	</dict>

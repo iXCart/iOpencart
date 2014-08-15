@@ -83,8 +83,8 @@
  
     
     //@step
-    double price = [Lang safeStringToDouble:[_data valueForKey:Cart_Product_price]  toValue:0] ;
-    double total = price * quantity;
+    float price = [Lang safeStringToFloat:[_data valueForKey:Cart_Product_price]  toValue:0] ;
+    float total = price * quantity;
     NSString* totalString = [NSString stringWithFormat:@"$%.2f", total];
     [_data setValue:totalString forKey:Cart_Product_total];
     

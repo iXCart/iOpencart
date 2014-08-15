@@ -34,6 +34,11 @@
         self.title = AppLocalizedString(@"Login");
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(onCancel:) ];
     }
+    //@step
+    [Utils roundRectView:self.loginButton];
+    [Utils roundRectView:self.forgotPasswordButton];
+    [Utils roundRectView:self.registerButton];
+    
 }
 
 
@@ -110,5 +115,11 @@
         [self.passwordTextField resignFirstResponder];
         
     }
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField;
+{
+    [self performSelector:@selector(onLogin:) withObject:nil afterDelay:8];
+    return true;
 }
 @end

@@ -49,7 +49,7 @@ FOUNDATION_EXPORT    BOOL    StringEqual(const  NSString*  aString  ,  const NSS
 
 +(NSString*)safeNumberToIntString:(NSNumber*) value   toValue:(NSString*) toValue;
 
-+ (double)safeStringToDouble:(NSString*)value toValue:(double)toValue;
++ (float)safeStringToFloat:(NSString*)value toValue:(float)toValue;
 
 
 + (id)paseJSONDatatoArrayOrNSDictionary:(NSData *)jsonData;

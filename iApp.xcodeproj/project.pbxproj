@@ -15,6 +15,10 @@
 		9110901F192CBCB0009747E5 /* Resource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9110901E192CBCB0009747E5 /* Resource.m */; };
 		91109028192CBD25009747E5 /* CoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91109026192CBD25009747E5 /* CoverViewController.m */; };
 		9110902D192CBDD9009747E5 /* CNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9110902C192CBDD9009747E5 /* CNavigationController.m */; };
+		911F168A199CB5FF00442A84 /* WishlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 911F1687199CB5FF00442A84 /* WishlistViewController.m */; };
+		911F168B199CB5FF00442A84 /* WishlistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 911F1688199CB5FF00442A84 /* WishlistViewController.xib */; };
+		911F168F199D0CDA00442A84 /* ProductItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 911F168C199D0CDA00442A84 /* ProductItemCell.m */; };
+		911F1690199D0CDA00442A84 /* ProductItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 911F168E199D0CDA00442A84 /* ProductItemCell.xib */; };
 		9122E3AB1970DA6200C215B4 /* PaymentMethodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9122E3A91970DA6200C215B4 /* PaymentMethodViewController.xib */; };
 		9122E3AC1970DA6200C215B4 /* PaymentMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9122E3AA1970DA6200C215B4 /* PaymentMethodViewController.m */; };
 		914524791959658B00B9BFE7 /* CUIEnginer.m in Sources */ = {isa = PBXBuildFile; fileRef = 914524781959658B00B9BFE7 /* CUIEnginer.m */; };
@@ -50,6 +54,13 @@
 		9173966219714594008C42C7 /* ConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9173966019714594008C42C7 /* ConfirmViewController.m */; };
 		918ECC38192CC6AD00EDF6B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 918ECC34192CC6AD00EDF6B1 /* InfoPlist.strings */; };
 		918ECC39192CC6AD00EDF6B1 /* iAppTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 918ECC36192CC6AD00EDF6B1 /* iAppTests-Info.plist */; };
+		9195DB1D199B433000798D71 /* OrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9195DB1B199B433000798D71 /* OrdersViewController.m */; };
+		9195DB1E199B433000798D71 /* OrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9195DB1C199B433000798D71 /* OrdersViewController.xib */; };
+		9195DB23199B696D00798D71 /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9195DB22199B696D00798D71 /* OrderCell.xib */; };
+		9195DB26199B6C4F00798D71 /* OrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9195DB25199B6C4F00798D71 /* OrderCell.m */; };
+		9195DB2A199B7F3900798D71 /* AcountEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9195DB27199B7F3900798D71 /* AcountEditViewController.m */; };
+		9195DB2B199B7F3900798D71 /* AcountEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9195DB29199B7F3900798D71 /* AcountEditViewController.xib */; };
+		9195DB2D199B804E00798D71 /* accountEditViewDef.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9195DB2C199B804E00798D71 /* accountEditViewDef.plist */; };
 		919A268F1956A2EA00F251E3 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 919A25F61956A2EA00F251E3 /* MKAnnotationView+WebCache.m */; };
 		919A26901956A2EA00F251E3 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 919A25F81956A2EA00F251E3 /* NSData+ImageContentType.m */; };
 		919A26911956A2EA00F251E3 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 919A25FA1956A2EA00F251E3 /* SDImageCache.m */; };
@@ -204,6 +215,12 @@
 		91109026192CBD25009747E5 /* CoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoverViewController.m; sourceTree = "<group>"; };
 		9110902B192CBDD9009747E5 /* CNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNavigationController.h; sourceTree = "<group>"; };
 		9110902C192CBDD9009747E5 /* CNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNavigationController.m; sourceTree = "<group>"; };
+		911F1687199CB5FF00442A84 /* WishlistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WishlistViewController.m; sourceTree = "<group>"; };
+		911F1688199CB5FF00442A84 /* WishlistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WishlistViewController.xib; sourceTree = "<group>"; };
+		911F1689199CB5FF00442A84 /* WishlistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WishlistViewController.h; sourceTree = "<group>"; };
+		911F168C199D0CDA00442A84 /* ProductItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductItemCell.m; sourceTree = "<group>"; };
+		911F168D199D0CDA00442A84 /* ProductItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductItemCell.h; sourceTree = "<group>"; };
+		911F168E199D0CDA00442A84 /* ProductItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductItemCell.xib; sourceTree = "<group>"; };
 		9122E3A81970DA6200C215B4 /* PaymentMethodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentMethodViewController.h; sourceTree = "<group>"; };
 		9122E3A91970DA6200C215B4 /* PaymentMethodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentMethodViewController.xib; sourceTree = "<group>"; };
 		9122E3AA1970DA6200C215B4 /* PaymentMethodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentMethodViewController.m; sourceTree = "<group>"; };
@@ -261,6 +278,16 @@
 		9173966019714594008C42C7 /* ConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmViewController.m; sourceTree = "<group>"; };
 		918ECC35192CC6AD00EDF6B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		918ECC36192CC6AD00EDF6B1 /* iAppTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iAppTests-Info.plist"; sourceTree = "<group>"; };
+		9195DB1A199B433000798D71 /* OrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrdersViewController.h; sourceTree = "<group>"; };
+		9195DB1B199B433000798D71 /* OrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrdersViewController.m; sourceTree = "<group>"; };
+		9195DB1C199B433000798D71 /* OrdersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrdersViewController.xib; sourceTree = "<group>"; };
+		9195DB22199B696D00798D71 /* OrderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
+		9195DB24199B6C4F00798D71 /* OrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderCell.h; sourceTree = "<group>"; };
+		9195DB25199B6C4F00798D71 /* OrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderCell.m; sourceTree = "<group>"; };
+		9195DB27199B7F3900798D71 /* AcountEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcountEditViewController.m; sourceTree = "<group>"; };
+		9195DB28199B7F3900798D71 /* AcountEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcountEditViewController.h; sourceTree = "<group>"; };
+		9195DB29199B7F3900798D71 /* AcountEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AcountEditViewController.xib; sourceTree = "<group>"; };
+		9195DB2C199B804E00798D71 /* accountEditViewDef.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = accountEditViewDef.plist; sourceTree = "<group>"; };
 		919A25F51956A2EA00F251E3 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		919A25F61956A2EA00F251E3 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		919A25F71956A2EA00F251E3 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -489,6 +516,15 @@
 				9145247E19596AF300B9BFE7 /* LoginViewController.h */,
 				9145247F19596AF300B9BFE7 /* LoginViewController.m */,
 				9145248019596AF300B9BFE7 /* LoginViewController.xib */,
+				9195DB28199B7F3900798D71 /* AcountEditViewController.h */,
+				9195DB27199B7F3900798D71 /* AcountEditViewController.m */,
+				9195DB29199B7F3900798D71 /* AcountEditViewController.xib */,
+				911F1689199CB5FF00442A84 /* WishlistViewController.h */,
+				911F1687199CB5FF00442A84 /* WishlistViewController.m */,
+				911F1688199CB5FF00442A84 /* WishlistViewController.xib */,
+				9195DB1A199B433000798D71 /* OrdersViewController.h */,
+				9195DB1B199B433000798D71 /* OrdersViewController.m */,
+				9195DB1C199B433000798D71 /* OrdersViewController.xib */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -672,6 +708,7 @@
 				91B18F891947243E00103441 /* proudctDefs.plist */,
 				91D6DFEE195ADFB100FC2195 /* settingDefs.plist */,
 				91DB5BC01983A5F60006D80F /* addressViewDef.plist */,
+				9195DB2C199B804E00798D71 /* accountEditViewDef.plist */,
 				91C53FF1195585CC00FB0AA1 /* tabDefs.plist */,
 				916AB49A198CF5B60003D219 /* Main_iPhone.xib */,
 				914E77951948A1C000596707 /* XCartCoreData.xcdatamodeld */,
@@ -913,6 +950,12 @@
 				91DB71E51983CC3600DDC308 /* EditTextFieldCell.h */,
 				91DB71E61983CC3600DDC308 /* EditTextFieldCell.m */,
 				91DB71E41983CC3600DDC308 /* EditTextFieldCell.xib */,
+				9195DB24199B6C4F00798D71 /* OrderCell.h */,
+				9195DB25199B6C4F00798D71 /* OrderCell.m */,
+				9195DB22199B696D00798D71 /* OrderCell.xib */,
+				911F168D199D0CDA00442A84 /* ProductItemCell.h */,
+				911F168C199D0CDA00442A84 /* ProductItemCell.m */,
+				911F168E199D0CDA00442A84 /* ProductItemCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -1052,7 +1095,9 @@
 				919A26C41956BC2700F251E3 /* CPageView.xib in Resources */,
 				91D6DFFA195AEAAD00FC2195 /* cart.png in Resources */,
 				91E3F0161956C3B0000DF9AC /* CPageContainerViewController.xib in Resources */,
+				9195DB1E199B433000798D71 /* OrdersViewController.xib in Resources */,
 				918ECC38192CC6AD00EDF6B1 /* InfoPlist.strings in Resources */,
+				9195DB2D199B804E00798D71 /* accountEditViewDef.plist in Resources */,
 				91F4074C196D29A20058D397 /* row_selected.png in Resources */,
 				91DB5BC11983A5F60006D80F /* addressViewDef.plist in Resources */,
 				91CC86AD196C060300129688 /* CartViewController.xib in Resources */,
@@ -1066,9 +1111,11 @@
 				9145248219596AF300B9BFE7 /* LoginViewController.xib in Resources */,
 				91B18F8B1947243E00103441 /* proudctDefs.plist in Resources */,
 				91D6DFFF195AEAAD00FC2195 /* settings.png in Resources */,
+				911F168B199CB5FF00442A84 /* WishlistViewController.xib in Resources */,
 				9122E3AB1970DA6200C215B4 /* PaymentMethodViewController.xib in Resources */,
 				915326081950581D00E6E98F /* SettingsViewController.xib in Resources */,
 				91D6E006195AEF3800FC2195 /* Localizable.strings in Resources */,
+				9195DB23199B696D00798D71 /* OrderCell.xib in Resources */,
 				91563821195A9A8E00A3E6EB /* CoverViewController.xib in Resources */,
 				91D866ED1957CB7D00011141 /* ImageViewCell.xib in Resources */,
 				916DCDB6196D9A1200ECAD07 /* ShippingMethodViewController.xib in Resources */,
@@ -1079,6 +1126,8 @@
 				91DB5BBC1983A4A30006D80F /* AddressViewController.xib in Resources */,
 				91FC43C8196127EF00EB01A9 /* placeholder.png in Resources */,
 				91D6DFFC195AEAAD00FC2195 /* logo.png in Resources */,
+				9195DB2B199B7F3900798D71 /* AcountEditViewController.xib in Resources */,
+				911F1690199D0CDA00442A84 /* ProductItemCell.xib in Resources */,
 				916DCDAD196D8F2400ECAD07 /* ShippingAddressViewController.xib in Resources */,
 				91C6A6B6192C9AEE00903D95 /* InfoPlist.strings in Resources */,
 				915326061950581D00E6E98F /* ProductsViewController.xib in Resources */,
@@ -1117,6 +1166,7 @@
 				919A26BE1956BB2F00F251E3 /* Tile.m in Sources */,
 				9173966219714594008C42C7 /* ConfirmViewController.m in Sources */,
 				91D866F51958240A00011141 /* CDialogViewManager.m in Sources */,
+				9195DB26199B6C4F00798D71 /* OrderCell.m in Sources */,
 				91D866D91957CB0D00011141 /* Lang.m in Sources */,
 				915326051950581D00E6E98F /* ProductsViewController.m in Sources */,
 				91D866D81957CB0D00011141 /* AppResource.m in Sources */,
@@ -1132,9 +1182,11 @@
 				91E3F02B1956DF64000DF9AC /* UIImage+Extenstion.m in Sources */,
 				919A26991956A2EA00F251E3 /* UIImage+GIF.m in Sources */,
 				91CC86AC196C060300129688 /* CartViewController.m in Sources */,
+				911F168A199CB5FF00442A84 /* WishlistViewController.m in Sources */,
 				919A268F1956A2EA00F251E3 /* MKAnnotationView+WebCache.m in Sources */,
 				919A26921956A2EA00F251E3 /* SDWebImageCompat.m in Sources */,
 				91DB71DE1983CB6700DDC308 /* JVFloatLabeledTextField.m in Sources */,
+				911F168F199D0CDA00442A84 /* ProductItemCell.m in Sources */,
 				914E77911948A0DB00596707 /* DataModel.m in Sources */,
 				91E3F0251956D53C000DF9AC /* OpenCartConstant.m in Sources */,
 				919A269B1956A2EA00F251E3 /* UIImage+WebP.m in Sources */,
@@ -1146,6 +1198,7 @@
 				91D866EE1957CB7D00011141 /* WebViewCell.m in Sources */,
 				919A26C11956BB2F00F251E3 /* CPageContainerViewController.m in Sources */,
 				91CC86B6196C0F6B00129688 /* AddressCell.m in Sources */,
+				9195DB1D199B433000798D71 /* OrdersViewController.m in Sources */,
 				917396561971032E008C42C7 /* ActionSheetCustomPicker.m in Sources */,
 				917396551971032E008C42C7 /* AbstractActionSheetPicker.m in Sources */,
 				9122E3AC1970DA6200C215B4 /* PaymentMethodViewController.m in Sources */,
@@ -1153,6 +1206,7 @@
 				9156382C195AB6A500A3E6EB /* OpenCartUser.m in Sources */,
 				91DB5BBB1983A4A30006D80F /* AddressViewController.m in Sources */,
 				91563825195AB58400A3E6EB /* XCartUser.m in Sources */,
+				9195DB2A199B7F3900798D71 /* AcountEditViewController.m in Sources */,
 				9145248519598A0B00B9BFE7 /* XBlockBinder.m in Sources */,
 				919A26941956A2EA00F251E3 /* SDWebImageDownloader.m in Sources */,
 				919A26951956A2EA00F251E3 /* SDWebImageDownloaderOperation.m in Sources */,

@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController">
             <connections>
                 <outlet property="emailTextField" destination="CbA-Ur-owe" id="oaq-IX-UXg"/>
+                <outlet property="loginButton" destination="8dW-da-HM0" id="Nxe-HN-kHS"/>
                 <outlet property="passwordTextField" destination="Oag-jS-FSW" id="fob-Zx-yt4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,8 +20,9 @@
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dW-da-HM0">
                     <rect key="frame" x="24" y="305" width="273" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.70129453095472305" green="1" blue="0.98677002383567169" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.20000001788139343" green="0.76470595598220825" blue="0.93333339691162109" alpha="1" colorSpace="deviceRGB"/>
                     <state key="normal" title="Login">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -45,6 +47,9 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="n2T-y6-3yl"/>
+                    </connections>
                 </textField>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sFp-fx-Yk4">
                     <rect key="frame" x="24" y="206" width="230" height="21"/>
@@ -53,20 +58,19 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mf-RC-WjG">
-                    <rect key="frame" x="185" y="513" width="115" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7EQ-XE-XMz">
+                    <rect key="frame" x="20" y="523" width="133" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.70588237047195435" green="1" blue="0.98431378602981567" alpha="1" colorSpace="deviceRGB"/>
-                    <state key="normal" title="New Customer">
+                    <state key="normal" title="Forgot Password">
+                        <color key="titleColor" red="0.45490199327468872" green="0.68235296010971069" blue="0.92941182851791382" alpha="1" colorSpace="deviceRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W5Z-86-Ijk">
-                    <rect key="frame" x="24" y="513" width="115" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IVs-jY-0EX">
+                    <rect key="frame" x="173" y="523" width="127" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.70588237050000002" green="1" blue="0.98431378599999997" alpha="1" colorSpace="deviceRGB"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="Forgot Password">
+                    <state key="normal" title="New Customer">
+                        <color key="titleColor" red="0.45490199329999997" green="0.68235296010000002" blue="0.92941182850000004" alpha="1" colorSpace="deviceRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
@@ -76,11 +80,17 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
             <connections>
                 <outletCollection property="gestureRecognizers" destination="jwO-2P-Ozg" appends="YES" id="xnz-39-dji"/>
+                <outletCollection property="gestureRecognizers" destination="0Kg-4h-u3C" appends="YES" id="Cgk-kc-YZx"/>
             </connections>
         </view>
         <swipeGestureRecognizer direction="right" id="jwO-2P-Ozg">
             <connections>
                 <action selector="onTouchScreen:" destination="-1" id="st2-i8-ags"/>
+            </connections>
+        </swipeGestureRecognizer>
+        <swipeGestureRecognizer direction="up" id="0Kg-4h-u3C">
+            <connections>
+                <action selector="onTouchScreen:" destination="-1" id="MTg-SO-DLx"/>
             </connections>
         </swipeGestureRecognizer>
     </objects>

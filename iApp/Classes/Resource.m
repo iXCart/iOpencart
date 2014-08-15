@@ -64,13 +64,6 @@ NSString* NotifyEventCommpleteUpdateCart =@"NotifyEventCommpleteUpdateCart";
 }
 
 
-+ (NSString*)getLoginURLString
-{
-     return StringJoin([Resource getBaseURLString],    @"/index.php?route=account/login");
-    return @"/opencart/index.php?route=account/login";
-}
-
-
 + (NSString*)getCartURLString
 {
     return StringJoin([Resource getBaseURLString],    @"/index.php?");
@@ -144,16 +137,52 @@ NSString* NotifyEventCommpleteUpdateCart =@"NotifyEventCommpleteUpdateCart";
     return StringJoin([Resource getIndexURLString], @"route=checkout/success");
 } 
 
+
+#pragma mark Account
++ (NSString*)getLoginURLString
+{
+    return StringJoin([Resource getBaseURLString],    @"/index.php?route=account/login");
+    return @"/opencart/index.php?route=account/login";
+}
+
 + (NSString*)getLogoutURLString
 {
     return StringJoin([Resource getIndexURLString], @"route=account/logout");
 }
 
++ (NSString*)getAccountEditURLString
+{
+    return StringJoin([Resource getBaseURLString],    @"/index.php?route=account/edit");
+}
+
++ (NSString*)getAccountWishlistURLString
+{
+    return StringJoin([Resource getBaseURLString],    @"/index.php?route=account/wishlist");
+}
+
+
++ (NSString*)getOrderHistoryURLString
+{
+    return StringJoin([Resource getIndexURLString], @"route=account/order");
+}
+
+
+
+
+
 + (RKMappingResult*)parseData2Result:(NSData*)data
 {
     //@step
-    NSDictionary* response = [Lang paseJSONDatatoArrayOrNSDictionary:data];
-    RKMappingResult* result = [[RKMappingResult alloc]initWithDictionary:response];
+    NSObject* response = [Lang paseJSONDatatoArrayOrNSDictionary:data];
+    NSDictionary* dict = nil;
+    if ([response isKindOfClass:[NSArray class]]) {
+        dict = [NSDictionary dictionaryWithObjectsAndKeys:response, response, nil];
+    }else
+    {
+        dict = (NSDictionary*)response;
+    }
+    
+    RKMappingResult* result = [[RKMappingResult alloc]initWithDictionary:dict];
     return  result;
 };
 

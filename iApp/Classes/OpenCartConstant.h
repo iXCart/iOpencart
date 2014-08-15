@@ -20,6 +20,7 @@
     extern  NSString* _Meta_title;
     extern  NSString* _Meta_text;
 
+    extern  NSString* _Meta_page;
 
 
     extern  NSString* Product_product_id;

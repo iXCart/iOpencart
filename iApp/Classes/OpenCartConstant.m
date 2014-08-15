@@ -20,6 +20,10 @@
     const NSString* _Meta_title = @"title";
     const NSString* _Meta_text = @"text";
 
+    const NSString* _Meta_page = @"page";
+
+
+
     const NSString* Product_product_id = @"product_id";
     const NSString* Product_name = @"heading_title";
     const NSString* Product_popup = @"popup";
@@ -35,6 +39,8 @@
 
     const NSString* Account_success = @"success";
     const NSString* Account_error_warning = @"error_warning";
+
+
 
     const NSString* Cart_products = @"products";
     const NSString* Cart_totals = @"totals";
