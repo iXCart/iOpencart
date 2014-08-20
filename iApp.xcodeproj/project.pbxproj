@@ -52,6 +52,8 @@
 		9173965A1971032E008C42C7 /* DistancePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 917396541971032E008C42C7 /* DistancePickerView.m */; };
 		9173966119714594008C42C7 /* ConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9173965F19714594008C42C7 /* ConfirmViewController.xib */; };
 		9173966219714594008C42C7 /* ConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9173966019714594008C42C7 /* ConfirmViewController.m */; };
+		91807033199E0C4D00BD1746 /* CartConfirmItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91807030199E0C4D00BD1746 /* CartConfirmItemCell.m */; };
+		91807034199E0C4D00BD1746 /* CartConfirmItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91807032199E0C4D00BD1746 /* CartConfirmItemCell.xib */; };
 		918ECC38192CC6AD00EDF6B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 918ECC34192CC6AD00EDF6B1 /* InfoPlist.strings */; };
 		918ECC39192CC6AD00EDF6B1 /* iAppTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 918ECC36192CC6AD00EDF6B1 /* iAppTests-Info.plist */; };
 		9195DB1D199B433000798D71 /* OrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9195DB1B199B433000798D71 /* OrdersViewController.m */; };
@@ -276,6 +278,9 @@
 		9173965E19714594008C42C7 /* ConfirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfirmViewController.h; sourceTree = "<group>"; };
 		9173965F19714594008C42C7 /* ConfirmViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmViewController.xib; sourceTree = "<group>"; };
 		9173966019714594008C42C7 /* ConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfirmViewController.m; sourceTree = "<group>"; };
+		91807030199E0C4D00BD1746 /* CartConfirmItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartConfirmItemCell.m; sourceTree = "<group>"; };
+		91807031199E0C4D00BD1746 /* CartConfirmItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartConfirmItemCell.h; sourceTree = "<group>"; };
+		91807032199E0C4D00BD1746 /* CartConfirmItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartConfirmItemCell.xib; sourceTree = "<group>"; };
 		918ECC35192CC6AD00EDF6B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		918ECC36192CC6AD00EDF6B1 /* iAppTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iAppTests-Info.plist"; sourceTree = "<group>"; };
 		9195DB1A199B433000798D71 /* OrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrdersViewController.h; sourceTree = "<group>"; };
@@ -950,6 +955,9 @@
 				91DB71E51983CC3600DDC308 /* EditTextFieldCell.h */,
 				91DB71E61983CC3600DDC308 /* EditTextFieldCell.m */,
 				91DB71E41983CC3600DDC308 /* EditTextFieldCell.xib */,
+				91807031199E0C4D00BD1746 /* CartConfirmItemCell.h */,
+				91807030199E0C4D00BD1746 /* CartConfirmItemCell.m */,
+				91807032199E0C4D00BD1746 /* CartConfirmItemCell.xib */,
 				9195DB24199B6C4F00798D71 /* OrderCell.h */,
 				9195DB25199B6C4F00798D71 /* OrderCell.m */,
 				9195DB22199B696D00798D71 /* OrderCell.xib */,
@@ -1103,6 +1111,7 @@
 				91CC86AD196C060300129688 /* CartViewController.xib in Resources */,
 				915326041950581D00E6E98F /* ProductDetailViewController.xib in Resources */,
 				915326011950581D00E6E98F /* CategoriesViewController.xib in Resources */,
+				91807034199E0C4D00BD1746 /* CartConfirmItemCell.xib in Resources */,
 				91D866EB1957CB7D00011141 /* ImagePagesViewCell.xib in Resources */,
 				916AB49B198CF5B60003D219 /* Main_iPhone.xib in Resources */,
 				918ECC39192CC6AD00EDF6B1 /* iAppTests-Info.plist in Resources */,
@@ -1222,6 +1231,7 @@
 				919A269C1956A2EA00F251E3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				910EFD7D1949ADCB00FD4378 /* AppTableViewController.m in Sources */,
 				919A26BB1956BB2F00F251E3 /* DetailPopoverViewController.m in Sources */,
+				91807033199E0C4D00BD1746 /* CartConfirmItemCell.m in Sources */,
 				919A26931956A2EA00F251E3 /* SDWebImageDecoder.m in Sources */,
 				915326031950581D00E6E98F /* ProductDetailViewController.m in Sources */,
 				91C6A6B8192C9AEE00903D95 /* main.m in Sources */,

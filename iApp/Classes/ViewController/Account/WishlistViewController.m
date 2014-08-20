@@ -119,7 +119,7 @@ static NSString*  _reuseId = @"ProductItemCell";
 #pragma mark - Table view data source
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
-    return 140;
+    return 151;
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {

@@ -15,9 +15,5 @@
 }
 @property(nonatomic)IBOutlet UIView* bottomView;
 
-@property(nonatomic)IBOutlet UILabel* labelSubTotal;
-@property(nonatomic)IBOutlet UILabel* labelEcoTax;
-@property(nonatomic)IBOutlet UILabel* labelVAT;
-@property(nonatomic)IBOutlet UILabel* labelTotal;
 
 @end

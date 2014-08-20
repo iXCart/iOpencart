@@ -38,14 +38,7 @@
 -(UIViewController*)getMainViewController;
 
 -(void)showHomeViewInKeyWindow:(int)selectedIndex;
-
  
 -(void)showCoverView;
-
-
- 
- 
-//@private
-
 
 @end

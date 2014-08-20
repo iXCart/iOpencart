@@ -9,10 +9,11 @@
 #import "CartViewController.h"
 #import "DataModel.h"
 #import "ProductDetailViewController.h"
-#import "XCartDataManager.h"
 #import "CartItemCell.h"
 #import "PaymentAddressViewController.h"
 #import "TotalsTableViewController.h"
+#import "LoginViewController.h"
+#import "XCartKit.h"
 
 @interface CartViewController ()
 {
@@ -67,6 +68,7 @@
     [self unRegisterListener];
 }
 
+
 - (void)renderLeftButton:(BOOL)inEditMode
 {
     UIBarButtonItem* button = nil;
@@ -111,16 +113,26 @@
   
 }
 
+
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
+    XCartUser* user = [XCartDataManager sharedInstance].activeUser;
+    if (nil == user || ![user isValidateUser]) {
+        LoginViewController* viewController = (LoginViewController*)[CUIEnginer createViewController:@"LoginViewController" inNavigationController:true];
+        
+        [self presentViewController:viewController animated:true completion:^{
+            self.view.hidden = false;
+        }];
+        return;
+    }
+    //@step
     [self loadData];
     
     self.editing = false;
     [[DataModel sharedInstance]resetUnDeleteProducts];
-    
-    
 }
+
 
 
 - (void)saveAction:(id)sender
@@ -171,16 +183,7 @@
     [self.tableView reloadData];
 }
 
-- (void)renderTotalView:(NSDictionary*)record
-{
-    self.labelSubTotal.text =[record valueForKey:Cart_Product_name];
-    self.labelEcoTax.text =[record valueForKey:Cart_Product_name];
-    self.labelVAT.text =[record valueForKey:Cart_Product_name];
-    self.labelTotal.text =[record valueForKey:Cart_Product_name];
-    
-    
-}
-
+ 
 - (void)reloadTotalsView
 {
     //@step

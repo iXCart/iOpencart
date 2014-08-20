@@ -10,12 +10,17 @@
 #import "DataModel.h"
 #import "ProductDetailViewController.h"
 #import "XCartDataManager.h"
-#import "CartItemCell.h"
+#import "CartConfirmItemCell.h"
 #import "PaymentAddressViewController.h"
+#import "TotalsTableViewController.h"
 
 @interface ConfirmViewController ()
-
+{
+     TotalsTableViewController* _totalsController;
+}
 @end
+
+static NSString* _reuseID = @"CartConfirmItemCell";
 
 @implementation ConfirmViewController
 
@@ -38,11 +43,13 @@
 
 -(void)prepareTableview
 {
-    UINib *nib = [UINib nibWithNibName:@"CartItemCell" bundle:nil];
+    UINib *nib = [UINib nibWithNibName:_reuseID bundle:nil];
     [self.tableView registerNib:nib
-         forCellReuseIdentifier:@"CartItemCell"];
+         forCellReuseIdentifier:_reuseID];
     
-    self.tableView.tableFooterView = self.bottomView;
+    if (nil == _totalsController) {
+        _totalsController = (TotalsTableViewController*) [TotalsTableViewController create];
+    }
 }
 
 - (void)viewDidLoad
@@ -59,6 +66,29 @@
 {
     
 }
+
+
+- (void)reloadTotalsView
+{
+    //@step
+    NSArray* list = [[_mappingResult dictionary] valueForKey :Cart_totals];
+    [_totalsController relaod:list];
+    if (nil == _prodcuts || [_prodcuts count] ==0) {
+        self.tableView.tableFooterView  = nil;
+        _totalsController.tableView.tableFooterView = nil;
+    }else
+    {
+        _totalsController.tableView.tableFooterView = self.bottomView;
+        CGRect frame = _totalsController.view.frame;
+        frame.size.height = frame.size.height + self.bottomView.frame.size.height;
+         _totalsController.view.frame = frame;
+        
+        self.tableView.tableFooterView = _totalsController.view;
+        
+        
+    }
+}
+
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -140,33 +170,13 @@
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSString* buf = operation.HTTPRequestOperation.responseString;
        
-        [CDialogViewManager showMessageView:[error localizedDescription] message:buf delayAutoHide:-1];
+       //@  [CDialogViewManager showMessageView:[error localizedDescription] message:buf delayAutoHide:-1];
     }];
     
 }
 
-- (void)loadDataFromLocal
-{
-    NSArray* list = [[DataModel sharedInstance] getProudctsFromCart];
-    if (nil == list) {
-        _prodcuts = [NSArray array];
-    }else
-        _prodcuts = list;
-    
-    NSLog(@"%@->loadData:%@",self, _prodcuts);
-    //@step
-    [self.tableView reloadData];
-}
 
-- (void)renderTotalView:(NSDictionary*)record
-{
-    self.labelSubTotal.text =[record valueForKey:Cart_Product_name];
-    self.labelEcoTax.text =[record valueForKey:Cart_Product_name];
-    self.labelVAT.text =[record valueForKey:Cart_Product_name];
-    self.labelTotal.text =[record valueForKey:Cart_Product_name];
-    
-    
-}
+
 - (RKMappingResult*)parseData2Result:(NSData*)data
 {
     //@step
@@ -186,6 +196,8 @@
         _prodcuts = [[_mappingResult dictionary] valueForKey :Cart_products];
         //@step
         [self.tableView reloadData];
+        //@step
+        [self reloadTotalsView];
       
         
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
@@ -214,7 +226,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString* reuseId =@"CartItemCell";
+    NSString* reuseId =_reuseID;
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId forIndexPath:indexPath];
     
@@ -224,7 +236,7 @@
     int row = indexPath.row;
     NSDictionary* item = [items objectAtIndex:row];
     //cell.textLabel.text = [item valueForKey:Cart_Product_name];
-    CartItemCell* theCell = (CartItemCell*)cell;
+    CartConfirmItemCell* theCell = (CartConfirmItemCell*)cell;
     theCell.labelName.text =[item valueForKey:Cart_Product_name];
     theCell.labelName.numberOfLines = 2;
     theCell.labelModel.text = [item valueForKey:Cart_Product_model];
