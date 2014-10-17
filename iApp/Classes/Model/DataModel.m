@@ -132,17 +132,33 @@
 
 - (void)removeProductFromServerCart:(NSDictionary*)product
 {
-    //@ index.php?route=checkout/cart&remove=29:
+    //@ for Opencart v1.5 index.php?route=checkout/cart&remove=29:
+    
+    //@ for Opencart v2.0 index.php?route=checkout/cart/remove
     //@step
     NSString* productKey = [product valueForKey:CartProdcut_key];
+    //@step v1.5
     NSDictionary* params =[NSDictionary dictionaryWithObjectsAndKeys:
                            TRUE_ONE,Rest_json,
                            productKey,@"remove",
                            nil];
+
+    RKRequestMethod method = RKRequestMethodGET;
     NSString* urlString = [Resource getCheckoutCartURLString];
-    //urlString = [NSString stringWithFormat:@"%@&remove=%@", urlString, productKey];
+    
+    if ([Resource isVersion2]) {
+        
+        urlString = [NSString stringWithFormat:@"%@/remove", urlString];
+        //@step v2.0
+        params =[NSDictionary dictionaryWithObjectsAndKeys:
+                 TRUE_ONE,Rest_json,
+                 productKey,@"key",
+                 nil];
+        method = RKRequestMethodPOST;
+    }
+   
     //@step
-    [[XCartDataManager sharedInstance] executeAction:urlString method:RKRequestMethodGET params:params success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+    [[XCartDataManager sharedInstance] executeAction:urlString method:method params:params success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         //@step
         [self finishOneTask];
         //@step
@@ -244,7 +260,9 @@
     [params setValue:TRUE_ONE forKey:Rest_json];
   
     NSString* urlString = [Resource getCheckoutCartURLString];
-    
+    if ([Resource isVersion2]) {
+         urlString = [NSString stringWithFormat:@"%@/edit", urlString];
+    }
     //@step
     [[XCartDataManager sharedInstance] executeAction:urlString method:RKRequestMethodPOST params:params success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         //@step

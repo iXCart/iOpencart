@@ -77,6 +77,7 @@ NSString* NotifyEventCommpleteUpdateCart =@"NotifyEventCommpleteUpdateCart";
 
 + (NSString*)getCheckoutCartURLString
 {
+    
     return StringJoin([Resource getIndexURLString], @"route=checkout/cart");
 }
 

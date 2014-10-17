@@ -6,10 +6,11 @@
   Copyright (c) 2014 icoco. All rights reserved.
 */
 
-"WebSerivceVersion" ="1.5";
+"WebSerivceVersion_1.5" ="1.5";
+"WebSerivceVersion" ="2";
 
-"WebSerivceEntry2" = "http://127.0.0.1/o2/";
+"WebSerivceEntry" = "http://127.0.0.1/oc2";
 
-"WebSerivceEntry" = "http://127.0.0.1/opencart";
+"WebSerivceEntry_1.5" = "http://127.0.0.1/opencart";
 
 
