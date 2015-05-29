@@ -50,6 +50,18 @@
     NSLog(@"%@->dealloc", self);
     
 }
+
+- (void) closeView:(id)sender;
+{
+    [self dismissViewControllerAnimated:true completion:^{
+        
+    }];
+    UIViewController* parent = self.parentViewController;
+    if (nil != parent && [parent isKindOfClass:[UINavigationController class]]) {
+        UINavigationController* nv = (UINavigationController*) parent;
+        [nv popViewControllerAnimated:true];
+    }
+}
 /*
 #pragma mark - Navigation
 

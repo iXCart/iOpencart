@@ -8,19 +8,29 @@
 
 #import <Foundation/Foundation.h>
 
+//#undef DEBUG
+
 #ifdef DEBUG
- 
+    
 #else
-#define NSLog(...)
+
+    #define NSLog(...)
 
 #endif
+
+
 
 extern  NSString* NotifyEventCommpleteAddCart ;
 
 extern  NSString* NotifyEventCommpleteUpdateCart;
 
+extern const NSString* KeyOfStoreURL ;
+extern const NSString* DefaultValueOfStoreURL ;
+
+
 @interface Resource : NSObject
 
++ (void)setupLogger;
 
 +(UIColor*) getStandardColor;
  
@@ -64,10 +74,21 @@ extern  NSString* NotifyEventCommpleteUpdateCart;
 
 + (NSString*)getAccountEditURLString;
 
++ (NSString*)getAccountRegisterURLString;
+
++ (NSString*)getCountriesURLString;
+
++ (NSString*)getRegionOrStateURLString;
+
 + (NSString*)getAccountWishlistURLString;
 
 + (NSString*)getOrderHistoryURLString;
 
++ (NSString*)getAboutURLString;
+
++ (NSString*)getPrivacyPolicyURLString;
+
++ (NSString*)getResetPasswordURLString;
 
 + (RKMappingResult*)parseData2Result:(NSData*)data;
 

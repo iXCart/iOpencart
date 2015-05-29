@@ -9,6 +9,8 @@
 		<string>AcountEditViewController</string>
 		<key>Image</key>
 		<string></string>
+		<key>loginUser</key>
+		<string>1</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -17,6 +19,8 @@
 		<string>OrdersViewController</string>
 		<key>Image</key>
 		<string></string>
+		<key>loginUser</key>
+		<string>1</string>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -25,12 +29,14 @@
 		<string>WishlistViewController</string>
 		<key>Image</key>
 		<string></string>
+		<key>loginUser</key>
+		<string>1</string>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>Newsletter</string>
+		<string>Store</string>
 		<key>class</key>
-		<string></string>
+		<string>ServerViewController</string>
 		<key>Image</key>
 		<string></string>
 	</dict>
@@ -38,7 +44,7 @@
 		<key>name</key>
 		<string>About</string>
 		<key>class</key>
-		<string></string>
+		<string>AboutViewController</string>
 		<key>Image</key>
 		<string></string>
 	</dict>

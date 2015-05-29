@@ -16,6 +16,7 @@
 
 + (AppViewController*)create;
 
+- (void) closeView:(id)sender;
 
 - (IBAction)unwindSegueRouteView:(UIStoryboardSegue *)segue ;
 

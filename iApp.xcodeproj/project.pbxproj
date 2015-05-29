@@ -35,11 +35,22 @@
 		915326061950581D00E6E98F /* ProductsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 915325FB1950581D00E6E98F /* ProductsViewController.xib */; };
 		915326071950581D00E6E98F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915325FE1950581D00E6E98F /* SettingsViewController.m */; };
 		915326081950581D00E6E98F /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 915325FF1950581D00E6E98F /* SettingsViewController.xib */; };
+		9153B55B1A3AD07600AD17C1 /* RadioLinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9153B55A1A3AD07600AD17C1 /* RadioLinkCell.xib */; };
+		9153B5601A3ADE7100AD17C1 /* CWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9153B55F1A3ADE7100AD17C1 /* CWebViewController.xib */; };
+		9153B5641A3AEE9D00AD17C1 /* ResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9153B5621A3AEE9D00AD17C1 /* ResetPasswordViewController.m */; };
+		9153B5651A3AEE9D00AD17C1 /* ResetPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9153B5631A3AEE9D00AD17C1 /* ResetPasswordViewController.xib */; };
+		91548BC81A1EFBB500F75BB8 /* ServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91548BC61A1EFBB500F75BB8 /* ServerViewController.m */; };
+		91548BC91A1EFBB500F75BB8 /* ServerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91548BC71A1EFBB500F75BB8 /* ServerViewController.xib */; };
+		91548BCD1A2306E500F75BB8 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91548BCB1A2306E500F75BB8 /* RegisterViewController.m */; };
+		91548BCE1A2306E500F75BB8 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91548BCC1A2306E500F75BB8 /* RegisterViewController.xib */; };
+		91548BD01A230D2700F75BB8 /* registerDefs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91548BCF1A230D2700F75BB8 /* registerDefs.plist */; };
 		91563821195A9A8E00A3E6EB /* CoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91563820195A9A8E00A3E6EB /* CoverViewController.xib */; };
 		91563825195AB58400A3E6EB /* XCartUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 91563824195AB58400A3E6EB /* XCartUser.m */; };
 		9156382C195AB6A500A3E6EB /* OpenCartUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9156382B195AB6A500A3E6EB /* OpenCartUser.m */; };
 		9156382F195ABABC00A3E6EB /* XCartAppFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 9156382E195ABABC00A3E6EB /* XCartAppFactory.m */; };
-		916AB49B198CF5B60003D219 /* Main_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 916AB49A198CF5B60003D219 /* Main_iPhone.xib */; };
+		915C18D51A1DD7A60010D276 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 915C18D21A1DD7A60010D276 /* Default-568h@2x.png */; };
+		915C18D61A1DD7A60010D276 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 915C18D31A1DD7A60010D276 /* Default.png */; };
+		915C18D71A1DD7A60010D276 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 915C18D41A1DD7A60010D276 /* Default@2x.png */; };
 		916DCDAD196D8F2400ECAD07 /* ShippingAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 916DCDAA196D8F2400ECAD07 /* ShippingAddressViewController.xib */; };
 		916DCDAE196D8F2400ECAD07 /* ShippingAddressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 916DCDAB196D8F2400ECAD07 /* ShippingAddressViewController.m */; };
 		916DCDB5196D9A1200ECAD07 /* ShippingMethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 916DCDB2196D9A1200ECAD07 /* ShippingMethodViewController.m */; };
@@ -56,6 +67,8 @@
 		91807034199E0C4D00BD1746 /* CartConfirmItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91807032199E0C4D00BD1746 /* CartConfirmItemCell.xib */; };
 		918ECC38192CC6AD00EDF6B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 918ECC34192CC6AD00EDF6B1 /* InfoPlist.strings */; };
 		918ECC39192CC6AD00EDF6B1 /* iAppTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 918ECC36192CC6AD00EDF6B1 /* iAppTests-Info.plist */; };
+		9193CF7E1A2C62D700B22482 /* CountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9193CF7C1A2C62D700B22482 /* CountryViewController.m */; };
+		9193CF7F1A2C62D800B22482 /* CountryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9193CF7D1A2C62D700B22482 /* CountryViewController.xib */; };
 		9195DB1D199B433000798D71 /* OrdersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9195DB1B199B433000798D71 /* OrdersViewController.m */; };
 		9195DB1E199B433000798D71 /* OrdersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9195DB1C199B433000798D71 /* OrdersViewController.xib */; };
 		9195DB23199B696D00798D71 /* OrderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9195DB22199B696D00798D71 /* OrderCell.xib */; };
@@ -84,6 +97,12 @@
 		919A26BF1956BB2F00F251E3 /* CPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 919A26B51956BB2F00F251E3 /* CPageViewController.m */; };
 		919A26C11956BB2F00F251E3 /* CPageContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 919A26B91956BB2F00F251E3 /* CPageContainerViewController.m */; };
 		919A26C41956BC2700F251E3 /* CPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 919A26C21956BC2700F251E3 /* CPageView.xib */; };
+		919B11CA1A3842690076D142 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 919B11C81A3842690076D142 /* ButtonCell.m */; };
+		919B11CB1A3842690076D142 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 919B11C91A3842690076D142 /* ButtonCell.xib */; };
+		91A727DA1A35A49E0026A954 /* StateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A727D81A35A49E0026A954 /* StateViewController.m */; };
+		91A727DB1A35A49E0026A954 /* StateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A727D91A35A49E0026A954 /* StateViewController.xib */; };
+		91A727E21A35C59B0026A954 /* RadioCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A727DF1A35C59B0026A954 /* RadioCell.m */; };
+		91A727E31A35C59B0026A954 /* RadioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A727E01A35C59B0026A954 /* RadioCell.xib */; };
 		91A97A72196137BC002DEA0F /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A97A6919613749002DEA0F /* libRestKit.a */; };
 		91B18F8A1947243E00103441 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B18F881947243E00103441 /* splash.png */; };
 		91B18F8B1947243E00103441 /* proudctDefs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91B18F891947243E00103441 /* proudctDefs.plist */; };
@@ -115,6 +134,8 @@
 		91CC86B2196C063A00129688 /* PaymentAddressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91CC86B0196C063A00129688 /* PaymentAddressViewController.xib */; };
 		91CC86B6196C0F6B00129688 /* AddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91CC86B4196C0F6B00129688 /* AddressCell.m */; };
 		91CC86B7196C0F6B00129688 /* AddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91CC86B5196C0F6B00129688 /* AddressCell.xib */; };
+		91D687FC1A15C67700DD5032 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D687FA1A15C67700DD5032 /* AboutViewController.m */; };
+		91D688041A15C74300DD5032 /* AboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91D688031A15C74300DD5032 /* AboutViewController.xib */; };
 		91D6DFEF195ADFB100FC2195 /* settingDefs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91D6DFEE195ADFB100FC2195 /* settingDefs.plist */; };
 		91D6DFFA195AEAAD00FC2195 /* cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 91D6DFF4195AEAAD00FC2195 /* cart.png */; };
 		91D6DFFB195AEAAD00FC2195 /* category.png in Resources */ = {isa = PBXBuildFile; fileRef = 91D6DFF5195AEAAD00FC2195 /* category.png */; };
@@ -248,6 +269,18 @@
 		915325FD1950581D00E6E98F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		915325FE1950581D00E6E98F /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		915325FF1950581D00E6E98F /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		9153B55A1A3AD07600AD17C1 /* RadioLinkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioLinkCell.xib; sourceTree = "<group>"; };
+		9153B55F1A3ADE7100AD17C1 /* CWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CWebViewController.xib; sourceTree = "<group>"; };
+		9153B5611A3AEE9D00AD17C1 /* ResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPasswordViewController.h; sourceTree = "<group>"; };
+		9153B5621A3AEE9D00AD17C1 /* ResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPasswordViewController.m; sourceTree = "<group>"; };
+		9153B5631A3AEE9D00AD17C1 /* ResetPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResetPasswordViewController.xib; sourceTree = "<group>"; };
+		91548BC51A1EFBB500F75BB8 /* ServerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServerViewController.h; path = iApp/Classes/ViewController/Setting/ServerViewController.h; sourceTree = SOURCE_ROOT; };
+		91548BC61A1EFBB500F75BB8 /* ServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServerViewController.m; path = iApp/Classes/ViewController/Setting/ServerViewController.m; sourceTree = SOURCE_ROOT; };
+		91548BC71A1EFBB500F75BB8 /* ServerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ServerViewController.xib; path = iApp/Classes/ViewController/Setting/ServerViewController.xib; sourceTree = SOURCE_ROOT; };
+		91548BCA1A2306E500F75BB8 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		91548BCB1A2306E500F75BB8 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		91548BCC1A2306E500F75BB8 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		91548BCF1A230D2700F75BB8 /* registerDefs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = registerDefs.plist; sourceTree = "<group>"; };
 		91563820195A9A8E00A3E6EB /* CoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoverViewController.xib; sourceTree = "<group>"; };
 		91563823195AB58400A3E6EB /* XCartUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCartUser.h; sourceTree = "<group>"; };
 		91563824195AB58400A3E6EB /* XCartUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCartUser.m; sourceTree = "<group>"; };
@@ -255,7 +288,9 @@
 		9156382B195AB6A500A3E6EB /* OpenCartUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenCartUser.m; sourceTree = "<group>"; };
 		9156382D195ABABC00A3E6EB /* XCartAppFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCartAppFactory.h; sourceTree = "<group>"; };
 		9156382E195ABABC00A3E6EB /* XCartAppFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCartAppFactory.m; sourceTree = "<group>"; };
-		916AB49A198CF5B60003D219 /* Main_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Main_iPhone.xib; sourceTree = "<group>"; };
+		915C18D21A1DD7A60010D276 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		915C18D31A1DD7A60010D276 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		915C18D41A1DD7A60010D276 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		916DCDAA196D8F2400ECAD07 /* ShippingAddressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShippingAddressViewController.xib; sourceTree = "<group>"; };
 		916DCDAB196D8F2400ECAD07 /* ShippingAddressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShippingAddressViewController.m; sourceTree = "<group>"; };
 		916DCDAC196D8F2400ECAD07 /* ShippingAddressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShippingAddressViewController.h; sourceTree = "<group>"; };
@@ -283,6 +318,9 @@
 		91807032199E0C4D00BD1746 /* CartConfirmItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartConfirmItemCell.xib; sourceTree = "<group>"; };
 		918ECC35192CC6AD00EDF6B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		918ECC36192CC6AD00EDF6B1 /* iAppTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iAppTests-Info.plist"; sourceTree = "<group>"; };
+		9193CF7B1A2C62D700B22482 /* CountryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryViewController.h; sourceTree = "<group>"; };
+		9193CF7C1A2C62D700B22482 /* CountryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountryViewController.m; sourceTree = "<group>"; };
+		9193CF7D1A2C62D700B22482 /* CountryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountryViewController.xib; sourceTree = "<group>"; };
 		9195DB1A199B433000798D71 /* OrdersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrdersViewController.h; sourceTree = "<group>"; };
 		9195DB1B199B433000798D71 /* OrdersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrdersViewController.m; sourceTree = "<group>"; };
 		9195DB1C199B433000798D71 /* OrdersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrdersViewController.xib; sourceTree = "<group>"; };
@@ -335,6 +373,15 @@
 		919A26B81956BB2F00F251E3 /* CPageContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPageContainerViewController.h; sourceTree = "<group>"; };
 		919A26B91956BB2F00F251E3 /* CPageContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPageContainerViewController.m; sourceTree = "<group>"; };
 		919A26C21956BC2700F251E3 /* CPageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPageView.xib; sourceTree = "<group>"; };
+		919B11C71A3842690076D142 /* ButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonCell.h; sourceTree = "<group>"; };
+		919B11C81A3842690076D142 /* ButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonCell.m; sourceTree = "<group>"; };
+		919B11C91A3842690076D142 /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
+		91A727D71A35A49E0026A954 /* StateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StateViewController.h; sourceTree = "<group>"; };
+		91A727D81A35A49E0026A954 /* StateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StateViewController.m; sourceTree = "<group>"; };
+		91A727D91A35A49E0026A954 /* StateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StateViewController.xib; sourceTree = "<group>"; };
+		91A727DF1A35C59B0026A954 /* RadioCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioCell.m; sourceTree = "<group>"; };
+		91A727E01A35C59B0026A954 /* RadioCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioCell.xib; sourceTree = "<group>"; };
+		91A727E11A35C59B0026A954 /* RadioCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioCell.h; sourceTree = "<group>"; };
 		91A97A6119613749002DEA0F /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = "../../../../sdk/lib/RestKit-0.20.3/RestKit.xcodeproj"; sourceTree = "<group>"; };
 		91B18F881947243E00103441 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		91B18F891947243E00103441 /* proudctDefs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = proudctDefs.plist; sourceTree = "<group>"; };
@@ -376,6 +423,9 @@
 		91CC86B3196C0F6B00129688 /* AddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddressCell.h; sourceTree = "<group>"; };
 		91CC86B4196C0F6B00129688 /* AddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddressCell.m; sourceTree = "<group>"; };
 		91CC86B5196C0F6B00129688 /* AddressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddressCell.xib; sourceTree = "<group>"; };
+		91D687F91A15C67700DD5032 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		91D687FA1A15C67700DD5032 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		91D688031A15C74300DD5032 /* AboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutViewController.xib; sourceTree = "<group>"; };
 		91D6DFEE195ADFB100FC2195 /* settingDefs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = settingDefs.plist; sourceTree = "<group>"; };
 		91D6DFF4195AEAAD00FC2195 /* cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cart.png; sourceTree = "<group>"; };
 		91D6DFF5195AEAAD00FC2195 /* category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category.png; sourceTree = "<group>"; };
@@ -530,6 +580,18 @@
 				9195DB1A199B433000798D71 /* OrdersViewController.h */,
 				9195DB1B199B433000798D71 /* OrdersViewController.m */,
 				9195DB1C199B433000798D71 /* OrdersViewController.xib */,
+				9193CF7B1A2C62D700B22482 /* CountryViewController.h */,
+				9193CF7C1A2C62D700B22482 /* CountryViewController.m */,
+				9193CF7D1A2C62D700B22482 /* CountryViewController.xib */,
+				91A727D71A35A49E0026A954 /* StateViewController.h */,
+				91A727D81A35A49E0026A954 /* StateViewController.m */,
+				91A727D91A35A49E0026A954 /* StateViewController.xib */,
+				91548BCA1A2306E500F75BB8 /* RegisterViewController.h */,
+				91548BCB1A2306E500F75BB8 /* RegisterViewController.m */,
+				91548BCC1A2306E500F75BB8 /* RegisterViewController.xib */,
+				9153B5611A3AEE9D00AD17C1 /* ResetPasswordViewController.h */,
+				9153B5621A3AEE9D00AD17C1 /* ResetPasswordViewController.m */,
+				9153B5631A3AEE9D00AD17C1 /* ResetPasswordViewController.xib */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -560,9 +622,15 @@
 		915325FC1950581D00E6E98F /* Setting */ = {
 			isa = PBXGroup;
 			children = (
+				91548BC51A1EFBB500F75BB8 /* ServerViewController.h */,
+				91548BC61A1EFBB500F75BB8 /* ServerViewController.m */,
+				91548BC71A1EFBB500F75BB8 /* ServerViewController.xib */,
 				915325FD1950581D00E6E98F /* SettingsViewController.h */,
 				915325FE1950581D00E6E98F /* SettingsViewController.m */,
 				915325FF1950581D00E6E98F /* SettingsViewController.xib */,
+				91D687F91A15C67700DD5032 /* AboutViewController.h */,
+				91D687FA1A15C67700DD5032 /* AboutViewController.m */,
+				91D688031A15C74300DD5032 /* AboutViewController.xib */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -709,13 +777,16 @@
 		91B18F861947243E00103441 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				915C18D21A1DD7A60010D276 /* Default-568h@2x.png */,
+				915C18D31A1DD7A60010D276 /* Default.png */,
+				915C18D41A1DD7A60010D276 /* Default@2x.png */,
 				91B18F871947243E00103441 /* images */,
 				91B18F891947243E00103441 /* proudctDefs.plist */,
 				91D6DFEE195ADFB100FC2195 /* settingDefs.plist */,
+				91548BCF1A230D2700F75BB8 /* registerDefs.plist */,
 				91DB5BC01983A5F60006D80F /* addressViewDef.plist */,
 				9195DB2C199B804E00798D71 /* accountEditViewDef.plist */,
 				91C53FF1195585CC00FB0AA1 /* tabDefs.plist */,
-				916AB49A198CF5B60003D219 /* Main_iPhone.xib */,
 				914E77951948A1C000596707 /* XCartCoreData.xcdatamodeld */,
 			);
 			path = Resources;
@@ -823,6 +894,7 @@
 				910EFD7C1949ADCB00FD4378 /* AppTableViewController.m */,
 				91C6A719192C9E3900903D95 /* CWebViewController.h */,
 				91C6A71A192C9E3900903D95 /* CWebViewController.m */,
+				9153B55F1A3ADE7100AD17C1 /* CWebViewController.xib */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -958,6 +1030,13 @@
 				91807031199E0C4D00BD1746 /* CartConfirmItemCell.h */,
 				91807030199E0C4D00BD1746 /* CartConfirmItemCell.m */,
 				91807032199E0C4D00BD1746 /* CartConfirmItemCell.xib */,
+				91A727E11A35C59B0026A954 /* RadioCell.h */,
+				91A727DF1A35C59B0026A954 /* RadioCell.m */,
+				91A727E01A35C59B0026A954 /* RadioCell.xib */,
+				9153B55A1A3AD07600AD17C1 /* RadioLinkCell.xib */,
+				919B11C71A3842690076D142 /* ButtonCell.h */,
+				919B11C81A3842690076D142 /* ButtonCell.m */,
+				919B11C91A3842690076D142 /* ButtonCell.xib */,
 				9195DB24199B6C4F00798D71 /* OrderCell.h */,
 				9195DB25199B6C4F00798D71 /* OrderCell.m */,
 				9195DB22199B696D00798D71 /* OrderCell.xib */,
@@ -1030,6 +1109,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = icoco;
 				TargetAttributes = {
+					91C6A6A7192C9AEE00903D95 = {
+						DevelopmentTeam = 2G42EDR44V;
+					};
 					91C6A6CE192C9AEE00903D95 = {
 						TestTargetID = 91C6A6A7192C9AEE00903D95;
 					};
@@ -1097,28 +1179,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				91CC86A4196BB5E200129688 /* CartItemCell.xib in Resources */,
+				91D688041A15C74300DD5032 /* AboutViewController.xib in Resources */,
 				91D6DFFB195AEAAD00FC2195 /* category.png in Resources */,
+				9153B5601A3ADE7100AD17C1 /* CWebViewController.xib in Resources */,
 				91CC86B7196C0F6B00129688 /* AddressCell.xib in Resources */,
+				915C18D71A1DD7A60010D276 /* Default@2x.png in Resources */,
+				91A727E31A35C59B0026A954 /* RadioCell.xib in Resources */,
 				91D866E81957CB7D00011141 /* BaseCell.xib in Resources */,
 				919A26C41956BC2700F251E3 /* CPageView.xib in Resources */,
+				91548BC91A1EFBB500F75BB8 /* ServerViewController.xib in Resources */,
 				91D6DFFA195AEAAD00FC2195 /* cart.png in Resources */,
+				915C18D61A1DD7A60010D276 /* Default.png in Resources */,
 				91E3F0161956C3B0000DF9AC /* CPageContainerViewController.xib in Resources */,
 				9195DB1E199B433000798D71 /* OrdersViewController.xib in Resources */,
 				918ECC38192CC6AD00EDF6B1 /* InfoPlist.strings in Resources */,
 				9195DB2D199B804E00798D71 /* accountEditViewDef.plist in Resources */,
 				91F4074C196D29A20058D397 /* row_selected.png in Resources */,
+				91548BD01A230D2700F75BB8 /* registerDefs.plist in Resources */,
 				91DB5BC11983A5F60006D80F /* addressViewDef.plist in Resources */,
 				91CC86AD196C060300129688 /* CartViewController.xib in Resources */,
+				91A727DB1A35A49E0026A954 /* StateViewController.xib in Resources */,
+				9153B55B1A3AD07600AD17C1 /* RadioLinkCell.xib in Resources */,
 				915326041950581D00E6E98F /* ProductDetailViewController.xib in Resources */,
 				915326011950581D00E6E98F /* CategoriesViewController.xib in Resources */,
+				9153B5651A3AEE9D00AD17C1 /* ResetPasswordViewController.xib in Resources */,
 				91807034199E0C4D00BD1746 /* CartConfirmItemCell.xib in Resources */,
 				91D866EB1957CB7D00011141 /* ImagePagesViewCell.xib in Resources */,
-				916AB49B198CF5B60003D219 /* Main_iPhone.xib in Resources */,
 				918ECC39192CC6AD00EDF6B1 /* iAppTests-Info.plist in Resources */,
 				91C6A6CA192C9AEE00903D95 /* Images.xcassets in Resources */,
 				91E1409C197662A60084818A /* TotalsTableViewController.xib in Resources */,
 				9145248219596AF300B9BFE7 /* LoginViewController.xib in Resources */,
 				91B18F8B1947243E00103441 /* proudctDefs.plist in Resources */,
+				915C18D51A1DD7A60010D276 /* Default-568h@2x.png in Resources */,
 				91D6DFFF195AEAAD00FC2195 /* settings.png in Resources */,
 				911F168B199CB5FF00442A84 /* WishlistViewController.xib in Resources */,
 				9122E3AB1970DA6200C215B4 /* PaymentMethodViewController.xib in Resources */,
@@ -1126,11 +1218,14 @@
 				91D6E006195AEF3800FC2195 /* Localizable.strings in Resources */,
 				9195DB23199B696D00798D71 /* OrderCell.xib in Resources */,
 				91563821195A9A8E00A3E6EB /* CoverViewController.xib in Resources */,
+				919B11CB1A3842690076D142 /* ButtonCell.xib in Resources */,
 				91D866ED1957CB7D00011141 /* ImageViewCell.xib in Resources */,
 				916DCDB6196D9A1200ECAD07 /* ShippingMethodViewController.xib in Resources */,
+				91548BCE1A2306E500F75BB8 /* RegisterViewController.xib in Resources */,
 				91C53FF2195585CC00FB0AA1 /* tabDefs.plist in Resources */,
 				91B18F8A1947243E00103441 /* splash.png in Resources */,
 				91D866EF1957CB7D00011141 /* WebViewCell.xib in Resources */,
+				9193CF7F1A2C62D800B22482 /* CountryViewController.xib in Resources */,
 				91FC43C9196127EF00EB01A9 /* placeholder@2x.png in Resources */,
 				91DB5BBC1983A4A30006D80F /* AddressViewController.xib in Resources */,
 				91FC43C8196127EF00EB01A9 /* placeholder.png in Resources */,
@@ -1163,8 +1258,11 @@
 			files = (
 				917396581971032E008C42C7 /* ActionSheetDistancePicker.m in Sources */,
 				919A26971956A2EA00F251E3 /* SDWebImagePrefetcher.m in Sources */,
+				91A727DA1A35A49E0026A954 /* StateViewController.m in Sources */,
 				91D866D71957CB0D00011141 /* AppLanguage.m in Sources */,
 				91109028192CBD25009747E5 /* CoverViewController.m in Sources */,
+				91548BC81A1EFBB500F75BB8 /* ServerViewController.m in Sources */,
+				91548BCD1A2306E500F75BB8 /* RegisterViewController.m in Sources */,
 				91D866EA1957CB7D00011141 /* ImagePagesViewCell.m in Sources */,
 				91CC86B1196C063A00129688 /* PaymentAddressViewController.m in Sources */,
 				91D866E91957CB7D00011141 /* CTableViewCell.m in Sources */,
@@ -1172,6 +1270,7 @@
 				914E77971948A1C000596707 /* XCartCoreData.xcdatamodeld in Sources */,
 				9110901F192CBCB0009747E5 /* Resource.m in Sources */,
 				919A26BC1956BB2F00F251E3 /* DetailViewController.m in Sources */,
+				9153B5641A3AEE9D00AD17C1 /* ResetPasswordViewController.m in Sources */,
 				919A26BE1956BB2F00F251E3 /* Tile.m in Sources */,
 				9173966219714594008C42C7 /* ConfirmViewController.m in Sources */,
 				91D866F51958240A00011141 /* CDialogViewManager.m in Sources */,
@@ -1209,9 +1308,11 @@
 				91CC86B6196C0F6B00129688 /* AddressCell.m in Sources */,
 				9195DB1D199B433000798D71 /* OrdersViewController.m in Sources */,
 				917396561971032E008C42C7 /* ActionSheetCustomPicker.m in Sources */,
+				9193CF7E1A2C62D700B22482 /* CountryViewController.m in Sources */,
 				917396551971032E008C42C7 /* AbstractActionSheetPicker.m in Sources */,
 				9122E3AC1970DA6200C215B4 /* PaymentMethodViewController.m in Sources */,
 				91C6A721192C9E3900903D95 /* AppDelegate.m in Sources */,
+				919B11CA1A3842690076D142 /* ButtonCell.m in Sources */,
 				9156382C195AB6A500A3E6EB /* OpenCartUser.m in Sources */,
 				91DB5BBB1983A4A30006D80F /* AddressViewController.m in Sources */,
 				91563825195AB58400A3E6EB /* XCartUser.m in Sources */,
@@ -1227,6 +1328,7 @@
 				91C6A722192C9E3900903D95 /* AppViewController.m in Sources */,
 				914524791959658B00B9BFE7 /* CUIEnginer.m in Sources */,
 				91B18FD819472C7900103441 /* CAnimator.m in Sources */,
+				91D687FC1A15C67700DD5032 /* AboutViewController.m in Sources */,
 				919A26BF1956BB2F00F251E3 /* CPageViewController.m in Sources */,
 				919A269C1956A2EA00F251E3 /* UIImageView+HighlightedWebCache.m in Sources */,
 				910EFD7D1949ADCB00FD4378 /* AppTableViewController.m in Sources */,
@@ -1243,6 +1345,7 @@
 				91DB71E01983CB6700DDC308 /* NSString+TextDirectionality.m in Sources */,
 				915326071950581D00E6E98F /* SettingsViewController.m in Sources */,
 				9156382F195ABABC00A3E6EB /* XCartAppFactory.m in Sources */,
+				91A727E21A35C59B0026A954 /* RadioCell.m in Sources */,
 				9106EB92197FA99A0072B16A /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1311,7 +1414,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
+					"DEBUG=0",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
@@ -1321,7 +1424,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1354,7 +1457,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -1366,18 +1469,22 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iApp/iApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"",
 				);
 				INFOPLIST_FILE = "iApp/iApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = iApp;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1388,7 +1495,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iApp/iApp-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -1397,9 +1505,11 @@
 					"\"$(BUILT_PRODUCTS_DIR)/../../Headers\"",
 				);
 				INFOPLIST_FILE = "iApp/iApp-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = iApp;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1417,7 +1527,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iApp/iApp-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
+					"DEBUG=0",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "iAppTests/iAppTests-Info.plist";

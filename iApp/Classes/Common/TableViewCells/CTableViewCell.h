@@ -15,5 +15,6 @@
 @property(nonatomic)NSIndexPath* indexPath;
 
 - (void)setArgs:(NSObject*)args;
+- (NSObject*)getArgs;
 
 @end

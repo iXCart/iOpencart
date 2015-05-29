@@ -10,6 +10,7 @@
 #import "XCartDataManager.h"
 #import "AppManager.h"
 #import "DataModel.h"
+#import "CUIEnginer.h"
 
 @interface LoginViewController ()
 
@@ -48,7 +49,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)closeView
+- (void)closeView:(id)sender
 {
     [self dismissViewControllerAnimated:true completion:^{
         
@@ -83,7 +84,7 @@
              
             [[DataModel sharedInstance ]storeUserAccountInfo:email password:password];
             //@step login succcess
-            [self closeView];
+            [self closeView:nil];
             return ;
         }
         //@step
@@ -121,5 +122,23 @@
 {
     [self performSelector:@selector(onLogin:) withObject:nil afterDelay:8];
     return true;
+}
+
+- (IBAction)newCustomer:(id)sender{
+    
+    NSString* class = @"RegisterViewController";
+
+    UIViewController* viewController = [CUIEnginer createViewController:class inNavigationController:false];
+    [self.navigationController pushViewController:viewController animated:true];
+
+}
+
+- (IBAction)resetPassword:(id)sender
+{
+    
+    NSString* class = @"ResetPasswordViewController";
+    
+    UIViewController* viewController = [CUIEnginer createViewController:class inNavigationController:false];
+    [self.navigationController pushViewController:viewController animated:true];
 }
 @end

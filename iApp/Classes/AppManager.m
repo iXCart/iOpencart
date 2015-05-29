@@ -13,6 +13,8 @@
 #import "CNavigationController.h"
 
 #import "DataModel.h"
+#import "XCartUser.h"
+#import "XCartDataManager.h"
 
 static AppManager *  _appManagerInstance = nil;
 
@@ -106,6 +108,7 @@ static AppManager *  _appManagerInstance = nil;
 	}
     _keyWindow.rootViewController = _coverViewController;
     [_keyWindow makeKeyAndVisible];
+   
 }
 
 -(void)replaceCoverView:(UIViewController*)new
@@ -118,7 +121,8 @@ static AppManager *  _appManagerInstance = nil;
                   
                   _keyWindow.rootViewController = new;
                   //[keyWindow makeKeyAndVisible];
-
+                  //@step
+                  
               }];
     
 	 
@@ -134,6 +138,7 @@ static AppManager *  _appManagerInstance = nil;
     tabBarController.viewControllers = tabs;
     
    [self replaceCoverView:tabBarController];
+    
 	
 }
 
@@ -141,7 +146,7 @@ static AppManager *  _appManagerInstance = nil;
 -(void)onCompletedSetupWorkSpace
 {
     NSLog(@"onCompletedSetupWorkSpace");
-
+    
 
     [self showTabControllerView];
     
@@ -170,6 +175,18 @@ static AppManager *  _appManagerInstance = nil;
  	
 }
 
+-(void) showLoginView
+{
+    
+    XCartUser* user = [XCartDataManager sharedInstance].activeUser;
+    if (nil == user || ![user isValidateUser]) {
+        LoginViewController* viewController = (LoginViewController*)[CUIEnginer createViewController:@"LoginViewController" inNavigationController:true];
+    
+        [_mainViewController presentViewController:viewController animated:true completion:^{
+             }];
+    return;
+}
+}
 
 - (void)showHomeViewInKeyWindow:(int)selectedIndex
 {

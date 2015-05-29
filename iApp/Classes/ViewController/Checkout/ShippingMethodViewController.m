@@ -13,6 +13,7 @@
 @interface ShippingMethodViewController ()
 {
     NSIndexPath* _selectedIndexPath;
+    
     BOOL _isExpandBottomView;
     
     CGRect _original_frame;

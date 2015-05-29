@@ -35,4 +35,9 @@
 
     _args = args;
 }
+
+- (NSObject*)getArgs
+{
+    return _args;
+}
 @end

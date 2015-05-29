@@ -152,6 +152,22 @@ BOOL    StringEqual( const NSString*  aString  ,  const NSString*   bString)
 	
 }
 
+#pragma 
++(NSString*) toBoolString:(BOOL) value
+{
+    
+    return value ? _TRUE_ONE:_FALSE_ZERO;
+}
+
++(BOOL) toBool:( NSString*) value
+{
+    if ([Lang isEmptyString:value]) {
+        return FALSE;
+    }
+    value = [value uppercaseString];
+    return  [_TRUE isEqualToString: value ] || [ _TRUE_ONE isEqualToString: value] || StringEqual(_TRUE_ONE, value);
+}
+
 #pragma mark split
 +(NSMutableArray*)splitStringByCount:(NSString*) value  count: (int) count
 {

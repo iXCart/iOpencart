@@ -9,17 +9,12 @@
 #import "AppDelegate.h"
 #import "AppManager.h"
 
+ 
 
 @implementation AppDelegate
 
 @synthesize tabBarController;
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
-    [self applicationDidFinishLaunching:application];
-    return YES;
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -50,19 +45,24 @@
 
  
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {
-	
-    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    //@step
+    [Resource setupLogger];
     
 	//@step
 	[[AppManager sharedInstance] startApp];
      
 	//@step
 	[[AppManager sharedInstance]setKeyWindow:self.window];
+    
    	//@step
     if (nil == self.tabBarController) {
-     
-        self.tabBarController =(UITabBarController *)[self.window rootViewController];
+        self.tabBarController = [[UITabBarController alloc] init];
     }
     
     [[AppManager sharedInstance]setMainViewController:tabBarController];
@@ -71,7 +71,9 @@
     
     [[AppManager sharedInstance] setupWorkSpace];
     
-	
+  
+    return true;
+    
 }
 
 

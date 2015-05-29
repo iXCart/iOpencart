@@ -42,18 +42,24 @@ static NSString* ruseCellId = @"BaseCell";
     [self prepareTableview];
 }
 
-- (void)viewWillAppear:(BOOL)animated{
-    [super viewWillAppear:animated];
-    
+- (BOOL)checkValidateUser
+{
     XCartUser* user = [XCartDataManager sharedInstance].activeUser;
     if (nil == user || ![user isValidateUser]) {
         LoginViewController* viewController = (LoginViewController*)[CUIEnginer createViewController:@"LoginViewController" inNavigationController:true];
         
-         [self presentViewController:viewController animated:true completion:^{
-             self.view.hidden = false;
-         }];
-        return;
+        [self presentViewController:viewController animated:true completion:^{
+            self.view.hidden = false;
+            
+        }];
+        return false;
+        
     }
+    //@ste has login
+    return true;
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     
 }
 
@@ -110,7 +116,7 @@ static NSString* ruseCellId = @"BaseCell";
     
         //
     NSArray* items = _defs;
-    int row = indexPath.row;
+    NSInteger row = indexPath.row;
     NSDictionary* item = [items objectAtIndex:row];
     cell.textLabel.text = [item valueForKey:@"name"];
     
@@ -124,11 +130,19 @@ static NSString* ruseCellId = @"BaseCell";
         if ([Lang isEmptyString:class]) {
             break;
         }
-
+        
         if (StringEqual(class, @"Logout")) {
             
             [self confirmLogout:nil];
             break;
+        }
+        //@step
+        NSString* needLogin = (NSString*) [dict valueForKey:@"loginUser"];
+        if ([Lang toBool:needLogin] ) {
+            if ( ![self checkValidateUser])
+            {
+                break;
+            }
         }
         UIViewController* viewController = [CUIEnginer createViewController:class inNavigationController:false];
         [self.navigationController pushViewController:viewController animated:true];
@@ -141,16 +155,10 @@ static NSString* ruseCellId = @"BaseCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     NSArray* items = _defs;
-    int row = indexPath.row;
+    NSInteger row = indexPath.row;
     NSDictionary* item = [items objectAtIndex:row];
     [self processCommand:item];
-    //@step
-    //ProductsViewController* viewController = [[ProductsViewController alloc]initWithNibName:@"ProductsViewController" bundle:nil];
-    
-   // AppViewController * viewController = [ProductsViewController create];
-   // viewController.args = item;
-    
-   // [self.navigationController pushViewController:viewController animated:true];
+  
     
 }
 

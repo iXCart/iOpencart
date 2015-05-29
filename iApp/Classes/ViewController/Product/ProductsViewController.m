@@ -37,8 +37,8 @@ static NSString* ruseCellId = @"BaseCell";
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.title =@"Prodcuts";
-
+    //self.title =@"Prodcuts";
+     self.title = [self.args valueForKey:@"name"];
     [self prepareTableview];
     // [[XCartDataManager sharedManager] getCategories  ];
     [self loadData];

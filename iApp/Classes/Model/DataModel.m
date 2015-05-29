@@ -291,7 +291,7 @@
 }
 
 #pragma Account
-- (void)login:(NSString*) email password:(NSString*)password{
+- (void)login:(NSString*) email password:(NSString*)password popupLogiviewWhileFailed:(BOOL)popupLogiviewWhileFailed{
     
     if ([Lang isEmptyString:email] || [Lang isEmptyString:password]) {
         return;
@@ -318,6 +318,8 @@
         }
         
         [CDialogViewManager showMessageView:@"" message:mssage delayAutoHide: -1];
+        //@step
+      
         
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"%@->login failure->responseString:[%@]",self, operation.HTTPRequestOperation.responseString);
@@ -331,7 +333,7 @@
     NSString* email = [dict valueForKey:@"email"];
     NSString* password = [dict valueForKey:@"password"];
     
-    [self login:email password:password];
+    [self login:email password:password popupLogiviewWhileFailed:true];
     
 }
 

@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <RestKit/RestKit.h>
+
 #import "XBlockBinder.h"
 #import "XCartUser.h"
 

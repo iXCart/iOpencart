@@ -14,8 +14,26 @@ NSString* NotifyEventCommpleteAddCart =@"NotifyEventCommpleteAddCart";
 
 NSString* NotifyEventCommpleteUpdateCart =@"NotifyEventCommpleteUpdateCart";
 
+NSString* KeyOfStoreURL = @"StoreURL";
+
+NSString* DefaultValueOfStoreURL = @"http://www.opencart.i2cart.com/" ;
+ //@"http://127.0.0.1/oc2";//
+
 @implementation Resource
 
++ (void)setupLogger
+{
+
+#ifdef DEBUG
+     //RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+#else
+    
+    
+#endif
+ 
+     RKLogConfigureByName("RestKit/Network", RKLogLevelOff);
+   
+}
 
 +(UIColor*) getStandardColor
 {
@@ -25,11 +43,12 @@ NSString* NotifyEventCommpleteUpdateCart =@"NotifyEventCommpleteUpdateCart";
 	 
 }  
 
+
 + (NSString*) getBaseURLString
 {
-    return NSLocalizedString(@"WebSerivceEntry", @"");
-    return  AppLocalizedString2(@"WebSerivceEntry",@"http://127.0.0.1/o2");
-    
+    NSString* url = (NSString*)AppResourceGet(KeyOfStoreURL, DefaultValueOfStoreURL);
+    return url;
+      
 }
 
 + (BOOL)isVersion2
@@ -151,10 +170,28 @@ NSString* NotifyEventCommpleteUpdateCart =@"NotifyEventCommpleteUpdateCart";
     return StringJoin([Resource getIndexURLString], @"route=account/logout");
 }
 
+
 + (NSString*)getAccountEditURLString
 {
     return StringJoin([Resource getBaseURLString],    @"/index.php?route=account/edit");
 }
+
++ (NSString*)getAccountRegisterURLString
+{
+    return StringJoin([Resource getBaseURLString],    @"/index.php?route=account/register");
+    
+}
+
++ (NSString*)getCountriesURLString
+{
+    return StringJoin([Resource getBaseURLString],    @"/index.php?route=account/register");
+}
+
++ (NSString*)getRegionOrStateURLString
+{
+    return StringJoin([Resource getBaseURLString],    @"/index.php?route=account/account/country");
+}
+
 
 + (NSString*)getAccountWishlistURLString
 {
@@ -167,8 +204,25 @@ NSString* NotifyEventCommpleteUpdateCart =@"NotifyEventCommpleteUpdateCart";
     return StringJoin([Resource getIndexURLString], @"route=account/order");
 }
 
++ (NSString*)getAboutURLString
+{
+    //return  @"http://127.0.0.1/oc2/about.html";
+    
+    return StringJoin([Resource getBaseURLString], @"/catalog/view/theme/default/template/information/about.html");
+}
 
++ (NSString*)getPrivacyPolicyURLString
+{
+    //return  @"http://127.0.0.1/oc2/about.html";
+    
+    return StringJoin([Resource getIndexURLString], @"route=information/information/agree&information_id=3");
+    
+}
 
++ (NSString*)getResetPasswordURLString
+{
+     return StringJoin([Resource getIndexURLString], @"route=account/forgotten");
+}
 
 
 + (RKMappingResult*)parseData2Result:(NSData*)data

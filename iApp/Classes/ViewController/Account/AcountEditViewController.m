@@ -46,7 +46,7 @@ static NSString* _reuseID = @"EditTextFieldCell";
     self.title = AppLocalizedString(@"Account Information");
     [self prepareTableview];
     
-   UIBarButtonItem* button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(saveAction:)];
+    UIBarButtonItem* button = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(saveAction:)];
     [self.navigationItem setRightBarButtonItem:button];
 }
 
@@ -202,7 +202,7 @@ static NSString* _reuseID = @"EditTextFieldCell";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
     NSArray* items = _defs;
-    int row = indexPath.row;
+    NSInteger row = indexPath.row;
     NSDictionary* item = [items objectAtIndex:row];
     NSNumber* height = [item valueForKey:@"height"];
     if (nil != height) {
@@ -219,7 +219,7 @@ static NSString* _reuseID = @"EditTextFieldCell";
     cell.indexPath = indexPath;
 
     NSArray* items = _defs;
-    int row = indexPath.row;
+    NSInteger row = indexPath.row;
     NSDictionary* item = [items objectAtIndex:row];
 
     [cell setArgs:item];

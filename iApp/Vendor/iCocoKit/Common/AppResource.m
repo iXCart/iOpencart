@@ -73,12 +73,14 @@ NSObject *AppResourceGet( NSString* aKey, NSObject* defaultValue)
 	
 	NSUserDefaults* settings = [NSUserDefaults standardUserDefaults];
 	NSObject* value = (NSObject*)[settings objectForKey: key];
-	if ( nil == value || nil != defaultValue)
+	if ( nil == value && nil != defaultValue)
 	{
+        
 		[settings setObject:defaultValue forKey:key];
 		value = defaultValue;
+        NSLog(@"Set default key=[%@],value=[%@]", key, value );
 	}
-	NSLog(@"key=[%@],value=[%@]", key, value );
+	NSLog(@"Get key=[%@],value=[%@]", key, value );
 	
 	return value;
 	
@@ -89,7 +91,7 @@ NSObject *AppResourceSet(const NSString* aKey,    NSObject* value)
 	NSUserDefaults* settings = [NSUserDefaults standardUserDefaults];
 	[settings setObject:value forKey:key];
 	[settings synchronize];
-	NSLog(@"key=[%@],value=[%@]", key, value );
+	NSLog(@"Set key=[%@],value=[%@]", key, value );
 	return value;
 	
 }
