@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50B77B6100074F65EF80961C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFABA457A32C8EFB291E2BA7 /* libPods.a */; };
 		9106EB92197FA99A0072B16A /* UIScrollView+SVInfiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 9106EB8F197FA99A0072B16A /* UIScrollView+SVInfiniteScrolling.m */; };
 		9106EB93197FA99A0072B16A /* UIScrollView+SVPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 9106EB91197FA99A0072B16A /* UIScrollView+SVPullToRefresh.m */; };
 		910EFD7419498AAD00FD4378 /* XCartDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 910EFD7319498AAD00FD4378 /* XCartDataManager.m */; };
@@ -103,7 +104,6 @@
 		91A727DB1A35A49E0026A954 /* StateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A727D91A35A49E0026A954 /* StateViewController.xib */; };
 		91A727E21A35C59B0026A954 /* RadioCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A727DF1A35C59B0026A954 /* RadioCell.m */; };
 		91A727E31A35C59B0026A954 /* RadioCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91A727E01A35C59B0026A954 /* RadioCell.xib */; };
-		91A97A72196137BC002DEA0F /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91A97A6919613749002DEA0F /* libRestKit.a */; };
 		91B18F8A1947243E00103441 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B18F881947243E00103441 /* splash.png */; };
 		91B18F8B1947243E00103441 /* proudctDefs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 91B18F891947243E00103441 /* proudctDefs.plist */; };
 		91B18FD819472C7900103441 /* CAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B18FD719472C7900103441 /* CAnimator.m */; };
@@ -175,41 +175,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		91A97A6819613749002DEA0F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 91A97A6119613749002DEA0F /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 25160D1614564E810060A5C5;
-			remoteInfo = RestKit;
-		};
-		91A97A6A19613749002DEA0F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 91A97A6119613749002DEA0F /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 25160D2614564E820060A5C5;
-			remoteInfo = RestKitTests;
-		};
-		91A97A6C19613749002DEA0F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 91A97A6119613749002DEA0F /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 25160E62145651060060A5C5;
-			remoteInfo = RestKitFramework;
-		};
-		91A97A6E19613749002DEA0F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 91A97A6119613749002DEA0F /* RestKit.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 25160E78145651060060A5C5;
-			remoteInfo = RestKitFrameworkTests;
-		};
-		91A97A70196137B2002DEA0F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 91A97A6119613749002DEA0F /* RestKit.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 25160D1514564E810060A5C5;
-			remoteInfo = RestKit;
-		};
 		91C6A6D4192C9AEE00903D95 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 91C6A6A0192C9AEE00903D95 /* Project object */;
@@ -220,6 +185,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		228C0EBFB98C04F75466178D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		368A1CE644576E4FBC7ACCFE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9106EB8D197FA99A0072B16A /* SVPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVPullToRefresh.h; sourceTree = "<group>"; };
 		9106EB8E197FA99A0072B16A /* UIScrollView+SVInfiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+SVInfiniteScrolling.h"; sourceTree = "<group>"; };
 		9106EB8F197FA99A0072B16A /* UIScrollView+SVInfiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+SVInfiniteScrolling.m"; sourceTree = "<group>"; };
@@ -382,7 +349,6 @@
 		91A727DF1A35C59B0026A954 /* RadioCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioCell.m; sourceTree = "<group>"; };
 		91A727E01A35C59B0026A954 /* RadioCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioCell.xib; sourceTree = "<group>"; };
 		91A727E11A35C59B0026A954 /* RadioCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioCell.h; sourceTree = "<group>"; };
-		91A97A6119613749002DEA0F /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = "../../../../sdk/lib/RestKit-0.20.3/RestKit.xcodeproj"; sourceTree = "<group>"; };
 		91B18F881947243E00103441 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		91B18F891947243E00103441 /* proudctDefs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = proudctDefs.plist; sourceTree = "<group>"; };
 		91B18FD619472C7900103441 /* CAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAnimator.h; sourceTree = "<group>"; };
@@ -482,6 +448,7 @@
 		91F4074B196D29A20058D397 /* row_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = row_selected.png; sourceTree = "<group>"; };
 		91FC43C6196127EF00EB01A9 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		91FC43C7196127EF00EB01A9 /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder@2x.png"; sourceTree = "<group>"; };
+		EFABA457A32C8EFB291E2BA7 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -489,7 +456,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91A97A72196137BC002DEA0F /* libRestKit.a in Frameworks */,
 				91C6A701192C9CD700903D95 /* CFNetwork.framework in Frameworks */,
 				91C6A702192C9CD700903D95 /* CoreData.framework in Frameworks */,
 				91C6A703192C9CD700903D95 /* QuartzCore.framework in Frameworks */,
@@ -499,6 +465,7 @@
 				91C6A6AE192C9AEE00903D95 /* CoreGraphics.framework in Frameworks */,
 				91C6A6B0192C9AEE00903D95 /* UIKit.framework in Frameworks */,
 				91C6A6AC192C9AEE00903D95 /* Foundation.framework in Frameworks */,
+				50B77B6100074F65EF80961C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -763,17 +730,6 @@
 			path = iPhone;
 			sourceTree = "<group>";
 		};
-		91A97A6219613749002DEA0F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				91A97A6919613749002DEA0F /* libRestKit.a */,
-				91A97A6B19613749002DEA0F /* RestKitTests.octest */,
-				91A97A6D19613749002DEA0F /* RestKit.framework */,
-				91A97A6F19613749002DEA0F /* RestKitFrameworkTests.octest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		91B18F861947243E00103441 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -807,11 +763,11 @@
 		91C6A69F192C9AEE00903D95 = {
 			isa = PBXGroup;
 			children = (
-				91A97A6119613749002DEA0F /* RestKit.xcodeproj */,
 				91C6A6B1192C9AEE00903D95 /* iApp */,
 				918ECC33192CC6AD00EDF6B1 /* iAppTests */,
 				91C6A6AA192C9AEE00903D95 /* Frameworks */,
 				91C6A6A9192C9AEE00903D95 /* Products */,
+				D19D38CC2180BF59C32B8909 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -837,6 +793,7 @@
 				91C6A6AD192C9AEE00903D95 /* CoreGraphics.framework */,
 				91C6A6AF192C9AEE00903D95 /* UIKit.framework */,
 				91C6A6D0192C9AEE00903D95 /* XCTest.framework */,
+				EFABA457A32C8EFB291E2BA7 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1061,6 +1018,15 @@
 			path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextField;
 			sourceTree = "<group>";
 		};
+		D19D38CC2180BF59C32B8909 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				368A1CE644576E4FBC7ACCFE /* Pods.debug.xcconfig */,
+				228C0EBFB98C04F75466178D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1068,14 +1034,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91C6A6E0192C9AEE00903D95 /* Build configuration list for PBXNativeTarget "iApp" */;
 			buildPhases = (
+				F8520FA6F9A39659276936C0 /* Check Pods Manifest.lock */,
 				91C6A6A4192C9AEE00903D95 /* Sources */,
 				91C6A6A5192C9AEE00903D95 /* Frameworks */,
 				91C6A6A6192C9AEE00903D95 /* Resources */,
+				5673AB767FD7C619CD0F6FDB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				91A97A71196137B2002DEA0F /* PBXTargetDependency */,
 			);
 			name = iApp;
 			productName = iApp;
@@ -1128,12 +1095,6 @@
 			mainGroup = 91C6A69F192C9AEE00903D95;
 			productRefGroup = 91C6A6A9192C9AEE00903D95 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 91A97A6219613749002DEA0F /* Products */;
-					ProjectRef = 91A97A6119613749002DEA0F /* RestKit.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				91C6A6A7192C9AEE00903D95 /* iApp */,
@@ -1141,37 +1102,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		91A97A6919613749002DEA0F /* libRestKit.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRestKit.a;
-			remoteRef = 91A97A6819613749002DEA0F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		91A97A6B19613749002DEA0F /* RestKitTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = RestKitTests.octest;
-			remoteRef = 91A97A6A19613749002DEA0F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		91A97A6D19613749002DEA0F /* RestKit.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RestKit.framework;
-			remoteRef = 91A97A6C19613749002DEA0F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		91A97A6F19613749002DEA0F /* RestKitFrameworkTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = RestKitFrameworkTests.octest;
-			remoteRef = 91A97A6E19613749002DEA0F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		91C6A6A6192C9AEE00903D95 /* Resources */ = {
@@ -1250,6 +1180,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5673AB767FD7C619CD0F6FDB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8520FA6F9A39659276936C0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		91C6A6A4192C9AEE00903D95 /* Sources */ = {
@@ -1360,11 +1323,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		91A97A71196137B2002DEA0F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = RestKit;
-			targetProxy = 91A97A70196137B2002DEA0F /* PBXContainerItemProxy */;
-		};
 		91C6A6D5192C9AEE00903D95 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 91C6A6A7192C9AEE00903D95 /* iApp */;
@@ -1466,6 +1424,7 @@
 		};
 		91C6A6E1192C9AEE00903D95 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 368A1CE644576E4FBC7ACCFE /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1481,7 +1440,11 @@
 				);
 				INFOPLIST_FILE = "iApp/iApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = "-ObjC";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = iApp;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1492,6 +1455,7 @@
 		};
 		91C6A6E2192C9AEE00903D95 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 228C0EBFB98C04F75466178D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1506,7 +1470,11 @@
 				);
 				INFOPLIST_FILE = "iApp/iApp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = "-ObjC";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = iApp;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
