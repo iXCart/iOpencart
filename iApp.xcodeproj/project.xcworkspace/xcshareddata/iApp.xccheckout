@@ -10,37 +10,41 @@
 	<string>iApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>98C79055-695F-4F5D-9A8D-41C297CFB644</key>
-		<string>https://github.com/samvermette/SVPullToRefresh.git</string>
-		<key>D07B7B6D-D68E-475A-94F1-FB97E258C00F</key>
+		<key>03E6A121BBA3F8EE2C1504EBAFF18657499B30EC</key>
+		<string>https://github.com/jverdi/JVFloatLabeledTextField</string>
+		<key>6D2A952B1D5223F7E4C5CC0BBB548D2E9A8B2D3D</key>
 		<string>https://github.com/iXCart/iOSApp.git</string>
-		<key>FE9A1295-957B-4692-BDE0-0F328A5796F3</key>
+		<key>EB83C6C68AD13754321754ECC5B5557471F3663E</key>
+		<string>https://github.com/samvermette/SVPullToRefresh.git</string>
+		<key>FF65A8AFC255E5913A7BCDE7153CC9C006153EAE</key>
 		<string>https://github.com/skywinder/ActionSheetPicker-3.0.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>iApp.xcodeproj/project.xcworkspace</string>
+	<string>iApp.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>98C79055-695F-4F5D-9A8D-41C297CFB644</key>
-		<string>../../iApp/Vendor/SVPullToRefresh</string>
-		<key>D07B7B6D-D68E-475A-94F1-FB97E258C00F</key>
+		<key>03E6A121BBA3F8EE2C1504EBAFF18657499B30EC</key>
+		<string>../..iApp/Vendor/JVFloatLabeledTextField</string>
+		<key>6D2A952B1D5223F7E4C5CC0BBB548D2E9A8B2D3D</key>
 		<string>../..</string>
-		<key>FE9A1295-957B-4692-BDE0-0F328A5796F3</key>
-		<string>../../iApp/Vendor/ActionSheetPicker-3.0</string>
+		<key>EB83C6C68AD13754321754ECC5B5557471F3663E</key>
+		<string>../..iApp/Vendor/SVPullToRefresh</string>
+		<key>FF65A8AFC255E5913A7BCDE7153CC9C006153EAE</key>
+		<string>../..iApp/Vendor/ActionSheetPicker-3.0</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/iXCart/iOSApp.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D07B7B6D-D68E-475A-94F1-FB97E258C00F</string>
+	<string>6D2A952B1D5223F7E4C5CC0BBB548D2E9A8B2D3D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>FE9A1295-957B-4692-BDE0-0F328A5796F3</string>
+			<string>FF65A8AFC255E5913A7BCDE7153CC9C006153EAE</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ActionSheetPicker-3.0</string>
 		</dict>
@@ -48,7 +52,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D07B7B6D-D68E-475A-94F1-FB97E258C00F</string>
+			<string>6D2A952B1D5223F7E4C5CC0BBB548D2E9A8B2D3D</string>
 			<key>IDESourceControlWCCName</key>
 			<string>iOSApp</string>
 		</dict>
@@ -56,7 +60,15 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>98C79055-695F-4F5D-9A8D-41C297CFB644</string>
+			<string>03E6A121BBA3F8EE2C1504EBAFF18657499B30EC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JVFloatLabeledTextField</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EB83C6C68AD13754321754ECC5B5557471F3663E</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SVPullToRefresh</string>
 		</dict>
