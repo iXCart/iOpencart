@@ -1,3 +1,8 @@
+ DEPRECATED 
+
+ check:   https://github.com/iXCart/OpenCartKit
+ 
+
 iOSApp
 ======
 
